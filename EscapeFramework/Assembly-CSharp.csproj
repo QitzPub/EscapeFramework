@@ -62,9 +62,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\EventButton.cs" />
-    <Compile Include="Assets\Scripts\ImageHideScript.cs" />
-    <Compile Include="Assets\Scripts\NextSceneButton.cs" />
+    <Compile Include="Assets\ArchitectureCore\Controller\AController.cs" />
+    <Compile Include="Assets\ArchitectureCore\Controller\IController.cs" />
+    <Compile Include="Assets\ArchitectureCore\DataStore\ADataStore.cs" />
+    <Compile Include="Assets\ArchitectureCore\Repository\ARepository.cs" />
+    <Compile Include="Assets\ArchitectureCore\Transmitter\BaseFactory.cs" />
+    <Compile Include="Assets\ArchitectureCore\Transmitter\BaseTransmitter.cs" />
+    <Compile Include="Assets\ArchitectureCore\Transmitter\ITransmitter.cs" />
+    <Compile Include="Assets\ArchitectureCore\Transmitter\PrefabFolder.cs" />
+    <Compile Include="Assets\ArchitectureCore\ValueObject\BaseVO.cs" />
+    <Compile Include="Assets\ArchitectureCore\ValueObject\IVO.cs" />
+    <Compile Include="Assets\ArchitectureCore\View\AView.cs" />
+    <Compile Include="Assets\ArchitectureCore\View\IView.cs" />
+    <Compile Include="Assets\Scripts\Buttons\EventButton.cs" />
+    <Compile Include="Assets\Scripts\Buttons\ImageHideScript.cs" />
+    <Compile Include="Assets\Scripts\Buttons\NextSceneButton.cs" />
+    <Compile Include="Assets\Scripts\Controller\EscapeGameController.cs" />
+    <Compile Include="Assets\Scripts\DataStore\EscapeGameDataStore.cs" />
+    <Compile Include="Assets\Scripts\Enum\EventType.cs" />
+    <Compile Include="Assets\Scripts\Repository\EscapeGameRepository.cs" />
+    <Compile Include="Assets\Scripts\VO\SampleVO.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/user/Desktop/EscapeFramework/EscapeFramework/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
