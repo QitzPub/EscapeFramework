@@ -1,5 +1,5 @@
 ﻿
-namespace Qitz.ArchitectureCore
+namespace Qitz.EscapeFramework
 {
     public interface ITransmitter
     {

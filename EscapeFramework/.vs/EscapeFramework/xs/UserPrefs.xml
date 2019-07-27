@@ -1,12 +1,12 @@
 ﻿<Properties StartupConfiguration="{C9900E98-A63D-0522-C79D-6228823C21E5}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DataStore/EscapeGameDataStore.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Controller/EscapeGameController.cs">
     <Files>
-      <File FileName="Assets/Scripts/Buttons/NextSceneButton.cs" Line="10" Column="5" />
-      <File FileName="Assets/Scripts/Enum/EventType.cs" Line="5" Column="22" />
-      <File FileName="Assets/Scripts/VO/SampleVO.cs" Line="14" Column="6" />
-      <File FileName="Assets/Scripts/Buttons/EventButton.cs" Line="14" Column="39" NotebookId="1" />
-      <File FileName="Assets/Scripts/Repository/EscapeGameRepository.cs" Line="11" Column="5" NotebookId="1" />
-      <File FileName="Assets/Scripts/DataStore/EscapeGameDataStore.cs" Line="11" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/Buttons/NextSceneButton.cs" Line="18" Column="1" />
+      <File FileName="Assets/Scripts/Enum/ItemName.cs" Line="5" Column="21" />
+      <File FileName="Assets/Scripts/Repository/EscapeGameRepository.cs" Line="13" Column="34" />
+      <File FileName="Assets/Scripts/DataStore/ItemDataStore.cs" Line="11" Column="60" NotebookId="1" />
+      <File FileName="Assets/Scripts/VO/ItemVO.cs" Line="5" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/Controller/EscapeGameController.cs" Line="13" Column="5" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

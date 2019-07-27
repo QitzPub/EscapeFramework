@@ -1,7 +1,7 @@
 ﻿
 using UnityEngine;
 
-namespace Qitz.ArchitectureCore
+namespace Qitz.EscapeFramework
 {
     public interface IView
     {

@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4f7ab885c5644b4c88b33631ff2b0a1, type: 3}
   m_Name: EscapeGameRepository
   m_EditorClassIdentifier: 
+  itemDataStore: {fileID: 11400000, guid: cd959559d9c1545ed81c2e26c611d1a5, type: 2}

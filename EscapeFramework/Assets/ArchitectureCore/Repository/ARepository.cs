@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Qitz.ArchitectureCore
+namespace Qitz.EscapeFramework
 {
     public interface IRepository
     {

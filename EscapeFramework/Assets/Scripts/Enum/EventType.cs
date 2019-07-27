@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public enum EventType
+namespace Qitz.EscapeFramework
 {
-    GET_TONKATI,
+    public enum EventType
+    {
+        GET_TONKATI,
+    }
 }

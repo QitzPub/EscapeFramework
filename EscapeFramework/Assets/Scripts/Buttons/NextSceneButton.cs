@@ -4,15 +4,18 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-[RequireComponent(typeof (Button))]
-public class NextSceneButton : MonoBehaviour
+namespace Qitz.EscapeFramework
 {
-
-    [SerializeField]
-    string SceneName;
-    public void GotoScene()
+    [RequireComponent(typeof(Button))]
+    public class NextSceneButton : MonoBehaviour
     {
-        SceneManager.LoadScene(SceneName);
-        
+
+        [SerializeField]
+        string SceneName;
+        public void GotoScene()
+        {
+            SceneManager.LoadScene(SceneName);
+
+        }
     }
 }
