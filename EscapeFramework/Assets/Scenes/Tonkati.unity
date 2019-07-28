@@ -282,8 +282,10 @@ GameObject:
   - component: {fileID: 1440744660}
   - component: {fileID: 1440744662}
   - component: {fileID: 1440744663}
-  - component: {fileID: 1440744664}
+  - component: {fileID: 1440744667}
+  - component: {fileID: 1440744666}
   - component: {fileID: 1440744665}
+  - component: {fileID: 1440744664}
   m_Layer: 5
   m_Name: Tonkati
   m_TagString: Untagged
@@ -404,7 +406,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1440744662}
-        m_MethodName: SendEventToGameController
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -425,12 +427,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1440744658}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc2566ded61a646d68288b466c4fc02c, type: 3}
+  m_Script: {fileID: 11500000, guid: 359e9775453ec449786438e560037e2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventType: 0
-  eventFlag: 0
-  eventProgress: 0
+  itemName: 0
+  ignitionPointItem: 0
 --- !u!114 &1440744665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -440,12 +441,43 @@ MonoBehaviour:
   m_GameObject: {fileID: 1440744658}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c5f5baf3e64e4eccba2d92575266734, type: 3}
+  m_Script: {fileID: 11500000, guid: c1a1877f06eb54410b202159b3d4a357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventExecuteTiming: 0
+  aIgnitionPointBase: {fileID: 1440744664}
+  displayEventProgress: 1
+--- !u!114 &1440744666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440744658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1a1877f06eb54410b202159b3d4a357, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventExecuteTiming: 1
+  aIgnitionPointBase: {fileID: 0}
+  displayEventProgress: 1
+--- !u!114 &1440744667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440744658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e01e9eb5d7943f5b275d3b4407e6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventExecuteTiming: 1
+  aIgnitionPointBase: {fileID: 0}
   itemName: 0
-  itemPossession: 0
-  eventProgress: 1
+  itemEventProgress: 0
 --- !u!1001 &1535903592
 PrefabInstance:
   m_ObjectHideFlags: 0

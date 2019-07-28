@@ -15,16 +15,16 @@ namespace Qitz.EscapeFramework
     {
 
         [SerializeField]
-        EventType eventType;
+        int eventType;
         [SerializeField]
         bool isOn;
 
-        public EventType EventType => eventType;
+        public EventType EventType => (EventType)eventType;
         public bool IsOn => isOn;
 
         public EventFlagVO(EventType eventType,bool isOn)
         {
-            this.eventType = eventType;
+            this.eventType = (int)eventType;
             this.isOn = isOn;
         }
 

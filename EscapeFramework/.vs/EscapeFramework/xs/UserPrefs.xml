@@ -1,12 +1,12 @@
 ﻿<Properties StartupConfiguration="{C9900E98-A63D-0522-C79D-6228823C21E5}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Controller/EscapeGameController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/View/BaseObject/AEventViewBase.cs">
     <Files>
-      <File FileName="Assets/Scripts/Buttons/NextSceneButton.cs" Line="18" Column="1" />
-      <File FileName="Assets/Scripts/Enum/ItemName.cs" Line="5" Column="21" />
-      <File FileName="Assets/Scripts/Repository/EscapeGameRepository.cs" Line="13" Column="34" />
-      <File FileName="Assets/Scripts/DataStore/ItemDataStore.cs" Line="11" Column="60" NotebookId="1" />
-      <File FileName="Assets/Scripts/VO/ItemVO.cs" Line="5" Column="1" NotebookId="1" />
-      <File FileName="Assets/Scripts/Controller/EscapeGameController.cs" Line="13" Column="5" NotebookId="1" />
+      <File FileName="Assets/Scripts/View/EventViews/DisplayEventView.cs" Line="7" Column="51" />
+      <File FileName="Assets/Scripts/Enum/EventEnums.cs" Line="12" Column="26" />
+      <File FileName="Assets/Scripts/View/EventViews/EventFlagEventView.cs" Line="7" Column="43" />
+      <File FileName="Assets/Scripts/View/BaseObject/AEventViewBase.cs" Line="15" Column="9" />
+      <File FileName="Assets/Scripts/View/EventIGnitionPoint/AIgnitionPointBase.cs" Line="8" Column="45" />
+      <File FileName="Assets/Scripts/View/EventViews/IncreaseItemEventView.cs" Line="8" Column="6" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

@@ -8,6 +8,9 @@ namespace Qitz.EscapeFramework
 {
     public interface IEscapeGameUserDataStore: ICanHoldItems, ICanHoldEvents
     {
+        bool GetEventFlagValue(IEventFlagVO eventFlagVO);
+        bool InPossessionItem(ItemVO itemVO);
+        bool InPossessionItem(ItemName itemName);
     }
 
     public class EscapeGameUserDataStore: IEscapeGameUserDataStore
@@ -44,6 +47,29 @@ namespace Qitz.EscapeFramework
         {
             UserVO.SetEventFlag(eventFlag);
             SaveUserData();
+        }
+
+        public bool GetEventFlagValue(IEventFlagVO eventFlagVO)
+        {
+            bool existEventFlag = EventFlags.Exists(ef => ef.EventType == eventFlagVO.EventType);
+            if (existEventFlag)
+            {
+                return EventFlags.FirstOrDefault(ef => ef.EventType == eventFlagVO.EventType).IsOn;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool InPossessionItem(ItemVO itemVO)
+        {
+            return Items.Exists(it => it.ItemName == itemVO.ItemName);
+        }
+
+        public bool InPossessionItem(ItemName itemName)
+        {
+            return Items.Exists(it => it.ItemName == itemName);
         }
 
         public EscapeGameUserDataStore()
@@ -84,9 +110,9 @@ namespace Qitz.EscapeFramework
         [SerializeField]
         List<EventFlagVO> eventFlags = new List<EventFlagVO>();
 
-        public List<ItemVO> Items => throw new NotImplementedException();
+        public List<ItemVO> Items => items;
 
-        public List<EventFlagVO> EventFlags => throw new NotImplementedException();
+        public List<EventFlagVO> EventFlags => eventFlags;
 
         public void AddItem(ItemVO item)
         {

@@ -4,5 +4,5 @@ using UnityEngine;
 
 public enum ItemName
 {
-    トンカチ,
+    トンカチ=0,
 }
