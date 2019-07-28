@@ -31,6 +31,20 @@ namespace Qitz.EscapeFramework
             {
                 ExcuteEvent(aEvent);
             }
+            //Viewクリック時に実行されるイベントのセットを行う
+            foreach (var aEvent in events.Where(e => e.EventExecuteTiming == EventExecuteTiming.クリックされた時))
+            {
+                SetClickEvent(aEvent);
+            }
+        }
+
+        void SetClickEvent(AEventViewBase aEvent)
+        {
+            aEvent.Button.onClick.AddListener(
+                () => { 
+                    ExcuteEvent(aEvent); 
+                }
+            );
         }
 
         void ExcuteEvent(AEventViewBase aEvent)

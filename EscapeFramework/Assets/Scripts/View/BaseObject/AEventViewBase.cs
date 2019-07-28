@@ -15,5 +15,6 @@ namespace Qitz.EscapeFramework
         [SerializeField, HeaderAttribute("イベント発火制限条件")]
         AIgnitionPointBase aIgnitionPointBase;
         public AIgnitionPointBase AIgnitionPointBase => aIgnitionPointBase;
+        public Button Button => this.GetComponent<Button>();
     }
 }

@@ -17,6 +17,11 @@ namespace Qitz.EscapeFramework
         EscapeGameRepository repository;
         protected override EscapeGameRepository Repository { get { return repository; } }
 
+        void Awake()
+        {
+            repository.Initialize();
+        }
+
         void Start()
         {
             ExecuteEvent();
@@ -28,11 +33,10 @@ namespace Qitz.EscapeFramework
             ExecuteEvent();
         }
 
-        //TODO USECASEへ
         void ExecuteEvent()
         {
             var excuteEventUseCase = new ExcuteEventUseCase(repository.EscapeGameUserDataStore);
-
+            excuteEventUseCase.Excute();
         }
 
     }
