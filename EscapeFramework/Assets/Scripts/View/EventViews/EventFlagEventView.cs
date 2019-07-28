@@ -12,5 +12,6 @@ namespace Qitz.EscapeFramework
         [SerializeField]
         EventFlag eventFlag;
         public EventFlag EventFlag => eventFlag;
+        public EventFlagVO EventFlagVO => new EventFlagVO(EventType, EventFlag == EventFlag.ON);
     }
 }

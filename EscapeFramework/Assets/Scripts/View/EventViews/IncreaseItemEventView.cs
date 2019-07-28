@@ -13,6 +13,6 @@ namespace Qitz.EscapeFramework
 
         public ItemName ItemName => itemName;
         public ItemEventProgress ItemEventProgress => itemEventProgress;
-
+        public ItemVO ItemVO => new ItemVO(itemName);
     }
 }

@@ -83,8 +83,7 @@
     <Compile Include="Assets\Scripts\Enum\ItemName.cs" />
     <Compile Include="Assets\Scripts\GameSystemInitializer\GameSystemInitializer.cs" />
     <Compile Include="Assets\Scripts\Repository\EscapeGameRepository.cs" />
-    <Compile Include="Assets\Scripts\UseCase\ItemEventProcessingUseCase.cs" />
-    <Compile Include="Assets\Scripts\UseCase\SwitchEventProcessingUseCase.cs" />
+    <Compile Include="Assets\Scripts\UseCase\ExcuteEventUseCase.cs" />
     <Compile Include="Assets\Scripts\Util\PrefabFolder.cs" />
     <Compile Include="Assets\Scripts\View\BaseObject\AEventViewBase.cs" />
     <Compile Include="Assets\Scripts\View\EventIGnitionPoint\AIgnitionPointBase.cs" />
@@ -93,8 +92,6 @@
     <Compile Include="Assets\Scripts\View\EventViews\DisplayEventView.cs" />
     <Compile Include="Assets\Scripts\View\EventViews\EventFlagEventView.cs" />
     <Compile Include="Assets\Scripts\View\EventViews\IncreaseItemEventView.cs" />
-    <Compile Include="Assets\Scripts\View\old\ItemEventView.cs" />
-    <Compile Include="Assets\Scripts\View\old\SwitchEventView.cs" />
     <Compile Include="Assets\Scripts\VO\EventFlagVO.cs" />
     <Compile Include="Assets\Scripts\VO\ItemSpriteVO.cs" />
     <Compile Include="Assets\Scripts\VO\ItemVO.cs" />

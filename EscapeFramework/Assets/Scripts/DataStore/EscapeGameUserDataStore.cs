@@ -9,6 +9,7 @@ namespace Qitz.EscapeFramework
     public interface IEscapeGameUserDataStore: ICanHoldItems, ICanHoldEvents
     {
         bool GetEventFlagValue(IEventFlagVO eventFlagVO);
+        bool GetEventFlagValue(EventType eventType);
         bool InPossessionItem(ItemVO itemVO);
         bool InPossessionItem(ItemName itemName);
     }
@@ -62,6 +63,19 @@ namespace Qitz.EscapeFramework
             }
         }
 
+        public bool GetEventFlagValue(EventType eventType)
+        {
+            bool existEventFlag = EventFlags.Exists(ef => ef.EventType == eventType);
+            if (existEventFlag)
+            {
+                return EventFlags.FirstOrDefault(ef => ef.EventType == eventType).IsOn;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public bool InPossessionItem(ItemVO itemVO)
         {
             return Items.Exists(it => it.ItemName == itemVO.ItemName);
@@ -70,6 +84,12 @@ namespace Qitz.EscapeFramework
         public bool InPossessionItem(ItemName itemName)
         {
             return Items.Exists(it => it.ItemName == itemName);
+        }
+
+        public void DecreaseItem(ItemVO item)
+        {
+            UserVO.DecreaseItem(item);
+            SaveUserData();
         }
 
         public EscapeGameUserDataStore()
@@ -88,6 +108,7 @@ namespace Qitz.EscapeFramework
     {
         List<ItemVO> Items { get; }
         void AddItem(ItemVO item);
+        void DecreaseItem(ItemVO item);
     }
     public interface ICanHoldEvents
     {
@@ -117,6 +138,11 @@ namespace Qitz.EscapeFramework
         public void AddItem(ItemVO item)
         {
             items.Add(item);
+        }
+
+        public void DecreaseItem(ItemVO item)
+        {
+            items.Remove(item);
         }
 
         public void SetEventFlag(EventFlagVO eventFlag)
