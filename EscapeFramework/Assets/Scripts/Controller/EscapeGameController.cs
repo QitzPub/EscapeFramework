@@ -9,6 +9,9 @@ namespace Qitz.EscapeFramework
 {
     public interface IEscapeGameController
     {
+        void AddEventExecuteCallBack(Action<AEventConponent[]> addEventExecuteCallBack);
+        void AddUserItemListChangeCallBack(Action<List<IItemSpriteVO>> addUserItemListChangeCallBack);
+        IEscapeGameDefinsDataStore GetEscapeGameDefins();
     }
 
     public class EscapeGameController : AController<EscapeGameRepository>, IEscapeGameController
@@ -16,6 +19,19 @@ namespace Qitz.EscapeFramework
         [SerializeField]
         EscapeGameRepository repository;
         protected override EscapeGameRepository Repository { get { return repository; } }
+        Action<AEventConponent[]> eventExecuteCallBack;
+        Action<List<IItemSpriteVO>> userItemListChangeCallBack;
+
+        public void AddEventExecuteCallBack(Action<AEventConponent[]> addEventExecuteCallBack)
+        {
+            eventExecuteCallBack += addEventExecuteCallBack;
+        }
+
+        public void AddUserItemListChangeCallBack(Action<List<IItemSpriteVO>> addUserItemListChangeCallBack)
+        {
+            userItemListChangeCallBack += addUserItemListChangeCallBack;
+        }
+
 
         void Awake()
         {
@@ -35,8 +51,25 @@ namespace Qitz.EscapeFramework
 
         void ExecuteEvent()
         {
-            var excuteEventUseCase = new ExcuteEventUseCase(repository.EscapeGameUserDataStore);
+            var excuteEventUseCase = new ExcuteEventUseCase(repository.EscapeGameUserDataStore,
+                (events)=> {
+                    //イベント実行後のコールバック
+                    //ユーザーデータのアイテム数をItemViewに反映させる処理など
+                    eventExecuteCallBack?.Invoke(events);
+                    userItemListChangeCallBack?.Invoke(repository.UserPossessionItemSpriteList);
+            });
             excuteEventUseCase.Excute();
+        }
+
+        public IEscapeGameDefinsDataStore GetEscapeGameDefins()
+        {
+            return repository.EscapeGameDefinsDataStore;
+        }
+
+        [ContextMenu("ユーザーデータを削除")]
+        void DebugDeleteUserData()
+        {
+            PlayerPrefs.DeleteAll();
         }
 
     }

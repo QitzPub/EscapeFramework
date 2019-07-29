@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Qitz.EscapeFramework
 {
-    public class IncreaseItemEventView : AEventViewBase
+    public class IncreaseItemEventView : AEventConponent
     {
         [SerializeField, HeaderAttribute("以下アイテムを")]
         ItemName itemName;

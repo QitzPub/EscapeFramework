@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using System;
 
 namespace Qitz.EscapeFramework
 {
@@ -16,12 +17,14 @@ namespace Qitz.EscapeFramework
     public class ExcuteEventUseCase: IExcuteEventUseCase
     {
         IEscapeGameUserDataStore escapeGameUserDataStore;
-        AEventViewBase[] events;
+        AEventConponent[] events;
+        Action<AEventConponent[]> eventExcuteCallBack;
 
-        public ExcuteEventUseCase(IEscapeGameUserDataStore escapeGameUserDataStore)
+        public ExcuteEventUseCase(IEscapeGameUserDataStore escapeGameUserDataStore, Action<AEventConponent[]> eventExcuteCallBack)
         {
-            this.events = UnityEngine.Object.FindObjectsOfType<AEventViewBase>();
+            this.events = UnityEngine.Object.FindObjectsOfType<AEventConponent>();
             this.escapeGameUserDataStore = escapeGameUserDataStore;
+            this.eventExcuteCallBack = eventExcuteCallBack;
         }
 
         public void Excute()
@@ -36,18 +39,22 @@ namespace Qitz.EscapeFramework
             {
                 SetClickEvent(aEvent);
             }
+            //イベントのコールバックを設定
+            eventExcuteCallBack.Invoke(events);
+
         }
 
-        void SetClickEvent(AEventViewBase aEvent)
+        void SetClickEvent(AEventConponent aEvent)
         {
             aEvent.Button.onClick.AddListener(
                 () => { 
-                    ExcuteEvent(aEvent); 
+                    ExcuteEvent(aEvent);
+                    eventExcuteCallBack.Invoke(events);
                 }
             );
         }
 
-        void ExcuteEvent(AEventViewBase aEvent)
+        void ExcuteEvent(AEventConponent aEvent)
         {
             if ((aEvent as IncreaseItemEventView) != null)
             {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Qitz.EscapeFramework
 {
-    public class DisplayEventView : AEventViewBase
+    public class DisplayEventView : AEventConponent
     {
         [SerializeField, HeaderAttribute("アイテムを表示-非表示切り替え")]
         DisplayEventProgress displayEventProgress;

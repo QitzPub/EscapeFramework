@@ -7,7 +7,7 @@ namespace Qitz.EscapeFramework
 {
     [RequireComponent(typeof(Button))]
     [RequireComponent(typeof(Image))]
-    public abstract class AEventViewBase : MonoBehaviour,IView
+    public abstract class AEventConponent : MonoBehaviour,IView
     {
         [SerializeField]
         EventExecuteTiming eventExecuteTiming;

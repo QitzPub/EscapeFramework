@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Qitz.EscapeFramework
 {
-    public class EventFlagEventView : AEventViewBase
+    public class EventFlagEventView : AEventConponent
     {
         [SerializeField]
         EventType eventType;
