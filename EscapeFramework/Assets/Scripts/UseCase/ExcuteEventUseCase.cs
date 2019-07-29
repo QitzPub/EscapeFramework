@@ -17,63 +17,98 @@ namespace Qitz.EscapeFramework
     public class ExcuteEventUseCase: IExcuteEventUseCase
     {
         IEscapeGameUserDataStore escapeGameUserDataStore;
-        AEventConponent[] events;
-        Action<AEventConponent[]> eventExcuteCallBack;
+        AEvent[] events;
+        Action<AEvent[]> eventExcuteCallBack;
 
-        public ExcuteEventUseCase(IEscapeGameUserDataStore escapeGameUserDataStore, Action<AEventConponent[]> eventExcuteCallBack)
+        public ExcuteEventUseCase(IEscapeGameUserDataStore escapeGameUserDataStore, Action<AEvent[]> eventExcuteCallBack)
         {
-            this.events = UnityEngine.Object.FindObjectsOfType<AEventConponent>();
+            this.events = UnityEngine.Object.FindObjectsOfType<AEvent>();
             this.escapeGameUserDataStore = escapeGameUserDataStore;
             this.eventExcuteCallBack = eventExcuteCallBack;
         }
 
         public void Excute()
         {
+            var normalEvents = events.Select(e => e as AEscapeGameEvent).Where(e => e != null);
+            var itemDropEvents = events.Select(e => e as AItemDropEvent).Where(e => e != null);
             //シーン読み込み時開始になっているものはこのタイミングでイベントが実行される
-            foreach (var aEvent in events.Where(e=>e.EventExecuteTiming == EventExecuteTiming.シーン読み込み時))
+            foreach (var aEvent in normalEvents.Where(e=>e.EventExecuteTiming == EventExecuteTiming.シーン読み込み時))
             {
-                ExcuteEvent(aEvent);
+                ExcuteNormalEvent(aEvent);
             }
             //Viewクリック時に実行されるイベントのセットを行う
-            foreach (var aEvent in events.Where(e => e.EventExecuteTiming == EventExecuteTiming.クリックされた時))
+            foreach (var aEvent in normalEvents.Where(e => e.EventExecuteTiming == EventExecuteTiming.クリックされた時))
             {
                 SetClickEvent(aEvent);
             }
-            //イベントのコールバックを設定
+            //ItemDrop時に実行されるイベントのセットを行う
+            foreach (var ide in itemDropEvents)
+            {
+                ide.DropableView.SetDropAction((itemName)=> {
+                    ExcuteItemDropEvent(ide, itemName);
+                    eventExcuteCallBack.Invoke(events);
+                });
+            }
             eventExcuteCallBack.Invoke(events);
 
         }
 
-        void SetClickEvent(AEventConponent aEvent)
+        void SetClickEvent(AEvent aEvent)
         {
             aEvent.Button.onClick.AddListener(
                 () => { 
-                    ExcuteEvent(aEvent);
+                    ExcuteNormalEvent(aEvent);
                     eventExcuteCallBack.Invoke(events);
                 }
             );
         }
 
-        void ExcuteEvent(AEventConponent aEvent)
+        void ExcuteItemDropEvent(AItemDropEvent itemDropEvent,ItemName dropedItem)
         {
-            if ((aEvent as IncreaseItemEventView) != null)
+            //アイテムドロップ後に実行される処理！　実装する！！
+            if(itemDropEvent.DropedItemName != dropedItem)
             {
-                var itemEvent = aEvent as IncreaseItemEventView;
+                return;
+            }
+
+            if ((itemDropEvent as ItemDropIncreaseItemEvent) != null)
+            {
+                var itemEvent = itemDropEvent as ItemDropIncreaseItemEvent;
                 ExcuteItemIncreaseEvent(itemEvent);
             }
-            else if ((aEvent as DisplayEventView) != null)
+            else if ((itemDropEvent as ItemDropDisplayEvent) != null)
             {
-                var displayEvent = aEvent as DisplayEventView;
+                var displayEvent = itemDropEvent as ItemDropDisplayEvent;
                 ExcuteDisplayEvent(displayEvent);
             }
-            else if ((aEvent as EventFlagEventView) != null)
+            else if ((itemDropEvent as ItemDropEventFlagEvent) != null)
             {
-                var eventFlagEvent = aEvent as EventFlagEventView;
+                var eventFlagEvent = itemDropEvent as ItemDropEventFlagEvent;
+                ExcuteEventFlagEvent(eventFlagEvent);
+            }
+
+        }
+
+        void ExcuteNormalEvent(AEvent aEvent)
+        {
+            if ((aEvent as IncreaseItemEvent) != null)
+            {
+                var itemEvent = aEvent as IncreaseItemEvent;
+                ExcuteItemIncreaseEvent(itemEvent);
+            }
+            else if ((aEvent as DisplayEvent) != null)
+            {
+                var displayEvent = aEvent as DisplayEvent;
+                ExcuteDisplayEvent(displayEvent);
+            }
+            else if ((aEvent as EventFlagEvent) != null)
+            {
+                var eventFlagEvent = aEvent as EventFlagEvent;
                 ExcuteEventFlagEvent(eventFlagEvent);
             }
         }
 
-        void ExcuteEventFlagEvent(EventFlagEventView eventFlagEventView)
+        void ExcuteEventFlagEvent(IEventFlagEvent eventFlagEventView)
         {
             //イベント制限事項を突破しているかどうか判定
             bool isOverTheLimit = JudgeEventIgnitionOverTheLimit(eventFlagEventView.AIgnitionPointBase);
@@ -86,7 +121,7 @@ namespace Qitz.EscapeFramework
         }
 
         //表示-非表示イベントの実行
-        void ExcuteDisplayEvent(DisplayEventView displayEventView)
+        void ExcuteDisplayEvent(IDisplayEvent displayEventView)
         {
             //イベント制限事項を突破しているかどうか判定
             bool isOverTheLimit = JudgeEventIgnitionOverTheLimit(displayEventView.AIgnitionPointBase);
@@ -111,7 +146,7 @@ namespace Qitz.EscapeFramework
         }
 
         //アイテム増加イベントの実行
-        void ExcuteItemIncreaseEvent(IncreaseItemEventView increaseItemEventView)
+        void ExcuteItemIncreaseEvent(IIncreaseItemEvent increaseItemEventView)
         {
 
             //イベント制限事項を突破しているかどうか判定

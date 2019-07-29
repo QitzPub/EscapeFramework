@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Qitz.EscapeFramework
 {
-    [RequireComponent(typeof(AEventConponent))]
+    [RequireComponent(typeof(AEscapeGameEvent))]
     public abstract class AIgnitionPointBase : MonoBehaviour
     {
     }

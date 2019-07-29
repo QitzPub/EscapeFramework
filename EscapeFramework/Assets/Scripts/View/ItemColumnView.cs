@@ -9,6 +9,8 @@ namespace Qitz.EscapeFramework
     {
         [SerializeField]
         Image itemImage;
+        [SerializeField]
+        ItemDragableView itemDragableView;
         IItemSpriteVO itemSpriteVO;
         public IItemSpriteVO ItemSpriteVO => itemSpriteVO;
 
@@ -16,6 +18,7 @@ namespace Qitz.EscapeFramework
         {
             this.itemSpriteVO = itemSpriteVO;
             itemImage.sprite = itemSpriteVO.Sprite;
+            itemDragableView.SetItemName(itemSpriteVO.ItemName);
         }
 
 

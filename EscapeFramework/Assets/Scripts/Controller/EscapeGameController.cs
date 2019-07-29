@@ -9,7 +9,7 @@ namespace Qitz.EscapeFramework
 {
     public interface IEscapeGameController
     {
-        void AddEventExecuteCallBack(Action<AEventConponent[]> addEventExecuteCallBack);
+        void AddEventExecuteCallBack(Action<AEvent[]> addEventExecuteCallBack);
         void AddUserItemListChangeCallBack(Action<List<IItemSpriteVO>> addUserItemListChangeCallBack);
         IEscapeGameDefinsDataStore GetEscapeGameDefins();
     }
@@ -19,10 +19,10 @@ namespace Qitz.EscapeFramework
         [SerializeField]
         EscapeGameRepository repository;
         protected override EscapeGameRepository Repository { get { return repository; } }
-        Action<AEventConponent[]> eventExecuteCallBack;
+        Action<AEvent[]> eventExecuteCallBack;
         Action<List<IItemSpriteVO>> userItemListChangeCallBack;
 
-        public void AddEventExecuteCallBack(Action<AEventConponent[]> addEventExecuteCallBack)
+        public void AddEventExecuteCallBack(Action<AEvent[]> addEventExecuteCallBack)
         {
             eventExecuteCallBack += addEventExecuteCallBack;
         }

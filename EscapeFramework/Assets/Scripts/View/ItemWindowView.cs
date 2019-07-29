@@ -20,7 +20,7 @@ namespace Qitz.EscapeFramework
         {
             int emptyItemCount = this.GetController<EscapeGameController>().GetEscapeGameDefins().MAX_ITEM_LIST_COUNT - itemSpriteVOs.Count;
 
-            itemColumnViews.ForEach(it => Destroy(it));
+            itemColumnViews.ForEach(it => Destroy(it.gameObject));
             itemColumnViews.Clear();
             itemSpriteVOs.ForEach(it =>
             {
