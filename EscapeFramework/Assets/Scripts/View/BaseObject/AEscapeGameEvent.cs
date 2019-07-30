@@ -10,5 +10,8 @@ namespace Qitz.EscapeFramework
         [SerializeField]
         EventExecuteTiming eventExecuteTiming;
         public EventExecuteTiming EventExecuteTiming => eventExecuteTiming;
+
+
+
     }
 }

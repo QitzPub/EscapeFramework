@@ -7,6 +7,7 @@ namespace Qitz.EscapeFramework
     public enum EventType
     {
         トンカチを入手,
+        ぶたの貯金箱を破壊,
     }
 
     public enum EventFlag
@@ -46,6 +47,7 @@ namespace Qitz.EscapeFramework
 
     public enum EventExecuteTiming
     {
+        Update実行,
         シーン読み込み時,
         クリックされた時,
     }

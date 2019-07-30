@@ -62,7 +62,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\View\Editor\EventObjectEditor.cs" />
+    <Compile Include="Assets\Scripts\View\Editor\DisplayEventExtentions.cs" />
+    <Compile Include="Assets\Scripts\View\Editor\EventFlagEventExtentions.cs" />
+    <Compile Include="Assets\Scripts\View\Editor\IncreaseItemEventExtentions.cs" />
+    <Compile Include="Assets\Scripts\View\Editor\ItemDropDisplayEventExtentions.cs" />
+    <Compile Include="Assets\Scripts\View\Editor\ItemDropEventFlagEventExtentions.cs" />
+    <Compile Include="Assets\Scripts\View\Editor\ItemDropIncreaseItemEventExtentions.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/user/Desktop/EscapeFramework/EscapeFramework/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

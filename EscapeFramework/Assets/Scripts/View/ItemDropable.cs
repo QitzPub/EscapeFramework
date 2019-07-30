@@ -13,7 +13,7 @@ namespace Qitz.EscapeFramework
 
         public void SetDropAction(Action<ItemName> dropAction)
         {
-            this.dropAction = dropAction;
+            this.dropAction += dropAction;
         }
 
     }

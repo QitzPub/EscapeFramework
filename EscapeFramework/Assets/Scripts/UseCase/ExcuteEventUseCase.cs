@@ -8,7 +8,7 @@ namespace Qitz.EscapeFramework
 {
     public interface IExcutabel
     {
-        void Excute();
+        void ExcuteSceneLoadTimingEvent();
     }
     public interface IExcuteEventUseCase: IExcutabel
     {
@@ -19,38 +19,61 @@ namespace Qitz.EscapeFramework
         IEscapeGameUserDataStore escapeGameUserDataStore;
         AEvent[] events;
         Action<AEvent[]> eventExcuteCallBack;
+        IEnumerable<AEscapeGameEvent> normalEvents;
+        IEnumerable<AItemDropEvent> itemDropEvents;
 
         public ExcuteEventUseCase(IEscapeGameUserDataStore escapeGameUserDataStore, Action<AEvent[]> eventExcuteCallBack)
         {
             this.events = UnityEngine.Object.FindObjectsOfType<AEvent>();
+            this.normalEvents = events.Select(e => e as AEscapeGameEvent).Where(e => e != null);
+            this.itemDropEvents = events.Select(e => e as AItemDropEvent).Where(e => e != null);
             this.escapeGameUserDataStore = escapeGameUserDataStore;
             this.eventExcuteCallBack = eventExcuteCallBack;
+
+            SetClickEvents();
+            SetItemDropEvent();
+
         }
 
-        public void Excute()
+        public void ExcuteSceneLoadTimingEvent()
         {
-            var normalEvents = events.Select(e => e as AEscapeGameEvent).Where(e => e != null);
-            var itemDropEvents = events.Select(e => e as AItemDropEvent).Where(e => e != null);
+
             //シーン読み込み時開始になっているものはこのタイミングでイベントが実行される
             foreach (var aEvent in normalEvents.Where(e=>e.EventExecuteTiming == EventExecuteTiming.シーン読み込み時))
             {
                 ExcuteNormalEvent(aEvent);
             }
+            eventExcuteCallBack.Invoke(events);
+        }
+
+        public void ExcuteUpdateEvent()
+        {
+            foreach (var aEvent in normalEvents.Where(e => e.EventExecuteTiming == EventExecuteTiming.Update実行))
+            {
+                ExcuteNormalEvent(aEvent);
+            }
+            eventExcuteCallBack.Invoke(events);
+        }
+
+        void SetClickEvents()
+        {
             //Viewクリック時に実行されるイベントのセットを行う
             foreach (var aEvent in normalEvents.Where(e => e.EventExecuteTiming == EventExecuteTiming.クリックされた時))
             {
                 SetClickEvent(aEvent);
             }
+        }
+
+        void SetItemDropEvent()
+        {
             //ItemDrop時に実行されるイベントのセットを行う
             foreach (var ide in itemDropEvents)
             {
-                ide.DropableView.SetDropAction((itemName)=> {
+                ide.DropableView.SetDropAction((itemName) => {
                     ExcuteItemDropEvent(ide, itemName);
                     eventExcuteCallBack.Invoke(events);
                 });
             }
-            eventExcuteCallBack.Invoke(events);
-
         }
 
         void SetClickEvent(AEvent aEvent)
@@ -58,6 +81,8 @@ namespace Qitz.EscapeFramework
             aEvent.Button.onClick.AddListener(
                 () => { 
                     ExcuteNormalEvent(aEvent);
+                    //UPDate時に実行されるイベントも発火する
+                    ExcuteUpdateEvent();
                     eventExcuteCallBack.Invoke(events);
                 }
             );
@@ -111,7 +136,7 @@ namespace Qitz.EscapeFramework
         void ExcuteEventFlagEvent(IEventFlagEvent eventFlagEventView)
         {
             //イベント制限事項を突破しているかどうか判定
-            bool isOverTheLimit = JudgeEventIgnitionOverTheLimit(eventFlagEventView.AIgnitionPointBase);
+            bool isOverTheLimit = JudgeEventIgnitionOverTheLimit((AEvent)eventFlagEventView);
             if (!isOverTheLimit)
             {
                 //イベント制限を突破していないのでイベントは実行されず
@@ -124,7 +149,7 @@ namespace Qitz.EscapeFramework
         void ExcuteDisplayEvent(IDisplayEvent displayEventView)
         {
             //イベント制限事項を突破しているかどうか判定
-            bool isOverTheLimit = JudgeEventIgnitionOverTheLimit(displayEventView.AIgnitionPointBase);
+            bool isOverTheLimit = JudgeEventIgnitionOverTheLimit((AEvent)displayEventView);
             if (!isOverTheLimit)
             {
                 //イベント制限を突破していないのでイベントは実行されず
@@ -133,7 +158,6 @@ namespace Qitz.EscapeFramework
             if(displayEventView.DisplayEventProgress == DisplayEventProgress.表示する)
             {
                 displayEventView.gameObject.SetActive(true);
-
             }
             else if (displayEventView.DisplayEventProgress == DisplayEventProgress.非表示にする)
             {
@@ -150,7 +174,7 @@ namespace Qitz.EscapeFramework
         {
 
             //イベント制限事項を突破しているかどうか判定
-            bool isOverTheLimit = JudgeEventIgnitionOverTheLimit(increaseItemEventView.AIgnitionPointBase);
+            bool isOverTheLimit = JudgeEventIgnitionOverTheLimit((AEvent)increaseItemEventView);
             if (!isOverTheLimit)
             {
                 //イベント制限を突破していないのでイベントは実行されず
@@ -173,59 +197,57 @@ namespace Qitz.EscapeFramework
 
         //↓以下イベント発火制限条件を突破しているかどうかの判定取得
 
-        bool JudgeEventIgnitionOverTheLimit(AIgnitionPointBase aIgnitionPoint)
+        bool JudgeEventIgnitionOverTheLimit(AEvent aEvent)
         {
             //制限条件が設定されていない場合
-            if (aIgnitionPoint == null)
+            if (!aEvent.UseItemRestrictedSetting && !aEvent.UseEventFlagRestrictedSetting)
             {
                 return true;
             }
-            else if((aIgnitionPoint as ItemIGnitionPointSetting) != null)
+            else if(aEvent.UseItemRestrictedSetting)
             {
-                var itemIgnition = aIgnitionPoint as ItemIGnitionPointSetting;
-                return JudgeItemEventIgnitionOverTheLimit(itemIgnition);
+                return JudgeItemEventIgnitionOverTheLimit(aEvent);
             }
-            else if ((aIgnitionPoint as EventFlagIGnitionPointSetting) != null)
+            else if (aEvent.UseEventFlagRestrictedSetting)
             {
-                var eventFlagIgnition = aIgnitionPoint as EventFlagIGnitionPointSetting;
-                return JudgeEventFlagIgnitionOverTheLimit(eventFlagIgnition);
+                return JudgeEventFlagIgnitionOverTheLimit(aEvent);
             }
             else
             {
-                throw new System.Exception($"想定されない形式です:{aIgnitionPoint}");
+                throw new System.Exception($"想定されない形式です");
             }
         }
 
-        bool JudgeItemEventIgnitionOverTheLimit(ItemIGnitionPointSetting aItemIgnitionPoint)
+        bool JudgeItemEventIgnitionOverTheLimit(AEvent aEvent)
         {
-            if(aItemIgnitionPoint.IGnitionPointItem == IGnitionPointItem.アイテムを持っている)
+            if(aEvent.IGnitionPointItem == IGnitionPointItem.アイテムを持っている)
             {
-                return escapeGameUserDataStore.InPossessionItem(aItemIgnitionPoint.ItemName);
+                return escapeGameUserDataStore.InPossessionItem(aEvent.ItemName);
             }
-            else if (aItemIgnitionPoint.IGnitionPointItem == IGnitionPointItem.アイテムを持っていない)
+            else if (aEvent.IGnitionPointItem == IGnitionPointItem.アイテムを持っていない)
             {
-                return !escapeGameUserDataStore.InPossessionItem(aItemIgnitionPoint.ItemName);
+                return !escapeGameUserDataStore.InPossessionItem(aEvent.ItemName);
             }
             else
             {
-                throw new System.Exception($"想定されない形式です:{aItemIgnitionPoint.IGnitionPointItem}");
+                throw new System.Exception($"想定されない形式です");
             }
 
         }
 
-        bool JudgeEventFlagIgnitionOverTheLimit(EventFlagIGnitionPointSetting aEventFlagIgnitionPoint)
+        bool JudgeEventFlagIgnitionOverTheLimit(AEvent aEvent)
         {
-            if(aEventFlagIgnitionPoint.EventFlag == EventFlag.ON)
+            if(aEvent.EventFlag == EventFlag.ON)
             {
-                return escapeGameUserDataStore.GetEventFlagValue(aEventFlagIgnitionPoint.EventType);
+                return escapeGameUserDataStore.GetEventFlagValue(aEvent.EventType);
             }
-            else if (aEventFlagIgnitionPoint.EventFlag == EventFlag.OFF)
+            else if (aEvent.EventFlag == EventFlag.OFF)
             {
-                return !escapeGameUserDataStore.GetEventFlagValue(aEventFlagIgnitionPoint.EventType);
+                return !escapeGameUserDataStore.GetEventFlagValue(aEvent.EventType);
             }
             else
             {
-                throw new System.Exception($"想定されない形式です:{aEventFlagIgnitionPoint.EventFlag}");
+                throw new System.Exception($"想定されない形式です");
             }
         }
 

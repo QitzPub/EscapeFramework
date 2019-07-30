@@ -7,7 +7,6 @@ namespace Qitz.EscapeFramework
     public interface IDisplayEvent
     {
         DisplayEventProgress DisplayEventProgress { get; }
-        AIgnitionPointBase AIgnitionPointBase { get; }
         GameObject gameObject { get; }
     }
     public class DisplayEvent : AEscapeGameEvent, IDisplayEvent

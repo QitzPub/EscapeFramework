@@ -9,7 +9,6 @@ namespace Qitz.EscapeFramework
         ItemName ItemName { get; }
         ItemEventProgress ItemEventProgress { get; }
         ItemVO ItemVO { get; }
-        AIgnitionPointBase AIgnitionPointBase { get; }
         GameObject gameObject { get; }
     }
     public class IncreaseItemEvent : AEscapeGameEvent, IIncreaseItemEvent

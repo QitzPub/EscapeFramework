@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 namespace Qitz.EscapeFramework
 {
@@ -21,6 +22,7 @@ namespace Qitz.EscapeFramework
         protected override EscapeGameRepository Repository { get { return repository; } }
         Action<AEvent[]> eventExecuteCallBack;
         Action<List<IItemSpriteVO>> userItemListChangeCallBack;
+        ExcuteEventUseCase excuteEventUseCase;
 
         public void AddEventExecuteCallBack(Action<AEvent[]> addEventExecuteCallBack)
         {
@@ -32,33 +34,45 @@ namespace Qitz.EscapeFramework
             userItemListChangeCallBack += addUserItemListChangeCallBack;
         }
 
-
         void Awake()
         {
             repository.Initialize();
+            excuteEventUseCase = new ExcuteEventUseCase(repository.EscapeGameUserDataStore,
+                (events) => {
+                                //イベント実行後のコールバック
+                                //ユーザーデータのアイテム数をItemViewに反映させる処理など
+                                eventExecuteCallBack?.Invoke(events);
+                                userItemListChangeCallBack?.Invoke(repository.UserPossessionItemSpriteList);
+                    });
         }
 
         void Start()
         {
-            ExecuteEvent();
+            ExecuteEvent(excuteEventUseCase);
+            StartCoroutine(ExcuteUpdateEvent(excuteEventUseCase));
             SceneManager.sceneLoaded += SceneLoaded;
         }
 
         void SceneLoaded(Scene nextScene, LoadSceneMode mode)
         {
-            ExecuteEvent();
+            ExecuteEvent(excuteEventUseCase);
         }
 
-        void ExecuteEvent()
+        void ExecuteEvent(ExcuteEventUseCase excuteEventUseCase)
         {
-            var excuteEventUseCase = new ExcuteEventUseCase(repository.EscapeGameUserDataStore,
-                (events)=> {
-                    //イベント実行後のコールバック
-                    //ユーザーデータのアイテム数をItemViewに反映させる処理など
-                    eventExecuteCallBack?.Invoke(events);
-                    userItemListChangeCallBack?.Invoke(repository.UserPossessionItemSpriteList);
-            });
-            excuteEventUseCase.Excute();
+            excuteEventUseCase.ExcuteSceneLoadTimingEvent();
+        }
+
+        //UpdateEventを実行するタイムスパン
+        const float UPDATE_EVENT_EXCUTE_SPAN = 1.0f;
+        IEnumerator ExcuteUpdateEvent(ExcuteEventUseCase excuteEventUseCase)
+        {
+            while (true)
+            {
+                yield return new WaitForSeconds(UPDATE_EVENT_EXCUTE_SPAN);
+                excuteEventUseCase.ExcuteUpdateEvent();
+            }
+            yield return null;
         }
 
         public IEscapeGameDefinsDataStore GetEscapeGameDefins()

@@ -283,9 +283,7 @@ GameObject:
   - component: {fileID: 1440744662}
   - component: {fileID: 1440744663}
   - component: {fileID: 1440744667}
-  - component: {fileID: 1440744666}
   - component: {fileID: 1440744665}
-  - component: {fileID: 1440744664}
   m_Layer: 5
   m_Name: Tonkati
   m_TagString: Untagged
@@ -418,20 +416,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &1440744664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1440744658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 359e9775453ec449786438e560037e2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: 0
-  ignitionPointItem: 0
 --- !u!114 &1440744665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -444,23 +428,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bc7e43669ba34aaeb291a31cb0ca081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aIgnitionPointBase: {fileID: 1440744664}
+  UseItemRestrictedSetting: 1
+  ItemName: 0
+  IGnitionPointItem: 0
+  UseEventFlagRestrictedSetting: 0
+  EventType: 0
+  EventFlag: 0
   eventExecuteTiming: 0
-  displayEventProgress: 1
---- !u!114 &1440744666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1440744658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bc7e43669ba34aaeb291a31cb0ca081, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aIgnitionPointBase: {fileID: 0}
-  eventExecuteTiming: 1
   displayEventProgress: 1
 --- !u!114 &1440744667
 MonoBehaviour:
@@ -474,8 +448,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2928bcea137e3499fadfb91bd9ed2307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aIgnitionPointBase: {fileID: 0}
-  eventExecuteTiming: 1
+  UseItemRestrictedSetting: 0
+  ItemName: 0
+  IGnitionPointItem: 0
+  UseEventFlagRestrictedSetting: 0
+  EventType: 0
+  EventFlag: 0
+  eventExecuteTiming: 2
   itemName: 0
   itemEventProgress: 0
 --- !u!1001 &1535903592

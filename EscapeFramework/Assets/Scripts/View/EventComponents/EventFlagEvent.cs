@@ -9,7 +9,6 @@ namespace Qitz.EscapeFramework
         EventType EventType { get; }
         EventFlag EventFlag { get; }
         EventFlagVO EventFlagVO { get; }
-        AIgnitionPointBase AIgnitionPointBase { get; }
         GameObject gameObject { get; }
     }
 
