@@ -5,4 +5,5 @@ using UnityEngine;
 public enum ItemName
 {
     トンカチ=0,
+    鍵 =1,
 }

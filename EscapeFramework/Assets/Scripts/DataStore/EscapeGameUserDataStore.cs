@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Qitz.EscapeFramework
 {
-    public interface IEscapeGameUserDataStore: ICanHoldItems, ICanHoldEvents
+    public interface IEscapeGameUserDataStore: ICanHoldItems, ICanHoldEvents, ICanHoldCountEvents
     {
         bool GetEventFlagValue(IEventFlagVO eventFlagVO);
         bool GetEventFlagValue(EventType eventType);
@@ -19,11 +19,14 @@ namespace Qitz.EscapeFramework
 
         const string SAVE_KEY = "EscapeGameSaveData";
         IEscapeGameUserVO userVO;
+        List<CountEventSetting> countEventSettings;
 
         public IEscapeGameUserVO UserVO => userVO;
         public List<ItemVO> Items => UserVO.Items;
 
         public List<EventFlagVO> EventFlags => UserVO.EventFlags;
+
+        public List<CountEventVO> CountEvents => UserVO.CountEvents;
 
         void SaveUserData()
         {
@@ -92,8 +95,52 @@ namespace Qitz.EscapeFramework
             SaveUserData();
         }
 
-        public EscapeGameUserDataStore()
+        public void IncrementEventCount(CountEventType countEvent)
         {
+            var cev = CountEvents.FirstOrDefault(ce=>ce.CountEventType == countEvent);
+            var countEventSetting = countEventSettings.FirstOrDefault(ces=>ces.CountEventType == countEvent);
+            if(countEventSetting == null)
+            {
+                throw new Exception($"カウントイベント設定データが設定されていません{countEvent}");
+            }
+            if (cev == null)
+            {
+                UserVO.AddCountEvent(countEvent);
+                cev = CountEvents.FirstOrDefault(ce => ce.CountEventType == countEvent);
+            }
+            if (cev.Count < countEventSetting.MaxCount)
+            {
+                UserVO.IncrementEventCount(countEvent);
+                SaveUserData();
+            }
+
+        }
+
+        public void DecrementEventCount(CountEventType countEvent)
+        {
+            var cev = CountEvents.FirstOrDefault(ce => ce.CountEventType == countEvent);
+            var countEventSetting = countEventSettings.FirstOrDefault(ces => ces.CountEventType == countEvent);
+            if (countEventSetting == null)
+            {
+                throw new Exception($"カウントイベント設定データが設定されていません{countEvent}");
+            }
+            if(cev == null)
+            {
+                UserVO.AddCountEvent(countEvent);
+                cev = CountEvents.FirstOrDefault(ce => ce.CountEventType == countEvent);
+            }
+
+            if (cev.Count > countEventSetting.MinCount)
+            {
+                UserVO.DecrementEventCount(countEvent);
+                SaveUserData();
+            }
+
+        }
+
+        public EscapeGameUserDataStore(List<CountEventSetting> countEventSettings)
+        {
+            this.countEventSettings = countEventSettings;
             userVO = LoadUserData();
             if (userVO == null)
             {
@@ -115,9 +162,16 @@ namespace Qitz.EscapeFramework
         List<EventFlagVO> EventFlags { get; }
         void SetEventFlag(EventFlagVO eventFlag);
     }
-
-    public interface IEscapeGameUserVO: ICanHoldItems, ICanHoldEvents
+    public interface ICanHoldCountEvents
     {
+        List<CountEventVO> CountEvents { get; }
+        void IncrementEventCount(CountEventType countEvent);
+        void DecrementEventCount(CountEventType countEvent);
+    }
+
+    public interface IEscapeGameUserVO: ICanHoldItems, ICanHoldEvents, ICanHoldCountEvents
+    {
+        void AddCountEvent(CountEventType countEvent);
         string ToJson();
     }
 
@@ -130,10 +184,15 @@ namespace Qitz.EscapeFramework
         List<ItemVO> items = new List<ItemVO>();
         [SerializeField]
         List<EventFlagVO> eventFlags = new List<EventFlagVO>();
+        [SerializeField]
+        List<CountEventVO> countEvents = new List<CountEventVO>();
+
 
         public List<ItemVO> Items => items;
 
         public List<EventFlagVO> EventFlags => eventFlags;
+
+        public List<CountEventVO> CountEvents => countEvents;
 
         public void AddItem(ItemVO item)
         {
@@ -143,6 +202,41 @@ namespace Qitz.EscapeFramework
         public void DecreaseItem(ItemVO item)
         {
             items.Remove(item);
+        }
+        public void AddCountEvent(CountEventType countEvent)
+        {
+            CountEventVO cEvent = new CountEventVO(countEvent);
+            CountEvents.Add(cEvent);
+        }
+
+        public void DecrementEventCount(CountEventType countEvent)
+        {
+            bool existCountEvent = countEvents.Exists(ce => ce.CountEventType == countEvent);
+            if (existCountEvent)
+            {
+                CountEvents.FirstOrDefault(ce => ce.CountEventType == countEvent).DecrementCount();
+            }
+            else
+            {
+                CountEventVO cEvent = new CountEventVO(countEvent);
+                cEvent.DecrementCount();
+                CountEvents.Add(cEvent);
+            }
+        }
+
+        public void IncrementEventCount(CountEventType countEvent)
+        {
+            bool existCountEvent = countEvents.Exists(ce=>ce.CountEventType == countEvent);
+            if (existCountEvent)
+            {
+                CountEvents.FirstOrDefault(ce => ce.CountEventType == countEvent).IncrementCount();
+            }
+            else
+            {
+                CountEventVO cEvent = new CountEventVO(countEvent);
+                cEvent.IncrementCount();
+                CountEvents.Add(cEvent);
+            }
         }
 
         public void SetEventFlag(EventFlagVO eventFlag)

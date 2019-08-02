@@ -10,6 +10,7 @@ namespace Qitz.EscapeFramework
         IItemDataStore ItemDataStore { get; }
         IEscapeGameUserDataStore EscapeGameUserDataStore { get; }
         IEscapeGameDefinsDataStore EscapeGameDefinsDataStore { get; }
+        List<CountEventSetting> CountEventSettings { get; }
     }
     //[CreateAssetMenu]
     public class EscapeGameRepository : ARepository, IEscapeGameRepository
@@ -26,14 +27,19 @@ namespace Qitz.EscapeFramework
         EscapeGameDefinsDataStore escapeGameDefinsDataStore;
         public IEscapeGameDefinsDataStore EscapeGameDefinsDataStore => escapeGameDefinsDataStore;
 
+        [SerializeField]
+        CountEventDataStore countEventDataStore;
+
         //ユーザーが持っている持ち物のアイテムSpriteList
         public List<IItemSpriteVO> UserPossessionItemSpriteList => escapeGameUserDataStore.Items.Select(iv => itemDataStore.GetItemFromItemName(iv.ItemName)).ToList();
         //ゲーム中の全アイテムSpriteList
         public List<IItemSpriteVO> AllItemSpriteList => itemDataStore.Items;
+        //カウントダウンイベント用
+        public List<CountEventSetting> CountEventSettings => countEventDataStore.CountEventSettings;
 
         public void Initialize()
         {
-            escapeGameUserDataStore = new EscapeGameUserDataStore();
+            escapeGameUserDataStore = new EscapeGameUserDataStore(CountEventSettings);
         }
 
     }

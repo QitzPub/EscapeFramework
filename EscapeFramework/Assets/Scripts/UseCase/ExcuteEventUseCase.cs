@@ -43,6 +43,7 @@ namespace Qitz.EscapeFramework
             {
                 ExcuteNormalEvent(aEvent);
             }
+            ExcuteUpdateEvent();
             eventExcuteCallBack.Invoke(events);
         }
 

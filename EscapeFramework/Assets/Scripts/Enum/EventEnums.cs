@@ -8,6 +8,7 @@ namespace Qitz.EscapeFramework
     {
         トンカチを入手,
         ぶたの貯金箱を破壊,
+        金庫を開ける,
     }
 
     public enum EventFlag
@@ -25,6 +26,13 @@ namespace Qitz.EscapeFramework
     {
         アイテムを増やす,
         アイテムを減らす,
+    }
+    public enum CountEventType
+    {
+        ダイアルロック上の数字,
+        ダイアルロック真ん中上の数字,
+        ダイアルロック真ん中下の数字,
+        ダイアルロック下の数字,
     }
 
     public enum ItemPossession
