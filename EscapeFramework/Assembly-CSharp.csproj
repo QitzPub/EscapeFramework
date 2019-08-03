@@ -92,10 +92,14 @@
     <Compile Include="Assets\Scripts\View\BaseObject\AItemDropEvent.cs" />
     <Compile Include="Assets\Scripts\View\EventComponents\DisplayEvent.cs" />
     <Compile Include="Assets\Scripts\View\EventComponents\EventFlagEvent.cs" />
-    <Compile Include="Assets\Scripts\View\EventComponents\IncreaseItemEvent.cs" />
+    <Compile Include="Assets\Scripts\View\EventComponents\IncreaseAndDecreaseCountEvent.cs" />
+    <Compile Include="Assets\Scripts\View\EventComponents\IncreaseAndDecreaseItemEvent.cs" />
     <Compile Include="Assets\Scripts\View\EventComponents\ItemDropDisplayEvent.cs" />
     <Compile Include="Assets\Scripts\View\EventComponents\ItemDropEventFlagEvent.cs" />
+    <Compile Include="Assets\Scripts\View\EventComponents\ItemDropIncreaseAndDecreaseCountEvent.cs" />
     <Compile Include="Assets\Scripts\View\EventComponents\ItemDropIncreaseItemEvent.cs" />
+    <Compile Include="Assets\Scripts\View\EventComponents\ItemDropSpriteChangeEvent.cs" />
+    <Compile Include="Assets\Scripts\View\EventComponents\SpriteChangeEvent.cs" />
     <Compile Include="Assets\Scripts\View\ItemColumnView.cs" />
     <Compile Include="Assets\Scripts\View\ItemDragableView.cs" />
     <Compile Include="Assets\Scripts\View\ItemDropable.cs" />

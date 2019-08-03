@@ -34,6 +34,19 @@ namespace Qitz.EscapeFramework
 
         //====================================
 
+        //====================================
+        [HeaderAttribute("カウントイベントによるイベント発火制限をかける")]
+        public bool UseCountEventRestrictedSetting = false;
+
+        [HideInInspector]
+        public CountEventType CountEventName;
+        [HideInInspector]
+        public int CountEventValue;
+        [HideInInspector]
+        public CountEventJudge CountEventJudge;
+
+        //====================================
+
     }
 
 }

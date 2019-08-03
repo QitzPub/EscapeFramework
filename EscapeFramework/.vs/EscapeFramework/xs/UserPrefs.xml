@@ -1,14 +1,19 @@
 ﻿<Properties StartupConfiguration="{C9900E98-A63D-0522-C79D-6228823C21E5}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UseCase/ExcuteEventUseCase.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/View/Editor/SpriteChangeEventExtentions.cs">
     <Files>
-      <File FileName="Assets/Scripts/View/EventComponents/ItemDropIncreaseItemEvent.cs" Line="7" Column="43" />
-      <File FileName="Assets/Scripts/VO/CountEventVO.cs" Line="42" Column="35" />
-      <File FileName="Assets/Scripts/UseCase/ExcuteEventUseCase.cs" Line="25" Column="16" />
-      <File FileName="Assets/Scripts/Enum/EventEnums.cs" Line="30" Column="31" NotebookId="1" />
-      <File FileName="Assets/Scripts/DataStore/ItemDataStore.cs" Line="12" Column="44" NotebookId="1" />
-      <File FileName="Assets/Scripts/Repository/EscapeGameRepository.cs" Line="24" Column="57" NotebookId="1" />
-      <File FileName="Assets/Scripts/DataStore/EscapeGameUserDataStore.cs" Line="17" Column="55" NotebookId="1" />
-      <File FileName="Assets/Scripts/Controller/EscapeGameController.cs" Line="40" Column="46" NotebookId="1" />
+      <File FileName="Assets/Scripts/VO/CountEventVO.cs" Line="16" Column="30" />
+      <File FileName="Assets/Scripts/View/EventComponents/ItemDropDisplayEvent.cs" Line="5" Column="1" />
+      <File FileName="Assets/Scripts/View/BaseObject/AEvent.cs" Line="45" Column="26" />
+      <File FileName="Assets/Scripts/View/Editor/DisplayEventExtentions.cs" Line="31" Column="41" NotebookId="1" />
+      <File FileName="Assets/Scripts/View/Editor/EventFlagEventExtentions.cs" Line="41" Column="14" NotebookId="1" />
+      <File FileName="Assets/Scripts/View/Editor/IncreaseAndDecreaseCountEventExtentions.cs" Line="14" Column="6" NotebookId="1" />
+      <File FileName="Assets/Scripts/View/Editor/IncreaseItemEventExtentions.cs" Line="18" Column="47" NotebookId="1" />
+      <File FileName="Assets/Scripts/View/Editor/ItemDropDisplayEventExtentions.cs" Line="28" Column="47" NotebookId="1" />
+      <File FileName="Assets/Scripts/View/Editor/ItemDropEventFlagEventExtentions.cs" Line="26" Column="47" NotebookId="1" />
+      <File FileName="Assets/Scripts/View/Editor/ItemDropIncreaseAndDecreaseCountEventExtentions.cs" Line="17" Column="41" NotebookId="1" />
+      <File FileName="Assets/Scripts/View/Editor/ItemDropIncreaseItemEventExtentions.cs" Line="41" Column="14" NotebookId="1" />
+      <File FileName="Assets/Scripts/View/Editor/ItemDropSpriteChangeEventExtentions.cs" Line="12" Column="53" NotebookId="1" />
+      <File FileName="Assets/Scripts/View/Editor/SpriteChangeEventExtentions.cs" Line="27" Column="14" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

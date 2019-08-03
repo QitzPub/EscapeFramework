@@ -4,15 +4,15 @@ using UnityEngine;
 
 namespace Qitz.EscapeFramework
 {
-    public class ItemDropIncreaseItemEvent : AItemDropEvent, IIncreaseItemEvent
+    public class ItemDropIncreaseItemEvent : AItemDropEvent, IIncreaseAndDecreaseItemEvent
     {
         [SerializeField, HeaderAttribute("以下アイテムを")]
         ItemName itemName;
         [SerializeField]
-        ItemEventProgress itemEventProgress;
+        EventProgress itemEventProgress;
 
         public ItemName ItemName => itemName;
-        public ItemEventProgress ItemEventProgress => itemEventProgress;
+        public EventProgress ItemEventProgress => itemEventProgress;
         public ItemVO ItemVO => new ItemVO(itemName);
     }
 }

@@ -4,22 +4,22 @@ using UnityEngine;
 
 namespace Qitz.EscapeFramework
 {
-    public interface IIncreaseItemEvent
+    public interface IIncreaseAndDecreaseItemEvent
     {
         ItemName ItemName { get; }
-        ItemEventProgress ItemEventProgress { get; }
+        EventProgress ItemEventProgress { get; }
         ItemVO ItemVO { get; }
         GameObject gameObject { get; }
     }
-    public class IncreaseItemEvent : AEscapeGameEvent, IIncreaseItemEvent
+    public class IncreaseAndDecreaseItemEvent : AEscapeGameEvent, IIncreaseAndDecreaseItemEvent
     {
         [SerializeField, HeaderAttribute("以下アイテムを")]
         ItemName itemName;
         [SerializeField]
-        ItemEventProgress itemEventProgress;
+        EventProgress itemEventProgress;
 
         public ItemName ItemName => itemName;
-        public ItemEventProgress ItemEventProgress => itemEventProgress;
+        public EventProgress ItemEventProgress => itemEventProgress;
         public ItemVO ItemVO => new ItemVO(itemName);
     }
 }

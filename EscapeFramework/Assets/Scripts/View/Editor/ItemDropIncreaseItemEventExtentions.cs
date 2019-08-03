@@ -31,6 +31,15 @@ namespace Qitz.EscapeFramework
                 EditorGUILayout.LabelField("時にイベントが実行可能");
                 EditorGUILayout.LabelField("========================================");
             }
+            if (_target.UseCountEventRestrictedSetting)
+            {
+                EditorGUILayout.LabelField("=======カウントイベント実行制限==========");
+                _target.EventType = (EventType)EditorGUILayout.EnumPopup("対象のカウントイベント:", _target.CountEventName);
+                _target.CountEventValue = (int)EditorGUILayout.IntField("カウントイベントの値", _target.CountEventValue);
+                _target.CountEventJudge = (CountEventJudge)EditorGUILayout.EnumPopup("", _target.CountEventJudge);
+                EditorGUILayout.LabelField("時にイベントが実行可能");
+                EditorGUILayout.LabelField("========================================");
+            }
             base.OnInspectorGUI();
         }
     }

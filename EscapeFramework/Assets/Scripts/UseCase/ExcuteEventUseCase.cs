@@ -117,9 +117,9 @@ namespace Qitz.EscapeFramework
 
         void ExcuteNormalEvent(AEvent aEvent)
         {
-            if ((aEvent as IncreaseItemEvent) != null)
+            if ((aEvent as IncreaseAndDecreaseItemEvent) != null)
             {
-                var itemEvent = aEvent as IncreaseItemEvent;
+                var itemEvent = aEvent as IncreaseAndDecreaseItemEvent;
                 ExcuteItemIncreaseEvent(itemEvent);
             }
             else if ((aEvent as DisplayEvent) != null)
@@ -171,7 +171,7 @@ namespace Qitz.EscapeFramework
         }
 
         //アイテム増加イベントの実行
-        void ExcuteItemIncreaseEvent(IIncreaseItemEvent increaseItemEventView)
+        void ExcuteItemIncreaseEvent(IIncreaseAndDecreaseItemEvent increaseItemEventView)
         {
 
             //イベント制限事項を突破しているかどうか判定
@@ -182,12 +182,11 @@ namespace Qitz.EscapeFramework
                 return;
             }
 
-            if (increaseItemEventView.ItemEventProgress == ItemEventProgress.アイテムを増やす)
+            if (increaseItemEventView.ItemEventProgress == EventProgress.増やす)
             {
                 escapeGameUserDataStore.AddItem(increaseItemEventView.ItemVO);
             }
-            else if (increaseItemEventView.ItemEventProgress == ItemEventProgress.アイテムを減らす)
-            {
+            else if (increaseItemEventView.ItemEventProgress == EventProgress.減らす){
                 escapeGameUserDataStore.DecreaseItem(increaseItemEventView.ItemVO);
             }
             else

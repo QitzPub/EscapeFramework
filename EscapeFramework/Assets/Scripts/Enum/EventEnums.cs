@@ -22,10 +22,10 @@ namespace Qitz.EscapeFramework
         非表示にする,
 
     }
-    public enum ItemEventProgress
+    public enum EventProgress
     {
-        アイテムを増やす,
-        アイテムを減らす,
+        増やす,
+        減らす,
     }
     public enum CountEventType
     {
@@ -58,6 +58,12 @@ namespace Qitz.EscapeFramework
         Update実行,
         シーン読み込み時,
         クリックされた時,
+    }
+    public enum CountEventJudge
+    {
+        等しい,
+        以上,
+        以下,
     }
 
 }
