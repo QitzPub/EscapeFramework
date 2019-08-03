@@ -138,6 +138,12 @@ namespace Qitz.EscapeFramework
 
         }
 
+        public int GetCountEventValue(CountEventType countEvent)
+        {
+            return UserVO.GetCountEventValue(countEvent);
+            SaveUserData();
+        }
+
         public EscapeGameUserDataStore(List<CountEventSetting> countEventSettings)
         {
             this.countEventSettings = countEventSettings;
@@ -167,6 +173,7 @@ namespace Qitz.EscapeFramework
         List<CountEventVO> CountEvents { get; }
         void IncrementEventCount(CountEventType countEvent);
         void DecrementEventCount(CountEventType countEvent);
+        int GetCountEventValue(CountEventType countEvent);
     }
 
     public interface IEscapeGameUserVO: ICanHoldItems, ICanHoldEvents, ICanHoldCountEvents
@@ -255,6 +262,17 @@ namespace Qitz.EscapeFramework
         public string ToJson()
         {
             return JsonUtility.ToJson(this);
+        }
+
+        public int GetCountEventValue(CountEventType countEvent)
+        {
+            var vo = CountEvents.FirstOrDefault(ce => ce.CountEventType == countEvent);
+            if(vo == null)
+            {
+                vo = new CountEventVO(countEvent);
+                CountEvents.Add(vo);
+            }
+            return vo.Count;
         }
     }
 }

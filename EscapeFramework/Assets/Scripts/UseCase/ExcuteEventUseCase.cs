@@ -58,7 +58,6 @@ namespace Qitz.EscapeFramework
 
         void SetClickEvents()
         {
-            //Viewクリック時に実行されるイベントのセットを行う
             foreach (var aEvent in normalEvents.Where(e => e.EventExecuteTiming == EventExecuteTiming.クリックされた時))
             {
                 SetClickEvent(aEvent);
@@ -112,6 +111,16 @@ namespace Qitz.EscapeFramework
                 var eventFlagEvent = itemDropEvent as ItemDropEventFlagEvent;
                 ExcuteEventFlagEvent(eventFlagEvent);
             }
+            else if ((itemDropEvent as ItemDropIncreaseAndDecreaseCountEvent) != null)
+            {
+                var countEvent = itemDropEvent as ItemDropIncreaseAndDecreaseCountEvent;
+                ExcuteCountIncreaseAndDecreaseEvent(countEvent);
+            }
+            else if ((itemDropEvent as ItemDropSpriteChangeEvent) != null)
+            {
+                var spriteChangeEvent = itemDropEvent as ItemDropSpriteChangeEvent;
+                ExcuteSpriteChangeEvent(spriteChangeEvent);
+            }
 
         }
 
@@ -131,6 +140,16 @@ namespace Qitz.EscapeFramework
             {
                 var eventFlagEvent = aEvent as EventFlagEvent;
                 ExcuteEventFlagEvent(eventFlagEvent);
+            }
+            else if ((aEvent as IncreaseAndDecreaseCountEvent) != null)
+            {
+                var countEvent = aEvent as IncreaseAndDecreaseCountEvent;
+                ExcuteCountIncreaseAndDecreaseEvent(countEvent);
+            }
+            else if ((aEvent as SpriteChangeEvent) != null)
+            {
+                var spriteChangeEvent = aEvent as SpriteChangeEvent;
+                ExcuteSpriteChangeEvent(spriteChangeEvent);
             }
         }
 
@@ -194,6 +213,48 @@ namespace Qitz.EscapeFramework
                 throw new System.Exception($"想定されない形式です:{increaseItemEventView.ItemEventProgress}");
             }
         }
+        //カウント増減イベントの実行
+        void ExcuteCountIncreaseAndDecreaseEvent(IIncreaseAndDecreaseCountEvent countEvent)
+        {
+
+            //イベント制限事項を突破しているかどうか判定
+            bool isOverTheLimit = JudgeCountEventIgnitionOverTheLimit((AEvent)countEvent);
+            if (!isOverTheLimit)
+            {
+                //イベント制限を突破していないのでイベントは実行されず
+                return;
+            }
+
+            if (countEvent.EventProgress == EventProgress.増やす)
+            {
+                escapeGameUserDataStore.IncrementEventCount(countEvent.CountEventName);
+            }
+            else if (countEvent.EventProgress == EventProgress.減らす)
+            {
+                escapeGameUserDataStore.DecrementEventCount(countEvent.CountEventName);
+            }
+            else
+            {
+                throw new System.Exception($"想定されない形式です:{countEvent.CountEventName}");
+            }
+        }
+
+        void ExcuteSpriteChangeEvent(ISpriteChangeEvent spriteChangeEvent)
+        {
+            //イベント制限事項を突破しているかどうか判定
+            bool isOverTheLimit = JudgeEventIgnitionOverTheLimit((AEvent)spriteChangeEvent);
+            if (!isOverTheLimit)
+            {
+                //イベント制限を突破していないのでイベントは実行されず
+                return;
+            }
+
+            ((AEvent)spriteChangeEvent).Image.sprite = spriteChangeEvent.ChangeSprite;
+        }
+
+        //======================================================================
+        //======================================================================
+
 
         //↓以下イベント発火制限条件を突破しているかどうかの判定取得
 
@@ -244,6 +305,26 @@ namespace Qitz.EscapeFramework
             else if (aEvent.EventFlag == EventFlag.OFF)
             {
                 return !escapeGameUserDataStore.GetEventFlagValue(aEvent.EventType);
+            }
+            else
+            {
+                throw new System.Exception($"想定されない形式です");
+            }
+        }
+
+        bool JudgeCountEventIgnitionOverTheLimit(AEvent aEvent)
+        {
+            if (aEvent.CountEventJudge == CountEventJudge.等しい)
+            {
+                return escapeGameUserDataStore.GetCountEventValue(aEvent.CountEventName) == aEvent.CountEventValue;
+            }
+            else if (aEvent.CountEventJudge == CountEventJudge.以上)
+            {
+                return escapeGameUserDataStore.GetCountEventValue(aEvent.CountEventName) >= aEvent.CountEventValue;
+            }
+            else if (aEvent.CountEventJudge == CountEventJudge.以下)
+            {
+                return escapeGameUserDataStore.GetCountEventValue(aEvent.CountEventName) <= aEvent.CountEventValue;
             }
             else
             {

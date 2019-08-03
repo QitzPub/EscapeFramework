@@ -20,7 +20,7 @@ namespace Qitz.EscapeFramework
         public CountEventType CountEventType => countEventType;
         [SerializeField,HideInInspector]
         int count = 0;
-        public int Count => Count;
+        public int Count => count;
 
         public CountEventVO(CountEventType countEventType)
         {

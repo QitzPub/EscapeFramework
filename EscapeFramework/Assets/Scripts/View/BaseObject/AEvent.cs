@@ -11,6 +11,7 @@ namespace Qitz.EscapeFramework
     public abstract class AEvent : MonoBehaviour
     {
         public Button Button => this.GetComponent<Button>();
+        public Image Image => this.GetComponent<Image>();
 
         //====================================
         [HeaderAttribute("アイテム所持判定のイベント発火制限をかける")]
