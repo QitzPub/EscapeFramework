@@ -19,7 +19,6 @@ namespace Qitz.EscapeFramework
 
         const string SAVE_KEY = "EscapeGameSaveData";
         IEscapeGameUserVO userVO;
-        List<CountEventSetting> countEventSettings;
 
         public IEscapeGameUserVO UserVO => userVO;
         public List<ItemVO> Items => UserVO.Items;
@@ -98,43 +97,32 @@ namespace Qitz.EscapeFramework
         public void IncrementEventCount(CountEventType countEvent)
         {
             var cev = CountEvents.FirstOrDefault(ce=>ce.CountEventType == countEvent);
-            var countEventSetting = countEventSettings.FirstOrDefault(ces=>ces.CountEventType == countEvent);
-            if(countEventSetting == null)
-            {
-                throw new Exception($"カウントイベント設定データが設定されていません{countEvent}");
-            }
             if (cev == null)
             {
                 UserVO.AddCountEvent(countEvent);
                 cev = CountEvents.FirstOrDefault(ce => ce.CountEventType == countEvent);
             }
-            if (cev.Count < countEventSetting.MaxCount)
-            {
-                UserVO.IncrementEventCount(countEvent);
-                SaveUserData();
-            }
+            UserVO.IncrementEventCount(countEvent);
+            SaveUserData();
 
         }
 
         public void DecrementEventCount(CountEventType countEvent)
         {
             var cev = CountEvents.FirstOrDefault(ce => ce.CountEventType == countEvent);
-            var countEventSetting = countEventSettings.FirstOrDefault(ces => ces.CountEventType == countEvent);
-            if (countEventSetting == null)
-            {
-                throw new Exception($"カウントイベント設定データが設定されていません{countEvent}");
-            }
+            //var countEventSetting = countEventSettings.FirstOrDefault(ces => ces.CountEventType == countEvent);
+            //if (countEventSetting == null)
+            //{
+            //    throw new Exception($"カウントイベント設定データが設定されていません{countEvent}");
+            //}
             if(cev == null)
             {
                 UserVO.AddCountEvent(countEvent);
                 cev = CountEvents.FirstOrDefault(ce => ce.CountEventType == countEvent);
             }
 
-            if (cev.Count > countEventSetting.MinCount)
-            {
-                UserVO.DecrementEventCount(countEvent);
-                SaveUserData();
-            }
+            UserVO.DecrementEventCount(countEvent);
+            SaveUserData();
 
         }
         public void SetDefaultEventCount(CountEventType countEvent)
@@ -151,9 +139,9 @@ namespace Qitz.EscapeFramework
 
 
 
-        public EscapeGameUserDataStore(List<CountEventSetting> countEventSettings)
+        public EscapeGameUserDataStore()
         {
-            this.countEventSettings = countEventSettings;
+            //this.countEventSettings = countEventSettings;
             userVO = LoadUserData();
             if (userVO == null)
             {

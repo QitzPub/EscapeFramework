@@ -1,9 +1,11 @@
 ﻿<Properties StartupConfiguration="{C9900E98-A63D-0522-C79D-6228823C21E5}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/View/EventComponents/IncreaseAndDecreaseCountEvent.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DataStore/EscapeGameUserDataStore.cs">
     <Files>
-      <File FileName="Assets/Scripts/UseCase/ExcuteEventUseCase.cs" Line="225" Column="20" />
+      <File FileName="Assets/Scripts/UseCase/ExcuteEventUseCase.cs" Line="300" Column="49" />
       <File FileName="Assets/Scripts/View/Editor/DisplayEventExtentions.cs" Line="5" Column="1" />
       <File FileName="Assets/Scripts/View/EventComponents/IncreaseAndDecreaseCountEvent.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Repository/EscapeGameRepository.cs" Line="42" Column="55" />
+      <File FileName="Assets/Scripts/VO/CountEventVO.cs" Line="47" Column="1" />
       <File FileName="Assets/Scripts/View/Editor/EventFlagEventExtentions.cs" Line="5" Column="19" NotebookId="1" />
       <File FileName="Assets/Scripts/View/Editor/IncreaseAndDecreaseCountEventExtentions.cs" Line="5" Column="19" NotebookId="1" />
       <File FileName="Assets/Scripts/View/Editor/IncreaseItemEventExtentions.cs" Line="5" Column="19" NotebookId="1" />
@@ -13,6 +15,7 @@
       <File FileName="Assets/Scripts/View/Editor/ItemDropIncreaseItemEventExtentions.cs" Line="5" Column="19" NotebookId="1" />
       <File FileName="Assets/Scripts/View/Editor/ItemDropSpriteChangeEventExtentions.cs" Line="5" Column="19" NotebookId="1" />
       <File FileName="Assets/Scripts/View/Editor/SpriteChangeEventExtentions.cs" Line="5" Column="19" NotebookId="1" />
+      <File FileName="Assets/Scripts/DataStore/EscapeGameUserDataStore.cs" Line="156" Column="59" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
@@ -20,8 +23,8 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/user/Desktop/EscapeFramework/EscapeFramework/Assets/Scripts/UseCase/ExcuteEventUseCase.cs" relfile="Assets/Scripts/UseCase/ExcuteEventUseCase.cs" line="88" column="21" />
-      <Breakpoint file="/Users/user/Desktop/EscapeFramework/EscapeFramework/Assets/Scripts/UseCase/ExcuteEventUseCase.cs" relfile="Assets/Scripts/UseCase/ExcuteEventUseCase.cs" line="233" column="13" />
+      <Breakpoint file="/Users/user/Desktop/EscapeFramework/EscapeFramework/Assets/Scripts/UseCase/ExcuteEventUseCase.cs" relfile="Assets/Scripts/UseCase/ExcuteEventUseCase.cs" line="227" column="17" />
+      <Breakpoint file="/Users/user/Desktop/EscapeFramework/EscapeFramework/Assets/Scripts/UseCase/ExcuteEventUseCase.cs" relfile="Assets/Scripts/UseCase/ExcuteEventUseCase.cs" line="232" column="13" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

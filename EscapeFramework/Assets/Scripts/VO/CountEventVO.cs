@@ -44,29 +44,29 @@ namespace Qitz.EscapeFramework
         }
     }
 
-    [System.Serializable]
-    public class CountEventSetting: ICountEventSetting
-    {
-        [SerializeField]
-        CountEventType countEventType;
-        [SerializeField]
-        int maxCount = 1;
-        [SerializeField]
-        int minCount = 0;
+    //[System.Serializable]
+    //public class CountEventSetting: ICountEventSetting
+    //{
+    //    [SerializeField]
+    //    CountEventType countEventType;
+    //    [SerializeField]
+    //    int maxCount = 1;
+    //    [SerializeField]
+    //    int minCount = 0;
 
-        public CountEventType CountEventType => countEventType;
+    //    public CountEventType CountEventType => countEventType;
 
-        public int MaxCount => maxCount;
+    //    public int MaxCount => maxCount;
 
-        public int MinCount => minCount;
-    }
+    //    public int MinCount => minCount;
+    //}
 
-    public interface ICountEventSetting
-    {
-        CountEventType CountEventType { get; }
-        int MaxCount { get; }
-        int MinCount { get; }
-    }
+    //public interface ICountEventSetting
+    //{
+    //    CountEventType CountEventType { get; }
+    //    int MaxCount { get; }
+    //    int MinCount { get; }
+    //}
 
 
 }

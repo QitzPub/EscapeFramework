@@ -77,7 +77,6 @@
     <Compile Include="Assets\Scripts\Buttons\ImageHideScript.cs" />
     <Compile Include="Assets\Scripts\Buttons\NextSceneButton.cs" />
     <Compile Include="Assets\Scripts\Controller\EscapeGameController.cs" />
-    <Compile Include="Assets\Scripts\DataStore\CountEventDataStore.cs" />
     <Compile Include="Assets\Scripts\DataStore\EscapeGameDefinsDataStore.cs" />
     <Compile Include="Assets\Scripts\DataStore\EscapeGameUserDataStore.cs" />
     <Compile Include="Assets\Scripts\DataStore\ItemDataStore.cs" />
