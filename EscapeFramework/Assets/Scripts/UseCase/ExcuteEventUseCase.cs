@@ -83,7 +83,8 @@ namespace Qitz.EscapeFramework
         void SetClickEvent(AEvent aEvent)
         {
             aEvent.Button.onClick.AddListener(
-                () => { 
+                () => {
+                    Debug.Log($"ExcuteNormalEvent:{aEvent.name}");
                     ExcuteNormalEvent(aEvent);
                     //UPDate時に実行されるイベントも発火する
                     ExcuteUpdateEvent();
@@ -221,6 +222,11 @@ namespace Qitz.EscapeFramework
         void ExcuteCountIncreaseAndDecreaseEvent(IIncreaseAndDecreaseCountEvent countEvent)
         {
 
+            //if(countEvent.CountEventProgress == CountEventProgress.増やす)
+            //{
+            //    Debug.Log("!!");
+            //}
+
             //イベント制限事項を突破しているかどうか判定
             bool isOverTheLimit = JudgeCountEventsIgnitionOverTheLimit((AEvent)countEvent);
             if (!isOverTheLimit)
@@ -228,6 +234,7 @@ namespace Qitz.EscapeFramework
                 //イベント制限を突破していないのでイベントは実行されず
                 return;
             }
+
 
             if (countEvent.CountEventProgress == CountEventProgress.増やす)
             {
@@ -290,6 +297,7 @@ namespace Qitz.EscapeFramework
 
         bool JudgeItemEventsIgnitionOverTheLimit(AEvent aEvent)
         {
+            if (!aEvent.UseItemRestrictedSetting) return true;
             return aEvent.ItemIGnitions.All(ii => JudgeItemIgnitionOverTheLimit(ii));
         }
 
@@ -312,6 +320,7 @@ namespace Qitz.EscapeFramework
 
         bool JudgeEventsFlagIgnitionOverTheLimit(AEvent aEvent)
         {
+            if (!aEvent.UseEventFlagRestrictedSetting) return true;
             return aEvent.EventFlagIGnitions.All(ei=> JudgeEventFlagIgnitionOverTheLimit(ei));
         }
 
@@ -334,6 +343,7 @@ namespace Qitz.EscapeFramework
 
         bool JudgeCountEventsIgnitionOverTheLimit(AEvent aEvent)
         {
+            if (!aEvent.UseCountEventRestrictedSetting) return true;
             return aEvent.CountEventIGnitions.All(ce => JudgeCountEventIgnitionOverTheLimit(ce));
         }
 

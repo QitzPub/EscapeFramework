@@ -1,24 +1,28 @@
 ﻿<Properties StartupConfiguration="{C9900E98-A63D-0522-C79D-6228823C21E5}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UseCase/ExcuteEventUseCase.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/View/EventComponents/IncreaseAndDecreaseCountEvent.cs">
     <Files>
-      <File FileName="Assets/Scripts/View/Editor/DisplayEventExtentions.cs" Line="54" Column="59" />
-      <File FileName="Assets/Scripts/UseCase/ExcuteEventUseCase.cs" Line="293" Column="40" />
-      <File FileName="Assets/Scripts/View/Editor/EventFlagEventExtentions.cs" Line="15" Column="1" NotebookId="1" />
-      <File FileName="Assets/Scripts/View/Editor/IncreaseAndDecreaseCountEventExtentions.cs" Line="14" Column="6" NotebookId="1" />
-      <File FileName="Assets/Scripts/View/Editor/IncreaseItemEventExtentions.cs" Line="14" Column="6" NotebookId="1" />
-      <File FileName="Assets/Scripts/View/Editor/ItemDropDisplayEventExtentions.cs" Line="14" Column="6" NotebookId="1" />
-      <File FileName="Assets/Scripts/View/Editor/ItemDropEventFlagEventExtentions.cs" Line="14" Column="6" NotebookId="1" />
-      <File FileName="Assets/Scripts/View/Editor/ItemDropIncreaseAndDecreaseCountEventExtentions.cs" Line="14" Column="6" NotebookId="1" />
-      <File FileName="Assets/Scripts/View/Editor/ItemDropIncreaseItemEventExtentions.cs" Line="14" Column="6" NotebookId="1" />
-      <File FileName="Assets/Scripts/View/Editor/ItemDropSpriteChangeEventExtentions.cs" Line="14" Column="6" NotebookId="1" />
-      <File FileName="Assets/Scripts/View/Editor/SpriteChangeEventExtentions.cs" Line="14" Column="6" NotebookId="1" />
+      <File FileName="Assets/Scripts/UseCase/ExcuteEventUseCase.cs" Line="225" Column="20" />
+      <File FileName="Assets/Scripts/View/Editor/DisplayEventExtentions.cs" Line="5" Column="1" />
+      <File FileName="Assets/Scripts/View/EventComponents/IncreaseAndDecreaseCountEvent.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/View/Editor/EventFlagEventExtentions.cs" Line="5" Column="19" NotebookId="1" />
+      <File FileName="Assets/Scripts/View/Editor/IncreaseAndDecreaseCountEventExtentions.cs" Line="5" Column="19" NotebookId="1" />
+      <File FileName="Assets/Scripts/View/Editor/IncreaseItemEventExtentions.cs" Line="5" Column="19" NotebookId="1" />
+      <File FileName="Assets/Scripts/View/Editor/ItemDropDisplayEventExtentions.cs" Line="5" Column="19" NotebookId="1" />
+      <File FileName="Assets/Scripts/View/Editor/ItemDropEventFlagEventExtentions.cs" Line="5" Column="19" NotebookId="1" />
+      <File FileName="Assets/Scripts/View/Editor/ItemDropIncreaseAndDecreaseCountEventExtentions.cs" Line="5" Column="19" NotebookId="1" />
+      <File FileName="Assets/Scripts/View/Editor/ItemDropIncreaseItemEventExtentions.cs" Line="5" Column="19" NotebookId="1" />
+      <File FileName="Assets/Scripts/View/Editor/ItemDropSpriteChangeEventExtentions.cs" Line="5" Column="19" NotebookId="1" />
+      <File FileName="Assets/Scripts/View/Editor/SpriteChangeEventExtentions.cs" Line="5" Column="19" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/user/Desktop/EscapeFramework/EscapeFramework/Assets/Scripts/UseCase/ExcuteEventUseCase.cs" relfile="Assets/Scripts/UseCase/ExcuteEventUseCase.cs" line="88" column="21" />
+      <Breakpoint file="/Users/user/Desktop/EscapeFramework/EscapeFramework/Assets/Scripts/UseCase/ExcuteEventUseCase.cs" relfile="Assets/Scripts/UseCase/ExcuteEventUseCase.cs" line="233" column="13" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
