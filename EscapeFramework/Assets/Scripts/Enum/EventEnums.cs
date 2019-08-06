@@ -27,6 +27,13 @@ namespace Qitz.EscapeFramework
         増やす,
         減らす,
     }
+    public enum CountEventProgress
+    {
+        増やす,
+        減らす,
+        初期値0にする,
+    }
+
     public enum CountEventType
     {
         ダイアルロック上の数字,

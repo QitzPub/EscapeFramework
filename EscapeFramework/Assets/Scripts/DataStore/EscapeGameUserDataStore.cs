@@ -137,12 +137,19 @@ namespace Qitz.EscapeFramework
             }
 
         }
+        public void SetDefaultEventCount(CountEventType countEvent)
+        {
+            UserVO.SetDefaultEventCount(countEvent);
+            SaveUserData();
+        }
 
         public int GetCountEventValue(CountEventType countEvent)
         {
             return UserVO.GetCountEventValue(countEvent);
             SaveUserData();
         }
+
+
 
         public EscapeGameUserDataStore(List<CountEventSetting> countEventSettings)
         {
@@ -173,6 +180,7 @@ namespace Qitz.EscapeFramework
         List<CountEventVO> CountEvents { get; }
         void IncrementEventCount(CountEventType countEvent);
         void DecrementEventCount(CountEventType countEvent);
+        void SetDefaultEventCount(CountEventType countEvent);
         int GetCountEventValue(CountEventType countEvent);
     }
 
@@ -245,6 +253,14 @@ namespace Qitz.EscapeFramework
                 CountEvents.Add(cEvent);
             }
         }
+        public void SetDefaultEventCount(CountEventType countEvent)
+        {
+            bool existCountEvent = countEvents.Exists(ce => ce.CountEventType == countEvent);
+            if (existCountEvent)
+            {
+                CountEvents.FirstOrDefault(ce => ce.CountEventType == countEvent).SetDefaulCount();
+            }
+        }
 
         public void SetEventFlag(EventFlagVO eventFlag)
         {
@@ -274,5 +290,7 @@ namespace Qitz.EscapeFramework
             }
             return vo.Count;
         }
+
+
     }
 }

@@ -7,7 +7,7 @@ namespace Qitz.EscapeFramework
     public interface IIncreaseAndDecreaseCountEvent
     {
         CountEventType CountEventName { get; }
-        EventProgress EventProgress { get; }
+        CountEventProgress CountEventProgress { get; }
         CountEventVO CountEventVO { get; }
         GameObject gameObject { get; }
     }
@@ -16,10 +16,10 @@ namespace Qitz.EscapeFramework
         [SerializeField, HeaderAttribute("以下カウントイベントを")]
         CountEventType countEventName;
         [SerializeField]
-        EventProgress eventProgress;
+        CountEventProgress countEventProgress;
 
         public CountEventType CountEventName => countEventName;
-        public EventProgress EventProgress => eventProgress;
+        public CountEventProgress CountEventProgress => countEventProgress;
         public CountEventVO CountEventVO => new CountEventVO(countEventName);
     }
 }

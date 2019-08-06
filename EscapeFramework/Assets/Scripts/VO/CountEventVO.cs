@@ -10,6 +10,7 @@ namespace Qitz.EscapeFramework
         CountEventType CountEventType { get; }
         void IncrementCount();
         void DecrementCount();
+        void SetDefaulCount();
     }
 
     [System.Serializable]
@@ -35,6 +36,11 @@ namespace Qitz.EscapeFramework
         public void DecrementCount()
         {
             count--;
+        }
+
+        public void SetDefaulCount()
+        {
+            count = 0;
         }
     }
 

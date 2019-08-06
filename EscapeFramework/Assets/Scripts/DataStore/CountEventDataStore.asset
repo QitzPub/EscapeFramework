@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countEventSettings:
   - countEventType: 0
-    maxCount: 9
+    maxCount: 10
     minCount: 0
   - countEventType: 1
-    maxCount: 9
+    maxCount: 10
     minCount: 0
   - countEventType: 2
-    maxCount: 9
+    maxCount: 10
     minCount: 0
   - countEventType: 3
-    maxCount: 9
+    maxCount: 10
     minCount: 0

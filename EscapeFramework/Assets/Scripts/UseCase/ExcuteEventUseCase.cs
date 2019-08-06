@@ -24,20 +24,24 @@ namespace Qitz.EscapeFramework
 
         public ExcuteEventUseCase(IEscapeGameUserDataStore escapeGameUserDataStore, Action<AEvent[]> eventExcuteCallBack)
         {
-            this.events = UnityEngine.Object.FindObjectsOfType<AEvent>();
-            this.normalEvents = events.Select(e => e as AEscapeGameEvent).Where(e => e != null);
-            this.itemDropEvents = events.Select(e => e as AItemDropEvent).Where(e => e != null);
             this.escapeGameUserDataStore = escapeGameUserDataStore;
             this.eventExcuteCallBack = eventExcuteCallBack;
 
+        }
+
+        void SetSceneEvents()
+        {
+            this.events = UnityEngine.Object.FindObjectsOfType<AEvent>();
+            this.normalEvents = events.Select(e => e as AEscapeGameEvent).Where(e => e != null);
+            this.itemDropEvents = events.Select(e => e as AItemDropEvent).Where(e => e != null);
             SetClickEvents();
             SetItemDropEvent();
-
         }
 
         public void ExcuteSceneLoadTimingEvent()
         {
-
+            //シーンロードのタイミングで各種シーン中のイベントを取得し直す
+            SetSceneEvents();
             //シーン読み込み時開始になっているものはこのタイミングでイベントが実行される
             foreach (var aEvent in normalEvents.Where(e=>e.EventExecuteTiming == EventExecuteTiming.シーン読み込み時))
             {
@@ -218,20 +222,24 @@ namespace Qitz.EscapeFramework
         {
 
             //イベント制限事項を突破しているかどうか判定
-            bool isOverTheLimit = JudgeCountEventIgnitionOverTheLimit((AEvent)countEvent);
+            bool isOverTheLimit = JudgeCountEventsIgnitionOverTheLimit((AEvent)countEvent);
             if (!isOverTheLimit)
             {
                 //イベント制限を突破していないのでイベントは実行されず
                 return;
             }
 
-            if (countEvent.EventProgress == EventProgress.増やす)
+            if (countEvent.CountEventProgress == CountEventProgress.増やす)
             {
                 escapeGameUserDataStore.IncrementEventCount(countEvent.CountEventName);
             }
-            else if (countEvent.EventProgress == EventProgress.減らす)
+            else if (countEvent.CountEventProgress == CountEventProgress.減らす)
             {
                 escapeGameUserDataStore.DecrementEventCount(countEvent.CountEventName);
+            }
+            else if (countEvent.CountEventProgress == CountEventProgress.初期値0にする)
+            {
+                escapeGameUserDataStore.SetDefaultEventCount(countEvent.CountEventName);
             }
             else
             {
@@ -260,18 +268,40 @@ namespace Qitz.EscapeFramework
 
         bool JudgeEventIgnitionOverTheLimit(AEvent aEvent)
         {
-            //制限条件が設定されていない場合
-            if (!aEvent.UseItemRestrictedSetting && !aEvent.UseEventFlagRestrictedSetting)
+            bool itemRestrictedOver = true;
+            if (aEvent.UseItemRestrictedSetting)
             {
-                return true;
+                itemRestrictedOver= JudgeItemEventsIgnitionOverTheLimit(aEvent);
             }
-            else if(aEvent.UseItemRestrictedSetting)
+
+            bool eventFlagRestrictedOver = true;
+            if (aEvent.UseEventFlagRestrictedSetting)
             {
-                return JudgeItemEventIgnitionOverTheLimit(aEvent);
+                eventFlagRestrictedOver= JudgeEventsFlagIgnitionOverTheLimit(aEvent);
             }
-            else if (aEvent.UseEventFlagRestrictedSetting)
+
+            bool countEventRestrictedOver = true;
+            if (aEvent.UseCountEventRestrictedSetting)
             {
-                return JudgeEventFlagIgnitionOverTheLimit(aEvent);
+                countEventRestrictedOver= JudgeCountEventsIgnitionOverTheLimit(aEvent);
+            }
+            return itemRestrictedOver && eventFlagRestrictedOver && countEventRestrictedOver;
+        }
+
+        bool JudgeItemEventsIgnitionOverTheLimit(AEvent aEvent)
+        {
+            return aEvent.ItemIGnitions.All(ii => JudgeItemIgnitionOverTheLimit(ii));
+        }
+
+        bool JudgeItemIgnitionOverTheLimit(ItemIGnitionPoint ii)
+        {
+            if (ii.IGnitionPointItem == IGnitionPointItem.アイテムを持っている)
+            {
+                return escapeGameUserDataStore.InPossessionItem(ii.ItemName);
+            }
+            else if (ii.IGnitionPointItem == IGnitionPointItem.アイテムを持っていない)
+            {
+                return !escapeGameUserDataStore.InPossessionItem(ii.ItemName);
             }
             else
             {
@@ -279,32 +309,21 @@ namespace Qitz.EscapeFramework
             }
         }
 
-        bool JudgeItemEventIgnitionOverTheLimit(AEvent aEvent)
-        {
-            if(aEvent.IGnitionPointItem == IGnitionPointItem.アイテムを持っている)
-            {
-                return escapeGameUserDataStore.InPossessionItem(aEvent.ItemName);
-            }
-            else if (aEvent.IGnitionPointItem == IGnitionPointItem.アイテムを持っていない)
-            {
-                return !escapeGameUserDataStore.InPossessionItem(aEvent.ItemName);
-            }
-            else
-            {
-                throw new System.Exception($"想定されない形式です");
-            }
 
+        bool JudgeEventsFlagIgnitionOverTheLimit(AEvent aEvent)
+        {
+            return aEvent.EventFlagIGnitions.All(ei=> JudgeEventFlagIgnitionOverTheLimit(ei));
         }
 
-        bool JudgeEventFlagIgnitionOverTheLimit(AEvent aEvent)
+        bool JudgeEventFlagIgnitionOverTheLimit(EventFlagIGnitionPoint ei)
         {
-            if(aEvent.EventFlag == EventFlag.ON)
+            if (ei.EventFlag == EventFlag.ON)
             {
-                return escapeGameUserDataStore.GetEventFlagValue(aEvent.EventType);
+                return escapeGameUserDataStore.GetEventFlagValue(ei.EventType);
             }
-            else if (aEvent.EventFlag == EventFlag.OFF)
+            else if (ei.EventFlag == EventFlag.OFF)
             {
-                return !escapeGameUserDataStore.GetEventFlagValue(aEvent.EventType);
+                return !escapeGameUserDataStore.GetEventFlagValue(ei.EventType);
             }
             else
             {
@@ -312,19 +331,28 @@ namespace Qitz.EscapeFramework
             }
         }
 
-        bool JudgeCountEventIgnitionOverTheLimit(AEvent aEvent)
+
+        bool JudgeCountEventsIgnitionOverTheLimit(AEvent aEvent)
         {
-            if (aEvent.CountEventJudge == CountEventJudge.等しい)
+            return aEvent.CountEventIGnitions.All(ce => JudgeCountEventIgnitionOverTheLimit(ce));
+        }
+
+        bool JudgeCountEventIgnitionOverTheLimit(CountEventIGnitionPoint ce)
+        {
+            if (ce.CountEventJudge == CountEventJudge.等しい)
             {
-                return escapeGameUserDataStore.GetCountEventValue(aEvent.CountEventName) == aEvent.CountEventValue;
+                var val = escapeGameUserDataStore.GetCountEventValue(ce.CountEventName);
+                return val == ce.CountEventValue;
             }
-            else if (aEvent.CountEventJudge == CountEventJudge.以上)
+            else if (ce.CountEventJudge == CountEventJudge.以上)
             {
-                return escapeGameUserDataStore.GetCountEventValue(aEvent.CountEventName) >= aEvent.CountEventValue;
+                var val = escapeGameUserDataStore.GetCountEventValue(ce.CountEventName);
+                return val >= ce.CountEventValue;
             }
-            else if (aEvent.CountEventJudge == CountEventJudge.以下)
+            else if (ce.CountEventJudge == CountEventJudge.以下)
             {
-                return escapeGameUserDataStore.GetCountEventValue(aEvent.CountEventName) <= aEvent.CountEventValue;
+                var val = escapeGameUserDataStore.GetCountEventValue(ce.CountEventName);
+                return val <= ce.CountEventValue;
             }
             else
             {

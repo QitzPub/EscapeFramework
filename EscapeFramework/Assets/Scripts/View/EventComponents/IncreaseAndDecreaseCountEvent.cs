@@ -10,10 +10,10 @@ namespace Qitz.EscapeFramework
         [SerializeField, HeaderAttribute("以下カウントイベントを")]
         CountEventType countEventName;
         [SerializeField]
-        EventProgress eventProgress;
+        CountEventProgress countEventProgress;
 
         public CountEventType CountEventName => countEventName;
-        public EventProgress EventProgress => eventProgress;
+        public CountEventProgress CountEventProgress => countEventProgress;
         public CountEventVO CountEventVO => new CountEventVO(countEventName);
     }
 }

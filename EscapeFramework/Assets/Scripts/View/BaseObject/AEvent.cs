@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 namespace Qitz.EscapeFramework
 {
@@ -18,9 +19,7 @@ namespace Qitz.EscapeFramework
         public bool UseItemRestrictedSetting = false;
 
         [HideInInspector]
-        public ItemName ItemName;
-        [HideInInspector]
-        public IGnitionPointItem IGnitionPointItem;
+        public List<ItemIGnitionPoint> ItemIGnitions = new List<ItemIGnitionPoint>() { new ItemIGnitionPoint() };
 
         //====================================
 
@@ -29,25 +28,49 @@ namespace Qitz.EscapeFramework
         public bool UseEventFlagRestrictedSetting = false;
 
         [HideInInspector]
+        public List<EventFlagIGnitionPoint> EventFlagIGnitions = new List<EventFlagIGnitionPoint>() { new EventFlagIGnitionPoint() };
+
+        //====================================
+
+        //====================================
+        [HeaderAttribute("カウントイベントによる発火制限をかける")]
+        public bool UseCountEventRestrictedSetting = false;
+
+        [HideInInspector]
+        public List<CountEventIGnitionPoint> CountEventIGnitions = new List<CountEventIGnitionPoint>() { new CountEventIGnitionPoint() };
+
+
+        //====================================
+
+    }
+
+    [Serializable]
+    public class ItemIGnitionPoint
+    {
+        [HideInInspector]
+        public ItemName ItemName;
+        [HideInInspector]
+        public IGnitionPointItem IGnitionPointItem;
+    }
+
+    [Serializable]
+    public class EventFlagIGnitionPoint
+    {
+        [HideInInspector]
         public EventType EventType;
         [HideInInspector]
         public EventFlag EventFlag;
+    }
 
-        //====================================
-
-        //====================================
-        [HeaderAttribute("カウントイベントによるイベント発火制限をかける")]
-        public bool UseCountEventRestrictedSetting = false;
-
+    [Serializable]
+    public class CountEventIGnitionPoint
+    {
         [HideInInspector]
         public CountEventType CountEventName;
         [HideInInspector]
         public int CountEventValue;
         [HideInInspector]
         public CountEventJudge CountEventJudge;
-
-        //====================================
-
     }
 
 }
