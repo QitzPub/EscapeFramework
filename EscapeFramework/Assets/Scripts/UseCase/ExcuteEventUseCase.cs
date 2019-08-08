@@ -14,6 +14,8 @@ namespace Qitz.EscapeFramework
     {
     }
 
+    //TODO USECaseを分離させる
+
     public class ExcuteEventUseCase: IExcuteEventUseCase
     {
         IEscapeGameUserDataStore escapeGameUserDataStore;
@@ -21,12 +23,13 @@ namespace Qitz.EscapeFramework
         Action<AEvent[]> eventExcuteCallBack;
         IEnumerable<AEscapeGameEvent> normalEvents;
         IEnumerable<AItemDropEvent> itemDropEvents;
+        EscapeGameAudioPlayer escapeGameAudioPlayer;
 
-        public ExcuteEventUseCase(IEscapeGameUserDataStore escapeGameUserDataStore, Action<AEvent[]> eventExcuteCallBack)
+        public ExcuteEventUseCase(IEscapeGameUserDataStore escapeGameUserDataStore, Action<AEvent[]> eventExcuteCallBack, EscapeGameAudioPlayer escapeGameAudioPlayer)
         {
             this.escapeGameUserDataStore = escapeGameUserDataStore;
             this.eventExcuteCallBack = eventExcuteCallBack;
-
+            this.escapeGameAudioPlayer = escapeGameAudioPlayer;
         }
 
         void SetSceneEvents()
@@ -126,7 +129,16 @@ namespace Qitz.EscapeFramework
                 var spriteChangeEvent = itemDropEvent as ItemDropSpriteChangeEvent;
                 ExcuteSpriteChangeEvent(spriteChangeEvent);
             }
-
+            else if ((itemDropEvent as ItemDropBGMEvent) != null)
+            {
+                var bgmEvent = itemDropEvent as ItemDropBGMEvent;
+                ExcuteBGMEvent(bgmEvent);
+            }
+            else if ((itemDropEvent as ItemDropSEEvent) != null)
+            {
+                var seEvent = itemDropEvent as ItemDropSEEvent;
+                ExcuteSEEvent(seEvent);
+            }
         }
 
         void ExcuteNormalEvent(AEvent aEvent)
@@ -156,8 +168,44 @@ namespace Qitz.EscapeFramework
                 var spriteChangeEvent = aEvent as SpriteChangeEvent;
                 ExcuteSpriteChangeEvent(spriteChangeEvent);
             }
+            else if ((aEvent as BGMEvent) != null)
+            {
+                var bgmEvent = aEvent as BGMEvent;
+                ExcuteBGMEvent(bgmEvent);
+            }
+            else if ((aEvent as SEEvent) != null)
+            {
+                var seEvent = aEvent as SEEvent;
+                ExcuteSEEvent(seEvent);
+            }
         }
 
+        //BGMを鳴らす
+        void ExcuteBGMEvent(IBGMEvent bGMEvent)
+        {
+            bool isOverTheLimit = JudgeEventIgnitionOverTheLimit((AEvent)bGMEvent);
+            if (!isOverTheLimit)
+            {
+                //イベント制限を突破していないのでイベントは実行されず
+                return;
+            }
+            escapeGameAudioPlayer.PlayAudio(bGMEvent.BGMName);
+        }
+
+        //SE再生イベント
+        void ExcuteSEEvent(ISEEvent seEvent)
+        {
+            //イベント制限事項を突破しているかどうか判定
+            bool isOverTheLimit = JudgeEventIgnitionOverTheLimit((AEvent)seEvent);
+            if (!isOverTheLimit)
+            {
+                //イベント制限を突破していないのでイベントは実行されず
+                return;
+            }
+            escapeGameAudioPlayer.PlaySE(seEvent.SEName);
+        }
+
+        //フラグ変更イベント
         void ExcuteEventFlagEvent(IEventFlagEvent eventFlagEventView)
         {
             //イベント制限事項を突破しているかどうか判定
@@ -221,11 +269,6 @@ namespace Qitz.EscapeFramework
         //カウント増減イベントの実行
         void ExcuteCountIncreaseAndDecreaseEvent(IIncreaseAndDecreaseCountEvent countEvent)
         {
-
-            //if(countEvent.CountEventProgress == CountEventProgress.増やす)
-            //{
-            //    Debug.Log("!!");
-            //}
 
             //イベント制限事項を突破しているかどうか判定
             bool isOverTheLimit = JudgeCountEventsIgnitionOverTheLimit((AEvent)countEvent);

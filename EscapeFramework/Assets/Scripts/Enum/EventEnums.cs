@@ -11,6 +11,21 @@ namespace Qitz.EscapeFramework
         金庫を開ける,
     }
 
+    public enum BGMName
+    {
+        test1,
+        test2,
+    }
+    public enum SEName
+    {
+        se_test1,
+        se_test2,
+    }
+    public enum AudioCommandType
+    {
+        再生する,
+    }
+
     public enum EventFlag
     {
         ON,

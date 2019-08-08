@@ -23,6 +23,8 @@ namespace Qitz.EscapeFramework
         Action<AEvent[]> eventExecuteCallBack;
         Action<List<IItemSpriteVO>> userItemListChangeCallBack;
         ExcuteEventUseCase excuteEventUseCase;
+        [SerializeField]
+        EscapeGameAudioPlayer escapeGameAudioPlayer;
 
         public void AddEventExecuteCallBack(Action<AEvent[]> addEventExecuteCallBack)
         {
@@ -43,11 +45,13 @@ namespace Qitz.EscapeFramework
                                 //ユーザーデータのアイテム数をItemViewに反映させる処理など
                                 eventExecuteCallBack?.Invoke(events);
                                 userItemListChangeCallBack?.Invoke(repository.UserPossessionItemSpriteList);
-                    });
+                    }, 
+                    escapeGameAudioPlayer);
         }
 
         void Start()
         {
+            escapeGameAudioPlayer.Initialize(Repository.EscapeGameAudioDataStore);
             ExecuteEvent(excuteEventUseCase);
             StartCoroutine(ExcuteUpdateEvent(excuteEventUseCase));
             SceneManager.sceneLoaded += SceneLoaded;

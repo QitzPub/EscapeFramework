@@ -27,6 +27,10 @@ namespace Qitz.EscapeFramework
         EscapeGameDefinsDataStore escapeGameDefinsDataStore;
         public IEscapeGameDefinsDataStore EscapeGameDefinsDataStore => escapeGameDefinsDataStore;
 
+        [SerializeField]
+        EscapeGameAudioDataStore escapeGameAudioDataStore;
+        public IEscapeGameAudioDataStore EscapeGameAudioDataStore => escapeGameAudioDataStore;
+
         //[SerializeField]
         //CountEventDataStore countEventDataStore;
 

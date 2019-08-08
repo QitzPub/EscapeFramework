@@ -458,6 +458,7 @@ GameObject:
   - component: {fileID: 716583055}
   - component: {fileID: 716583054}
   - component: {fileID: 716583053}
+  - component: {fileID: 716583068}
   m_Layer: 5
   m_Name: DialRockUp (2)
   m_TagString: Untagged
@@ -892,6 +893,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 716583051}
   m_CullTransparentMesh: 0
+--- !u!114 &716583068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716583051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aed50a7a140f43c8a76319d1526b3d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseItemRestrictedSetting: 0
+  ItemIGnitions:
+  - ItemName: 0
+    IGnitionPointItem: 0
+  UseEventFlagRestrictedSetting: 0
+  EventFlagIGnitions:
+  - EventType: 0
+    EventFlag: 0
+  UseCountEventRestrictedSetting: 0
+  CountEventIGnitions:
+  - CountEventName: 0
+    CountEventValue: 0
+    CountEventJudge: 0
+  eventExecuteTiming: 2
+  sEName: 1
+  audioCommandType: 0
 --- !u!1 &775081862
 GameObject:
   m_ObjectHideFlags: 0
@@ -916,6 +945,7 @@ GameObject:
   - component: {fileID: 775081869}
   - component: {fileID: 775081868}
   - component: {fileID: 775081878}
+  - component: {fileID: 775081879}
   m_Layer: 5
   m_Name: DialRockUp
   m_TagString: Untagged
@@ -1350,6 +1380,34 @@ MonoBehaviour:
   eventExecuteTiming: 0
   countEventName: 0
   countEventProgress: 2
+--- !u!114 &775081879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775081862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aed50a7a140f43c8a76319d1526b3d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseItemRestrictedSetting: 0
+  ItemIGnitions:
+  - ItemName: 0
+    IGnitionPointItem: 0
+  UseEventFlagRestrictedSetting: 0
+  EventFlagIGnitions:
+  - EventType: 0
+    EventFlag: 0
+  UseCountEventRestrictedSetting: 0
+  CountEventIGnitions:
+  - CountEventName: 0
+    CountEventValue: 0
+    CountEventJudge: 0
+  eventExecuteTiming: 2
+  sEName: 1
+  audioCommandType: 0
 --- !u!1 &806697721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1374,6 +1432,7 @@ GameObject:
   - component: {fileID: 806697725}
   - component: {fileID: 806697724}
   - component: {fileID: 806697723}
+  - component: {fileID: 806697738}
   m_Layer: 5
   m_Name: DialRockUp (3)
   m_TagString: Untagged
@@ -1808,6 +1867,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 806697721}
   m_CullTransparentMesh: 0
+--- !u!114 &806697738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806697721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aed50a7a140f43c8a76319d1526b3d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseItemRestrictedSetting: 0
+  ItemIGnitions:
+  - ItemName: 0
+    IGnitionPointItem: 0
+  UseEventFlagRestrictedSetting: 0
+  EventFlagIGnitions:
+  - EventType: 0
+    EventFlag: 0
+  UseCountEventRestrictedSetting: 0
+  CountEventIGnitions:
+  - CountEventName: 0
+    CountEventValue: 0
+    CountEventJudge: 0
+  eventExecuteTiming: 2
+  sEName: 1
+  audioCommandType: 0
 --- !u!1 &810010160
 GameObject:
   m_ObjectHideFlags: 0
@@ -1832,6 +1919,7 @@ GameObject:
   - component: {fileID: 810010164}
   - component: {fileID: 810010163}
   - component: {fileID: 810010162}
+  - component: {fileID: 810010177}
   m_Layer: 5
   m_Name: DialRockUp (1)
   m_TagString: Untagged
@@ -2266,6 +2354,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 810010160}
   m_CullTransparentMesh: 0
+--- !u!114 &810010177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810010160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aed50a7a140f43c8a76319d1526b3d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseItemRestrictedSetting: 0
+  ItemIGnitions:
+  - ItemName: 0
+    IGnitionPointItem: 0
+  UseEventFlagRestrictedSetting: 0
+  EventFlagIGnitions:
+  - EventType: 0
+    EventFlag: 0
+  UseCountEventRestrictedSetting: 0
+  CountEventIGnitions:
+  - CountEventName: 0
+    CountEventValue: 0
+    CountEventJudge: 0
+  eventExecuteTiming: 2
+  sEName: 1
+  audioCommandType: 0
 --- !u!1 &838191509
 GameObject:
   m_ObjectHideFlags: 0
