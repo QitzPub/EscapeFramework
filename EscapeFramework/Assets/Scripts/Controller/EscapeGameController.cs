@@ -25,6 +25,8 @@ namespace Qitz.EscapeFramework
         ExcuteEventUseCase excuteEventUseCase;
         [SerializeField]
         EscapeGameAudioPlayer escapeGameAudioPlayer;
+        [SerializeField]
+        ADVWindowView aDVWindowView;
 
         public void AddEventExecuteCallBack(Action<AEvent[]> addEventExecuteCallBack)
         {
@@ -38,6 +40,7 @@ namespace Qitz.EscapeFramework
 
         void Awake()
         {
+            aDVWindowView.Hide();
             repository.Initialize();
             excuteEventUseCase = new ExcuteEventUseCase(repository.EscapeGameUserDataStore,
                 (events) => {
@@ -46,7 +49,7 @@ namespace Qitz.EscapeFramework
                                 eventExecuteCallBack?.Invoke(events);
                                 userItemListChangeCallBack?.Invoke(repository.UserPossessionItemSpriteList);
                     }, 
-                    escapeGameAudioPlayer);
+                    escapeGameAudioPlayer, aDVWindowView);
         }
 
         void Start()

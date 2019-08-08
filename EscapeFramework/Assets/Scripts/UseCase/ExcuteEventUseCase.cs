@@ -24,12 +24,14 @@ namespace Qitz.EscapeFramework
         IEnumerable<AEscapeGameEvent> normalEvents;
         IEnumerable<AItemDropEvent> itemDropEvents;
         EscapeGameAudioPlayer escapeGameAudioPlayer;
+        IADVWindowView aDVWindowView;
 
-        public ExcuteEventUseCase(IEscapeGameUserDataStore escapeGameUserDataStore, Action<AEvent[]> eventExcuteCallBack, EscapeGameAudioPlayer escapeGameAudioPlayer)
+        public ExcuteEventUseCase(IEscapeGameUserDataStore escapeGameUserDataStore, Action<AEvent[]> eventExcuteCallBack, EscapeGameAudioPlayer escapeGameAudioPlayer, IADVWindowView aDVWindowView)
         {
             this.escapeGameUserDataStore = escapeGameUserDataStore;
             this.eventExcuteCallBack = eventExcuteCallBack;
             this.escapeGameAudioPlayer = escapeGameAudioPlayer;
+            this.aDVWindowView = aDVWindowView;
         }
 
         void SetSceneEvents()
@@ -139,6 +141,11 @@ namespace Qitz.EscapeFramework
                 var seEvent = itemDropEvent as ItemDropSEEvent;
                 ExcuteSEEvent(seEvent);
             }
+            else if ((itemDropEvent as ItemDropADVWindowEvent) != null)
+            {
+                var windowEvent = itemDropEvent as ItemDropADVWindowEvent;
+                ExcuteWindowEvent(windowEvent);
+            }
         }
 
         void ExcuteNormalEvent(AEvent aEvent)
@@ -178,6 +185,23 @@ namespace Qitz.EscapeFramework
                 var seEvent = aEvent as SEEvent;
                 ExcuteSEEvent(seEvent);
             }
+            else if ((aEvent as ADVWindowEvent) != null)
+            {
+                var windowEvent = aEvent as ADVWindowEvent;
+                ExcuteWindowEvent(windowEvent);
+            }
+        }
+
+        //AdvWindowの表示を行う
+        void ExcuteWindowEvent(IADVWindowEvent aDVWindowEvent)
+        {
+            bool isOverTheLimit = JudgeEventIgnitionOverTheLimit((AEvent)aDVWindowEvent);
+            if (!isOverTheLimit)
+            {
+                //イベント制限を突破していないのでイベントは実行されず
+                return;
+            }
+            aDVWindowView.SetText(aDVWindowEvent.Texts);
         }
 
         //BGMを鳴らす
