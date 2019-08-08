@@ -289,7 +289,6 @@ GameObject:
   - component: {fileID: 695814501}
   - component: {fileID: 695814500}
   - component: {fileID: 695814499}
-  - component: {fileID: 695814498}
   - component: {fileID: 695814502}
   m_Layer: 5
   m_Name: TestImage
@@ -317,42 +316,6 @@ RectTransform:
   m_AnchoredPosition: {x: -473, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &695814498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 695814496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 0
-    CountEventValue: 8
-    CountEventJudge: 0
-  - CountEventName: 1
-    CountEventValue: 3
-    CountEventJudge: 0
-  - CountEventName: 2
-    CountEventValue: 8
-    CountEventJudge: 0
-  - CountEventName: 3
-    CountEventValue: 3
-    CountEventJudge: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: 3ab067e9d52cf43999d8c9d7ec227c94, type: 3}
 --- !u!114 &695814499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -455,8 +418,18 @@ MonoBehaviour:
   EventFlagIGnitions:
   - EventType: 0
     EventFlag: 0
+  - EventType: 0
+    EventFlag: 0
+  - EventType: 0
+    EventFlag: 0
   UseCountEventRestrictedSetting: 0
   CountEventIGnitions:
+  - CountEventName: 0
+    CountEventValue: 0
+    CountEventJudge: 0
+  - CountEventName: 0
+    CountEventValue: 0
+    CountEventJudge: 0
   - CountEventName: 0
     CountEventValue: 0
     CountEventJudge: 0

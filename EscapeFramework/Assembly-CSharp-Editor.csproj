@@ -62,11 +62,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\View\Editor\ADVWindowEventExtentions.cs" />
     <Compile Include="Assets\Scripts\View\Editor\BGMEventExtentions.cs" />
     <Compile Include="Assets\Scripts\View\Editor\DisplayEventExtentions.cs" />
     <Compile Include="Assets\Scripts\View\Editor\EventFlagEventExtentions.cs" />
     <Compile Include="Assets\Scripts\View\Editor\IncreaseAndDecreaseCountEventExtentions.cs" />
     <Compile Include="Assets\Scripts\View\Editor\IncreaseItemEventExtentions.cs" />
+    <Compile Include="Assets\Scripts\View\Editor\ItemDropADVWindowEventExtentions.cs" />
     <Compile Include="Assets\Scripts\View\Editor\ItemDropBGMEventExtentions.cs" />
     <Compile Include="Assets\Scripts\View\Editor\ItemDropDisplayEventExtentions.cs" />
     <Compile Include="Assets\Scripts\View\Editor\ItemDropEventFlagEventExtentions.cs" />
