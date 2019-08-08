@@ -13,6 +13,7 @@ namespace Qitz.EscapeFramework
     [CustomEditor(typeof(SpriteChangeEvent))]
     public class SpriteChangeEventExtentions : Editor
     {
+        //======================================
         public override void OnInspectorGUI()
         {
             var _target = target as AEvent;
@@ -105,7 +106,23 @@ namespace Qitz.EscapeFramework
                 EditorGUILayout.LabelField("========================================");
             }
             base.OnInspectorGUI();
+            //イベント実行時タイミング判定
+            bool isItemDropEvent = (_target as AItemDropEvent) != null;
+            bool isDelayAbleEvent = (!isItemDropEvent && (_target as AEscapeGameEvent).EventExecuteTiming == EventExecuteTiming.クリックされた時)
+                                    || (!isItemDropEvent && (_target as AEscapeGameEvent).EventExecuteTiming == EventExecuteTiming.シーン読み込み時);
+
+            if (isItemDropEvent || isDelayAbleEvent)
+            {
+                _target.UseDelay = EditorGUILayout.Toggle("イベント遅延を行う", _target.UseDelay);
+                if (_target.UseDelay)
+                {
+                    _target.DelayTime = EditorGUILayout.FloatField("遅延時間", _target.DelayTime);
+                }
+            }
+
+
         }
+        //======================================
     }
     //======================================
 

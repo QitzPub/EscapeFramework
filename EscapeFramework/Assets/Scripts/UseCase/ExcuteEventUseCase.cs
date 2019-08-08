@@ -50,7 +50,10 @@ namespace Qitz.EscapeFramework
             //シーン読み込み時開始になっているものはこのタイミングでイベントが実行される
             foreach (var aEvent in normalEvents.Where(e=>e.EventExecuteTiming == EventExecuteTiming.シーン読み込み時))
             {
-                ExcuteNormalEvent(aEvent);
+                DelayTool.Tools.Delay(aEvent.DelayTime, () =>
+                {
+                    ExcuteNormalEvent(aEvent);
+                });
             }
             ExcuteUpdateEvent();
             eventExcuteCallBack.Invoke(events);
@@ -79,8 +82,10 @@ namespace Qitz.EscapeFramework
             foreach (var ide in itemDropEvents)
             {
                 ide.DropableView.SetDropAction((itemName) => {
-                    ExcuteItemDropEvent(ide, itemName);
-                    eventExcuteCallBack.Invoke(events);
+                    DelayTool.Tools.Delay(ide.DelayTime, () => {
+                        ExcuteItemDropEvent(ide, itemName);
+                        eventExcuteCallBack.Invoke(events);
+                    });
                 });
             }
         }
@@ -90,10 +95,13 @@ namespace Qitz.EscapeFramework
             aEvent.Button.onClick.AddListener(
                 () => {
                     Debug.Log($"ExcuteNormalEvent:{aEvent.name}");
-                    ExcuteNormalEvent(aEvent);
-                    //UPDate時に実行されるイベントも発火する
-                    ExcuteUpdateEvent();
-                    eventExcuteCallBack.Invoke(events);
+                    //遅延処理する！
+                    DelayTool.Tools.Delay(aEvent.DelayTime, () => {
+                        ExcuteNormalEvent(aEvent);
+                        //UPDate時に実行されるイベントも発火する
+                        ExcuteUpdateEvent();
+                        eventExcuteCallBack.Invoke(events);
+                    });
                 }
             );
         }
@@ -150,6 +158,9 @@ namespace Qitz.EscapeFramework
 
         void ExcuteNormalEvent(AEvent aEvent)
         {
+            //ここにDelayが設定されていた時の処理を加える
+
+
             if ((aEvent as IncreaseAndDecreaseItemEvent) != null)
             {
                 var itemEvent = aEvent as IncreaseAndDecreaseItemEvent;

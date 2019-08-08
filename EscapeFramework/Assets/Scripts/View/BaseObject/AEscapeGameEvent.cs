@@ -7,11 +7,10 @@ namespace Qitz.EscapeFramework
 {
     public abstract class AEscapeGameEvent : AEvent
     {
+
         [SerializeField]
         EventExecuteTiming eventExecuteTiming;
         public EventExecuteTiming EventExecuteTiming => eventExecuteTiming;
-
-
 
     }
 }

@@ -42,6 +42,12 @@ namespace Qitz.EscapeFramework
 
         //====================================
 
+
+        [HideInInspector]
+        public bool UseDelay = false;
+        [HideInInspector]
+        public float DelayTime = 0.0f;
+
     }
 
     [Serializable]

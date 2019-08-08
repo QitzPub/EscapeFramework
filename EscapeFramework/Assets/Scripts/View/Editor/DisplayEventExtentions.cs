@@ -13,6 +13,7 @@ namespace Qitz.EscapeFramework
     [CustomEditor(typeof(DisplayEvent))]
     public class DisplayEventExtentions : Editor
     {
+        //======================================
         public override void OnInspectorGUI()
         {
             var _target = target as AEvent;
@@ -37,13 +38,13 @@ namespace Qitz.EscapeFramework
                     buttonYPostion += elemntHight;
                 }
 
-                if (GUI.Button(new Rect(0.0f, buttonYPostion+ itemButtonOffsetY, buttonWidth, 20.0f), "制限条件を増やす"))
+                if (GUI.Button(new Rect(0.0f, buttonYPostion + itemButtonOffsetY, buttonWidth, 20.0f), "制限条件を増やす"))
                 {
                     _target.ItemIGnitions.Add(new ItemIGnitionPoint());
                 }
-                if (GUI.Button(new Rect(buttonWidth+20.0f, buttonYPostion+ itemButtonOffsetY, buttonWidth, 20.0f), "制限条件を減らす"))
+                if (GUI.Button(new Rect(buttonWidth + 20.0f, buttonYPostion + itemButtonOffsetY, buttonWidth, 20.0f), "制限条件を減らす"))
                 {
-                    if(_target.ItemIGnitions.LastOrDefault() != null)
+                    if (_target.ItemIGnitions.LastOrDefault() != null)
                         _target.ItemIGnitions.Remove(_target.ItemIGnitions.LastOrDefault());
                 }
                 EditorGUILayout.LabelField("");
@@ -63,11 +64,11 @@ namespace Qitz.EscapeFramework
                     buttonYPostion += elemntHight;
                 }
 
-                if (GUI.Button(new Rect(0.0f, buttonYPostion+ itemButtonOffsetY, buttonWidth, 20.0f), "制限条件を増やす"))
+                if (GUI.Button(new Rect(0.0f, buttonYPostion + itemButtonOffsetY, buttonWidth, 20.0f), "制限条件を増やす"))
                 {
                     _target.EventFlagIGnitions.Add(new EventFlagIGnitionPoint());
                 }
-                if (GUI.Button(new Rect(buttonWidth + 20.0f, buttonYPostion+ itemButtonOffsetY, buttonWidth, 20.0f), "制限条件を減らす"))
+                if (GUI.Button(new Rect(buttonWidth + 20.0f, buttonYPostion + itemButtonOffsetY, buttonWidth, 20.0f), "制限条件を減らす"))
                 {
                     if (_target.EventFlagIGnitions.LastOrDefault() != null)
                         _target.EventFlagIGnitions.Remove(_target.EventFlagIGnitions.LastOrDefault());
@@ -91,11 +92,11 @@ namespace Qitz.EscapeFramework
 
 
 
-                if (GUI.Button(new Rect(0.0f, buttonYPostion+ itemButtonOffsetY, buttonWidth, 20.0f), "制限条件を増やす"))
+                if (GUI.Button(new Rect(0.0f, buttonYPostion + itemButtonOffsetY, buttonWidth, 20.0f), "制限条件を増やす"))
                 {
                     _target.CountEventIGnitions.Add(new CountEventIGnitionPoint());
                 }
-                if (GUI.Button(new Rect(buttonWidth + 20.0f, buttonYPostion+ itemButtonOffsetY, buttonWidth, 20.0f), "制限条件を減らす"))
+                if (GUI.Button(new Rect(buttonWidth + 20.0f, buttonYPostion + itemButtonOffsetY, buttonWidth, 20.0f), "制限条件を減らす"))
                 {
                     if (_target.CountEventIGnitions.LastOrDefault() != null)
                         _target.CountEventIGnitions.Remove(_target.CountEventIGnitions.LastOrDefault());
@@ -105,8 +106,23 @@ namespace Qitz.EscapeFramework
                 EditorGUILayout.LabelField("========================================");
             }
             base.OnInspectorGUI();
+            //イベント実行時タイミング判定
+            bool isItemDropEvent = (_target as AItemDropEvent) != null;
+            bool isDelayAbleEvent = (!isItemDropEvent && (_target as AEscapeGameEvent).EventExecuteTiming == EventExecuteTiming.クリックされた時)
+                                    || (!isItemDropEvent && (_target as AEscapeGameEvent).EventExecuteTiming == EventExecuteTiming.シーン読み込み時);
+
+            if (isItemDropEvent || isDelayAbleEvent)
+            {
+                _target.UseDelay = EditorGUILayout.Toggle("イベント遅延を行う", _target.UseDelay);
+                if (_target.UseDelay)
+                {
+                    _target.DelayTime = EditorGUILayout.FloatField("遅延時間", _target.DelayTime);
+                }
+            }
+
+
         }
+        //======================================
     }
-    //======================================
 
 }

@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\GameSystemInitializer\EscapeGameSystemInitializer.cs" />
     <Compile Include="Assets\Scripts\Repository\EscapeGameRepository.cs" />
     <Compile Include="Assets\Scripts\UseCase\ExcuteEventUseCase.cs" />
+    <Compile Include="Assets\Scripts\Util\DelayTool.cs" />
     <Compile Include="Assets\Scripts\Util\PrefabFolder.cs" />
     <Compile Include="Assets\Scripts\View\ADVWindowView.cs" />
     <Compile Include="Assets\Scripts\View\Animation\TextAnimation.cs" />

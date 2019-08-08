@@ -433,6 +433,8 @@ MonoBehaviour:
   - CountEventName: 0
     CountEventValue: 0
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 2
   eventExecuteTiming: 2
   texts:
   - aaaaaa
@@ -513,6 +515,8 @@ MonoBehaviour:
   - CountEventName: 2
     CountEventValue: 10
     CountEventJudge: 1
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   countEventName: 2
   countEventProgress: 2
@@ -541,6 +545,8 @@ MonoBehaviour:
   - CountEventName: 2
     CountEventValue: 9
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: 66eb4a489a5184a74b1b9f646a0b2424, type: 3}
 --- !u!114 &716583055
@@ -568,6 +574,8 @@ MonoBehaviour:
   - CountEventName: 2
     CountEventValue: 8
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: eabb23b2214f540b986105ef19fd630e, type: 3}
 --- !u!114 &716583056
@@ -595,6 +603,8 @@ MonoBehaviour:
   - CountEventName: 2
     CountEventValue: 7
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: 350f7a7f1698a446b980bc6648dca6ca, type: 3}
 --- !u!114 &716583057
@@ -622,6 +632,8 @@ MonoBehaviour:
   - CountEventName: 2
     CountEventValue: 6
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: 99dde426e37074689a77e8a42e508c4b, type: 3}
 --- !u!114 &716583058
@@ -649,6 +661,8 @@ MonoBehaviour:
   - CountEventName: 2
     CountEventValue: 5
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: ae4e2c858eac74453983b0299945c0f8, type: 3}
 --- !u!114 &716583059
@@ -676,6 +690,8 @@ MonoBehaviour:
   - CountEventName: 2
     CountEventValue: 4
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: 56f11e52a328642f4906c52c82d5b2c6, type: 3}
 --- !u!114 &716583060
@@ -703,6 +719,8 @@ MonoBehaviour:
   - CountEventName: 2
     CountEventValue: 3
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: f902d1b2e89de435b8db054b5a3b8a9f, type: 3}
 --- !u!114 &716583061
@@ -730,6 +748,8 @@ MonoBehaviour:
   - CountEventName: 2
     CountEventValue: 2
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: e6ee00ca2febe4dae98aa7696cbea68e, type: 3}
 --- !u!114 &716583062
@@ -757,6 +777,8 @@ MonoBehaviour:
   - CountEventName: 2
     CountEventValue: 1
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: dfa872434080c4c7998e3af360e5f3c2, type: 3}
 --- !u!114 &716583063
@@ -784,6 +806,8 @@ MonoBehaviour:
   - CountEventName: 2
     CountEventValue: 0
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: 22aba7f3e0d2e4bfe8552fedf989f43d, type: 3}
 --- !u!114 &716583064
@@ -811,6 +835,8 @@ MonoBehaviour:
   - CountEventName: 0
     CountEventValue: 0
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 2
   countEventName: 2
   countEventProgress: 0
@@ -921,6 +947,8 @@ MonoBehaviour:
   - CountEventName: 0
     CountEventValue: 0
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 2
   sEName: 1
   audioCommandType: 0
@@ -1000,6 +1028,8 @@ MonoBehaviour:
   - CountEventName: 0
     CountEventValue: 0
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 2
   countEventName: 0
   countEventProgress: 0
@@ -1110,6 +1140,8 @@ MonoBehaviour:
   - CountEventName: 0
     CountEventValue: 9
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: 66eb4a489a5184a74b1b9f646a0b2424, type: 3}
 --- !u!114 &775081869
@@ -1137,6 +1169,8 @@ MonoBehaviour:
   - CountEventName: 0
     CountEventValue: 8
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: eabb23b2214f540b986105ef19fd630e, type: 3}
 --- !u!114 &775081870
@@ -1164,6 +1198,8 @@ MonoBehaviour:
   - CountEventName: 0
     CountEventValue: 7
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: 350f7a7f1698a446b980bc6648dca6ca, type: 3}
 --- !u!114 &775081871
@@ -1191,6 +1227,8 @@ MonoBehaviour:
   - CountEventName: 0
     CountEventValue: 6
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: 99dde426e37074689a77e8a42e508c4b, type: 3}
 --- !u!114 &775081872
@@ -1218,6 +1256,8 @@ MonoBehaviour:
   - CountEventName: 0
     CountEventValue: 5
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: ae4e2c858eac74453983b0299945c0f8, type: 3}
 --- !u!114 &775081873
@@ -1245,6 +1285,8 @@ MonoBehaviour:
   - CountEventName: 0
     CountEventValue: 4
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: 56f11e52a328642f4906c52c82d5b2c6, type: 3}
 --- !u!114 &775081874
@@ -1272,6 +1314,8 @@ MonoBehaviour:
   - CountEventName: 0
     CountEventValue: 3
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: f902d1b2e89de435b8db054b5a3b8a9f, type: 3}
 --- !u!114 &775081875
@@ -1299,6 +1343,8 @@ MonoBehaviour:
   - CountEventName: 0
     CountEventValue: 2
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: e6ee00ca2febe4dae98aa7696cbea68e, type: 3}
 --- !u!114 &775081876
@@ -1326,6 +1372,8 @@ MonoBehaviour:
   - CountEventName: 0
     CountEventValue: 1
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: dfa872434080c4c7998e3af360e5f3c2, type: 3}
 --- !u!114 &775081877
@@ -1353,6 +1401,8 @@ MonoBehaviour:
   - CountEventName: 0
     CountEventValue: 0
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: 22aba7f3e0d2e4bfe8552fedf989f43d, type: 3}
 --- !u!114 &775081878
@@ -1380,6 +1430,8 @@ MonoBehaviour:
   - CountEventName: 0
     CountEventValue: 10
     CountEventJudge: 1
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   countEventName: 0
   countEventProgress: 2
@@ -1408,6 +1460,8 @@ MonoBehaviour:
   - CountEventName: 0
     CountEventValue: 0
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 2
   sEName: 1
   audioCommandType: 0
@@ -1487,6 +1541,8 @@ MonoBehaviour:
   - CountEventName: 3
     CountEventValue: 10
     CountEventJudge: 1
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   countEventName: 3
   countEventProgress: 2
@@ -1515,6 +1571,8 @@ MonoBehaviour:
   - CountEventName: 3
     CountEventValue: 9
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: 66eb4a489a5184a74b1b9f646a0b2424, type: 3}
 --- !u!114 &806697725
@@ -1542,6 +1600,8 @@ MonoBehaviour:
   - CountEventName: 3
     CountEventValue: 8
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: eabb23b2214f540b986105ef19fd630e, type: 3}
 --- !u!114 &806697726
@@ -1569,6 +1629,8 @@ MonoBehaviour:
   - CountEventName: 3
     CountEventValue: 7
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: 350f7a7f1698a446b980bc6648dca6ca, type: 3}
 --- !u!114 &806697727
@@ -1596,6 +1658,8 @@ MonoBehaviour:
   - CountEventName: 3
     CountEventValue: 6
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: 99dde426e37074689a77e8a42e508c4b, type: 3}
 --- !u!114 &806697728
@@ -1623,6 +1687,8 @@ MonoBehaviour:
   - CountEventName: 3
     CountEventValue: 5
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: ae4e2c858eac74453983b0299945c0f8, type: 3}
 --- !u!114 &806697729
@@ -1650,6 +1716,8 @@ MonoBehaviour:
   - CountEventName: 3
     CountEventValue: 4
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: 56f11e52a328642f4906c52c82d5b2c6, type: 3}
 --- !u!114 &806697730
@@ -1677,6 +1745,8 @@ MonoBehaviour:
   - CountEventName: 3
     CountEventValue: 3
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: f902d1b2e89de435b8db054b5a3b8a9f, type: 3}
 --- !u!114 &806697731
@@ -1704,6 +1774,8 @@ MonoBehaviour:
   - CountEventName: 3
     CountEventValue: 2
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: e6ee00ca2febe4dae98aa7696cbea68e, type: 3}
 --- !u!114 &806697732
@@ -1731,6 +1803,8 @@ MonoBehaviour:
   - CountEventName: 3
     CountEventValue: 1
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: dfa872434080c4c7998e3af360e5f3c2, type: 3}
 --- !u!114 &806697733
@@ -1758,6 +1832,8 @@ MonoBehaviour:
   - CountEventName: 3
     CountEventValue: 0
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: 22aba7f3e0d2e4bfe8552fedf989f43d, type: 3}
 --- !u!114 &806697734
@@ -1785,6 +1861,8 @@ MonoBehaviour:
   - CountEventName: 0
     CountEventValue: 0
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 2
   countEventName: 3
   countEventProgress: 0
@@ -1895,6 +1973,8 @@ MonoBehaviour:
   - CountEventName: 0
     CountEventValue: 0
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 2
   sEName: 1
   audioCommandType: 0
@@ -1974,6 +2054,8 @@ MonoBehaviour:
   - CountEventName: 1
     CountEventValue: 10
     CountEventJudge: 1
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   countEventName: 1
   countEventProgress: 2
@@ -2002,6 +2084,8 @@ MonoBehaviour:
   - CountEventName: 1
     CountEventValue: 9
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: 66eb4a489a5184a74b1b9f646a0b2424, type: 3}
 --- !u!114 &810010164
@@ -2029,6 +2113,8 @@ MonoBehaviour:
   - CountEventName: 1
     CountEventValue: 8
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: eabb23b2214f540b986105ef19fd630e, type: 3}
 --- !u!114 &810010165
@@ -2056,6 +2142,8 @@ MonoBehaviour:
   - CountEventName: 1
     CountEventValue: 7
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: 350f7a7f1698a446b980bc6648dca6ca, type: 3}
 --- !u!114 &810010166
@@ -2083,6 +2171,8 @@ MonoBehaviour:
   - CountEventName: 1
     CountEventValue: 6
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: 99dde426e37074689a77e8a42e508c4b, type: 3}
 --- !u!114 &810010167
@@ -2110,6 +2200,8 @@ MonoBehaviour:
   - CountEventName: 1
     CountEventValue: 5
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: ae4e2c858eac74453983b0299945c0f8, type: 3}
 --- !u!114 &810010168
@@ -2137,6 +2229,8 @@ MonoBehaviour:
   - CountEventName: 1
     CountEventValue: 4
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: 56f11e52a328642f4906c52c82d5b2c6, type: 3}
 --- !u!114 &810010169
@@ -2164,6 +2258,8 @@ MonoBehaviour:
   - CountEventName: 1
     CountEventValue: 3
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: f902d1b2e89de435b8db054b5a3b8a9f, type: 3}
 --- !u!114 &810010170
@@ -2191,6 +2287,8 @@ MonoBehaviour:
   - CountEventName: 1
     CountEventValue: 2
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: e6ee00ca2febe4dae98aa7696cbea68e, type: 3}
 --- !u!114 &810010171
@@ -2218,6 +2316,8 @@ MonoBehaviour:
   - CountEventName: 1
     CountEventValue: 1
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: dfa872434080c4c7998e3af360e5f3c2, type: 3}
 --- !u!114 &810010172
@@ -2245,6 +2345,8 @@ MonoBehaviour:
   - CountEventName: 1
     CountEventValue: 0
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 0
   changeSprite: {fileID: 21300000, guid: 22aba7f3e0d2e4bfe8552fedf989f43d, type: 3}
 --- !u!114 &810010173
@@ -2272,6 +2374,8 @@ MonoBehaviour:
   - CountEventName: 0
     CountEventValue: 0
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 2
   countEventName: 1
   countEventProgress: 0
@@ -2382,6 +2486,8 @@ MonoBehaviour:
   - CountEventName: 0
     CountEventValue: 0
     CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
   eventExecuteTiming: 2
   sEName: 1
   audioCommandType: 0
