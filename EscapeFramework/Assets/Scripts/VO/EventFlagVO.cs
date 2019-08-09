@@ -6,7 +6,7 @@ namespace Qitz.EscapeFramework
 {
     public interface IEventFlagVO
     {
-        EventType EventType { get; }
+        EventName EventType { get; }
         bool IsOn { get; }
     }
 
@@ -19,10 +19,10 @@ namespace Qitz.EscapeFramework
         [SerializeField]
         bool isOn;
 
-        public EventType EventType => (EventType)eventType;
+        public EventName EventType => (EventName)eventType;
         public bool IsOn => isOn;
 
-        public EventFlagVO(EventType eventType,bool isOn)
+        public EventFlagVO(EventName eventType,bool isOn)
         {
             this.eventType = (int)eventType;
             this.isOn = isOn;

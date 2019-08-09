@@ -289,8 +289,8 @@ GameObject:
   - component: {fileID: 695814501}
   - component: {fileID: 695814500}
   - component: {fileID: 695814499}
+  - component: {fileID: 695814502}
   - component: {fileID: 695814498}
-  - component: {fileID: 695814503}
   m_Layer: 5
   m_Name: TestImage
   m_TagString: Untagged
@@ -326,7 +326,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 695814496}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de92cfe9638954be8818742860d65b93, type: 3}
+  m_Script: {fileID: 11500000, guid: a6653858e3ba443e7915025486804d58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UseItemRestrictedSetting: 0
@@ -344,8 +344,26 @@ MonoBehaviour:
     CountEventJudge: 0
   UseDelay: 0
   DelayTime: 0
-  eventExecuteTiming: 2
-  screenEffectName: 0
+  EventType: 4
+  EventExecuteTiming: 2
+  DropedItemName: 0
+  texts:
+  - aa
+  - aaaaa
+  BGMName: 0
+  BGMAudioCommandType: 0
+  DisplayEventProgress: 0
+  EventName: 0
+  EventFlag: 0
+  CountEventName: 0
+  CountEventProgress: 0
+  ItemName: 0
+  ItemEventProgress: 0
+  SceneName: 
+  ScreenEffect: 0
+  SEName: 0
+  SEAudioCommandType: 0
+  ChangeSprite: {fileID: 21300000, guid: 3ab067e9d52cf43999d8c9d7ec227c94, type: 3}
 --- !u!114 &695814499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,7 +446,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 695814496}
   m_CullTransparentMesh: 0
---- !u!114 &695814503
+--- !u!114 &695814502
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -437,26 +455,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 695814496}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbd6e9e7929ff4132a6081bcdfe22a66, type: 3}
+  m_Script: {fileID: 11500000, guid: ddacfc461bc794894b9489266d5c5f98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 0
-  CountEventIGnitions:
-  - CountEventName: 0
-    CountEventValue: 0
-    CountEventJudge: 0
-  UseDelay: 1
-  DelayTime: 2
-  eventExecuteTiming: 2
-  sceneName: TV
 --- !u!1 &716583051
 GameObject:
   m_ObjectHideFlags: 0

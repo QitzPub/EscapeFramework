@@ -57,7 +57,7 @@ namespace Qitz.EscapeFramework
                 EditorGUILayout.LabelField("=======イベントフラグ実行制限==========");
                 foreach (var ignitionPoint in _target.EventFlagIGnitions)
                 {
-                    ignitionPoint.EventType = (EventType)EditorGUILayout.EnumPopup("対象のイベントフラグ:", ignitionPoint.EventType);
+                    ignitionPoint.EventType = (EventName)EditorGUILayout.EnumPopup("対象のイベントフラグ:", ignitionPoint.EventType);
                     ignitionPoint.EventFlag = (EventFlag)EditorGUILayout.EnumPopup("イベントフラグの状態", ignitionPoint.EventFlag);
                     EditorGUILayout.LabelField("時にイベントが実行可能");
                     EditorGUILayout.LabelField("");

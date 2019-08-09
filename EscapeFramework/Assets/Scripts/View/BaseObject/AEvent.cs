@@ -15,7 +15,7 @@ namespace Qitz.EscapeFramework
         public Image Image => this.GetComponent<Image>();
 
         //====================================
-        [HeaderAttribute("アイテム所持判定のイベント発火制限をかける")]
+        [HideInInspector,HeaderAttribute("アイテム所持判定のイベント発火制限をかける")]
         public bool UseItemRestrictedSetting = false;
 
         [HideInInspector]
@@ -24,7 +24,7 @@ namespace Qitz.EscapeFramework
         //====================================
 
         //====================================
-        [HeaderAttribute("フラグによるイベント発火制限をかける")]
+        [HideInInspector, HeaderAttribute("フラグによるイベント発火制限をかける")]
         public bool UseEventFlagRestrictedSetting = false;
 
         [HideInInspector]
@@ -33,7 +33,7 @@ namespace Qitz.EscapeFramework
         //====================================
 
         //====================================
-        [HeaderAttribute("カウントイベントによる発火制限をかける")]
+        [HideInInspector, HeaderAttribute("カウントイベントによる発火制限をかける")]
         public bool UseCountEventRestrictedSetting = false;
 
         [HideInInspector]
@@ -63,7 +63,7 @@ namespace Qitz.EscapeFramework
     public class EventFlagIGnitionPoint
     {
         [HideInInspector]
-        public EventType EventType;
+        public EventName EventType;
         [HideInInspector]
         public EventFlag EventFlag;
     }

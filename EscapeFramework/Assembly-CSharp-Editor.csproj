@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\View\Editor\ItemDropScreenEffectEventExtentions.cs" />
     <Compile Include="Assets\Scripts\View\Editor\ItemDropSEEventExtentions.cs" />
     <Compile Include="Assets\Scripts\View\Editor\ItemDropSpriteChangeEventExtentions.cs" />
+    <Compile Include="Assets\Scripts\View\Editor\New\GameEventExtentions.cs" />
     <Compile Include="Assets\Scripts\View\Editor\SceneTransitionEventExtentions.cs" />
     <Compile Include="Assets\Scripts\View\Editor\ScreenEffectEventExtentions.cs" />
     <Compile Include="Assets\Scripts\View\Editor\SEEventExtentions.cs" />

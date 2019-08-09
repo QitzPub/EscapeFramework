@@ -7,8 +7,8 @@ namespace Qitz.EscapeFramework
     public class ItemDropEventFlagEvent : AItemDropEvent, IEventFlagEvent
     {
         [SerializeField]
-        EventType eventType;
-        public EventType EventType => eventType;
+        EventName eventType;
+        public EventName EventType => eventType;
         [SerializeField]
         EventFlag eventFlag;
         public EventFlag EventFlag => eventFlag;

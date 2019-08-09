@@ -9,7 +9,7 @@ namespace Qitz.EscapeFramework
     public interface IEscapeGameUserDataStore: ICanHoldItems, ICanHoldEvents, ICanHoldCountEvents
     {
         bool GetEventFlagValue(IEventFlagVO eventFlagVO);
-        bool GetEventFlagValue(EventType eventType);
+        bool GetEventFlagValue(EventName eventType);
         bool InPossessionItem(ItemVO itemVO);
         bool InPossessionItem(ItemName itemName);
     }
@@ -65,7 +65,7 @@ namespace Qitz.EscapeFramework
             }
         }
 
-        public bool GetEventFlagValue(EventType eventType)
+        public bool GetEventFlagValue(EventName eventType)
         {
             bool existEventFlag = EventFlags.Exists(ef => ef.EventType == eventType);
             if (existEventFlag)

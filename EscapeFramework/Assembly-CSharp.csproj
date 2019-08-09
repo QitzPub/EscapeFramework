@@ -74,9 +74,6 @@
     <Compile Include="Assets\ArchitectureCore\View\AView.cs" />
     <Compile Include="Assets\ArchitectureCore\View\IView.cs" />
     <Compile Include="Assets\Scripts\Audio\EscapeGameAudioPlayer.cs" />
-    <Compile Include="Assets\Scripts\Buttons\EventSwitchButton.cs" />
-    <Compile Include="Assets\Scripts\Buttons\ImageHideScript.cs" />
-    <Compile Include="Assets\Scripts\Buttons\NextSceneButton.cs" />
     <Compile Include="Assets\Scripts\Controller\EscapeGameController.cs" />
     <Compile Include="Assets\Scripts\DataStore\EscapeGameAudioDataStore.cs" />
     <Compile Include="Assets\Scripts\DataStore\EscapeGameDefinsDataStore.cs" />
@@ -84,6 +81,7 @@
     <Compile Include="Assets\Scripts\DataStore\ItemDataStore.cs" />
     <Compile Include="Assets\Scripts\Enum\EventEnums.cs" />
     <Compile Include="Assets\Scripts\Enum\ItemName.cs" />
+    <Compile Include="Assets\Scripts\GameEvent\GameEvent.cs" />
     <Compile Include="Assets\Scripts\GameSystemInitializer\EscapeGameSystemInitializer.cs" />
     <Compile Include="Assets\Scripts\Repository\EscapeGameRepository.cs" />
     <Compile Include="Assets\Scripts\UseCase\ExcuteEventUseCase.cs" />

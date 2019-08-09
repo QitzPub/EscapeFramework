@@ -6,7 +6,7 @@ namespace Qitz.EscapeFramework
 {
     public interface IEventFlagEvent
     {
-        EventType EventType { get; }
+        EventName EventType { get; }
         EventFlag EventFlag { get; }
         EventFlagVO EventFlagVO { get; }
         GameObject gameObject { get; }
@@ -15,8 +15,8 @@ namespace Qitz.EscapeFramework
     public class EventFlagEvent : AEscapeGameEvent, IEventFlagEvent
     {
         [SerializeField]
-        EventType eventType;
-        public EventType EventType => eventType;
+        EventName eventType;
+        public EventName EventType => eventType;
         [SerializeField]
         EventFlag eventFlag;
         public EventFlag EventFlag => eventFlag;

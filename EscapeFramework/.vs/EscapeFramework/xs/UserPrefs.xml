@@ -1,13 +1,11 @@
 ﻿<Properties StartupConfiguration="{C9900E98-A63D-0522-C79D-6228823C21E5}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/View/ScreenEffectView.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/VO/CountEventVO.cs">
     <Files>
-      <File FileName="Assets/Scripts/View/EventComponents/SceneTransitionEvent.cs" Line="11" Column="38" />
-      <File FileName="Assets/Scripts/View/EventComponents/ItemDropSceneTransitionEvent.cs" Line="6" Column="46" />
-      <File FileName="Assets/Scripts/UseCase/SceneTransitionUseCase.cs" Line="12" Column="40" NotebookId="1" />
-      <File FileName="Assets/Scripts/View/Editor/SceneTransitionEventExtentions.cs" Line="13" Column="46" NotebookId="1" />
-      <File FileName="Assets/Scripts/View/Editor/ItemDropSceneTransitionEventExtentions.cs" Line="20" Column="38" NotebookId="1" />
-      <File FileName="Assets/Scripts/UseCase/ExcuteEventUseCase.cs" Line="29" Column="17" NotebookId="1" />
-      <File FileName="Assets/Scripts/View/ScreenEffectView.cs" Line="8" Column="22" NotebookId="1" />
+      <File FileName="Assets/Scripts/View/Editor/New/GameEventExtentions.cs" Line="152" Column="1" />
+      <File FileName="Assets/Scripts/Enum/EventEnums.cs" Line="20" Column="5" NotebookId="1" />
+      <File FileName="Assets/Scripts/View/Editor/ADVWindowEventExtentions.cs" Line="86" Column="21" NotebookId="1" />
+      <File FileName="Assets/Scripts/GameEvent/GameEvent.cs" Line="37" Column="25" NotebookId="1" />
+      <File FileName="Assets/Scripts/VO/CountEventVO.cs" Line="10" Column="9" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

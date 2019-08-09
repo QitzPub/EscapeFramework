@@ -6,6 +6,22 @@ namespace Qitz.EscapeFramework
 {
     public enum EventType
     {
+        イベントの種類を設定してくださいまし,
+        メッセージWindowイベント,
+        BGMイベント,
+        SEイベント,
+        表示ー非表示イベント,
+        フラグイベント,
+        カウントイベント,
+        アイテムイベント,
+        シーン遷移イベント,
+        イメージ切り替えイベント,
+        スクリーンエフェクトイベント,
+    }
+
+
+    public enum EventName
+    {
         トンカチを入手,
         ぶたの貯金箱を破壊,
         金庫を開ける,
@@ -87,6 +103,7 @@ namespace Qitz.EscapeFramework
         Update実行,
         シーン読み込み時,
         クリックされた時,
+        アイテムがドロップされた時,
     }
     public enum CountEventJudge
     {
