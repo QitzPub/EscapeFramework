@@ -27,6 +27,8 @@ namespace Qitz.EscapeFramework
         EscapeGameAudioPlayer escapeGameAudioPlayer;
         [SerializeField]
         ADVWindowView aDVWindowView;
+        [SerializeField]
+        ScreenEffectView screenEffectView;
 
         public void AddEventExecuteCallBack(Action<AEvent[]> addEventExecuteCallBack)
         {
@@ -49,7 +51,7 @@ namespace Qitz.EscapeFramework
                                 eventExecuteCallBack?.Invoke(events);
                                 userItemListChangeCallBack?.Invoke(repository.UserPossessionItemSpriteList);
                     }, 
-                    escapeGameAudioPlayer, aDVWindowView);
+                    escapeGameAudioPlayer, aDVWindowView, screenEffectView);
         }
 
         void Start()

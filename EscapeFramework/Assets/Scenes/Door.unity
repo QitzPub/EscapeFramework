@@ -290,6 +290,8 @@ GameObject:
   - component: {fileID: 695814500}
   - component: {fileID: 695814499}
   - component: {fileID: 695814502}
+  - component: {fileID: 695814498}
+  - component: {fileID: 695814503}
   m_Layer: 5
   m_Name: TestImage
   m_TagString: Untagged
@@ -316,6 +318,35 @@ RectTransform:
   m_AnchoredPosition: {x: -473, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &695814498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695814496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de92cfe9638954be8818742860d65b93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseItemRestrictedSetting: 0
+  ItemIGnitions:
+  - ItemName: 0
+    IGnitionPointItem: 0
+  UseEventFlagRestrictedSetting: 0
+  EventFlagIGnitions:
+  - EventType: 0
+    EventFlag: 0
+  UseCountEventRestrictedSetting: 0
+  CountEventIGnitions:
+  - CountEventName: 0
+    CountEventValue: 0
+    CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
+  eventExecuteTiming: 2
+  screenEffectName: 0
 --- !u!114 &695814499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -439,6 +470,35 @@ MonoBehaviour:
   texts:
   - aaaaaa
   - " \u3046\u3046\u3046\u3046"
+--- !u!114 &695814503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695814496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de92cfe9638954be8818742860d65b93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseItemRestrictedSetting: 0
+  ItemIGnitions:
+  - ItemName: 0
+    IGnitionPointItem: 0
+  UseEventFlagRestrictedSetting: 0
+  EventFlagIGnitions:
+  - EventType: 0
+    EventFlag: 0
+  UseCountEventRestrictedSetting: 0
+  CountEventIGnitions:
+  - CountEventName: 0
+    CountEventValue: 0
+    CountEventJudge: 0
+  UseDelay: 1
+  DelayTime: 3
+  eventExecuteTiming: 2
+  screenEffectName: 1
 --- !u!1 &716583051
 GameObject:
   m_ObjectHideFlags: 0

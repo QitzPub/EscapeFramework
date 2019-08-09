@@ -25,6 +25,13 @@ namespace Qitz.EscapeFramework
     {
         再生する,
     }
+    public enum ScreenEffectName
+    {
+        画面暗転,
+        画面暗転解除,
+        画面操作不能にする,
+        画面操作不能解除,
+    }
 
     public enum EventFlag
     {

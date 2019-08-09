@@ -9,6 +9,7 @@ namespace Qitz.EscapeFramework
     public interface IExcutabel
     {
         void ExcuteSceneLoadTimingEvent();
+        void ExcuteUpdateEvent();
     }
     public interface IExcuteEventUseCase: IExcutabel
     {
@@ -25,13 +26,15 @@ namespace Qitz.EscapeFramework
         IEnumerable<AItemDropEvent> itemDropEvents;
         EscapeGameAudioPlayer escapeGameAudioPlayer;
         IADVWindowView aDVWindowView;
+        IScreenEffectView screenEffectView;
 
-        public ExcuteEventUseCase(IEscapeGameUserDataStore escapeGameUserDataStore, Action<AEvent[]> eventExcuteCallBack, EscapeGameAudioPlayer escapeGameAudioPlayer, IADVWindowView aDVWindowView)
+        public ExcuteEventUseCase(IEscapeGameUserDataStore escapeGameUserDataStore, Action<AEvent[]> eventExcuteCallBack, EscapeGameAudioPlayer escapeGameAudioPlayer, IADVWindowView aDVWindowView, IScreenEffectView screenEffectView)
         {
             this.escapeGameUserDataStore = escapeGameUserDataStore;
             this.eventExcuteCallBack = eventExcuteCallBack;
             this.escapeGameAudioPlayer = escapeGameAudioPlayer;
             this.aDVWindowView = aDVWindowView;
+            this.screenEffectView = screenEffectView;
         }
 
         void SetSceneEvents()
@@ -154,6 +157,11 @@ namespace Qitz.EscapeFramework
                 var windowEvent = itemDropEvent as ItemDropADVWindowEvent;
                 ExcuteWindowEvent(windowEvent);
             }
+            else if ((itemDropEvent as ItemDropScreenEvent) != null)
+            {
+                var screenEvent = itemDropEvent as ItemDropScreenEvent;
+                ExcuteScreenEffectEvent(screenEvent);
+            }
         }
 
         void ExcuteNormalEvent(AEvent aEvent)
@@ -200,6 +208,40 @@ namespace Qitz.EscapeFramework
             {
                 var windowEvent = aEvent as ADVWindowEvent;
                 ExcuteWindowEvent(windowEvent);
+            }
+            else if ((aEvent as ScreenEffectEvent) != null)
+            {
+                var screenEvent = aEvent as ScreenEffectEvent;
+                ExcuteScreenEffectEvent(screenEvent);
+            }
+        }
+
+        //AdvWindowの表示を行う
+        void ExcuteScreenEffectEvent(IScreenEffectEvent screenEffectEvent)
+        {
+            bool isOverTheLimit = JudgeEventIgnitionOverTheLimit((AEvent)screenEffectEvent);
+            if (!isOverTheLimit)
+            {
+                //イベント制限を突破していないのでイベントは実行されず
+                return;
+            }
+            switch (screenEffectEvent.ScreenEffect)
+            {
+                case ScreenEffectName.画面操作不能にする:
+                    screenEffectView.BlockRaycasts();
+                    break;
+                case ScreenEffectName.画面操作不能解除:
+                    screenEffectView.UnBlockRaycasts();
+                    break;
+                case ScreenEffectName.画面暗転:
+                    screenEffectView.BlackOut();
+                    break;
+                case ScreenEffectName.画面暗転解除:
+                    screenEffectView.UnBlackOut();
+                    break;
+                default:
+                    throw new Exception("想定されない型です。");
+                    break;
             }
         }
 

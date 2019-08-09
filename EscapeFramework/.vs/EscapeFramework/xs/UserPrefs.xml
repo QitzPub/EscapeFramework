@@ -1,10 +1,14 @@
 ﻿<Properties StartupConfiguration="{C9900E98-A63D-0522-C79D-6228823C21E5}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UseCase/ExcuteEventUseCase.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Util/DelayTool.cs">
     <Files>
-      <File FileName="Assets/Scripts/View/Editor/ADVWindowEventExtentions.cs" Line="91" Column="18" />
-      <File FileName="Assets/Scripts/Util/DelayTool.cs" Line="36" Column="38" />
-      <File FileName="Assets/Scripts/View/Editor/SpriteChangeEventExtentions.cs" Line="17" Column="41" NotebookId="1" />
-      <File FileName="Assets/Scripts/UseCase/ExcuteEventUseCase.cs" Line="46" Column="47" NotebookId="1" />
+      <File FileName="Assets/Scripts/View/EventComponents/ScreenEffectEvent.cs" Line="13" Column="35" />
+      <File FileName="Assets/Scripts/View/EventComponents/ItemDropScreenEvent.cs" Line="7" Column="37" />
+      <File FileName="Assets/Scripts/Controller/EscapeGameController.cs" Line="25" Column="18" NotebookId="1" />
+      <File FileName="Assets/Scripts/UseCase/ExcuteEventUseCase.cs" Line="29" Column="27" NotebookId="1" />
+      <File FileName="Assets/Scripts/View/Editor/ScreenEffectEventExtentions.cs" Line="13" Column="43" NotebookId="1" />
+      <File FileName="Assets/Scripts/View/Editor/ItemDropScreenEffectEventExtentions.cs" Line="20" Column="38" NotebookId="1" />
+      <File FileName="Assets/Scripts/View/ScreenEffectView.cs" Line="26" Column="39" NotebookId="1" />
+      <File FileName="Assets/Scripts/Util/DelayTool.cs" Line="33" Column="15" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
