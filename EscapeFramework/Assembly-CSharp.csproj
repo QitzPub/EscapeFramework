@@ -85,6 +85,9 @@
     <Compile Include="Assets\Scripts\GameSystemInitializer\EscapeGameSystemInitializer.cs" />
     <Compile Include="Assets\Scripts\Repository\EscapeGameRepository.cs" />
     <Compile Include="Assets\Scripts\UseCase\ExcuteEventUseCase.cs" />
+    <Compile Include="Assets\Scripts\UseCase\New\ExcuteGameEventUseCase.cs" />
+    <Compile Include="Assets\Scripts\UseCase\New\GameEventExecutorUseCase.cs" />
+    <Compile Include="Assets\Scripts\UseCase\New\JudgeIgnitionOverTheLimitUseCase.cs" />
     <Compile Include="Assets\Scripts\UseCase\SceneTransitionUseCase.cs" />
     <Compile Include="Assets\Scripts\Util\DelayTool.cs" />
     <Compile Include="Assets\Scripts\Util\PrefabFolder.cs" />

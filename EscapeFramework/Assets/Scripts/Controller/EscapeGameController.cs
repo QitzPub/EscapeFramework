@@ -22,7 +22,7 @@ namespace Qitz.EscapeFramework
         protected override EscapeGameRepository Repository { get { return repository; } }
         Action<AEvent[]> eventExecuteCallBack;
         Action<List<IItemSpriteVO>> userItemListChangeCallBack;
-        ExcuteEventUseCase excuteEventUseCase;
+        IExcuteEventUseCase excuteEventUseCase;
         [SerializeField]
         EscapeGameAudioPlayer escapeGameAudioPlayer;
         [SerializeField]
@@ -45,14 +45,15 @@ namespace Qitz.EscapeFramework
         {
             aDVWindowView.Hide();
             repository.Initialize();
-            excuteEventUseCase = new ExcuteEventUseCase(repository.EscapeGameUserDataStore,
+            var gameEventExecutorUseCase = new GameEventExecutorUseCase(Repository.EscapeGameUserDataStore, escapeGameAudioPlayer, aDVWindowView, screenEffectView);
+
+            excuteEventUseCase = new ExcuteGameEventUseCase(
                 (events) => {
                                 //イベント実行後のコールバック
                                 //ユーザーデータのアイテム数をItemViewに反映させる処理など
                                 eventExecuteCallBack?.Invoke(events);
                                 userItemListChangeCallBack?.Invoke(repository.UserPossessionItemSpriteList);
-                    }, 
-                    escapeGameAudioPlayer, aDVWindowView, screenEffectView);
+                    }, gameEventExecutorUseCase);
         }
 
         void Start()
@@ -68,14 +69,14 @@ namespace Qitz.EscapeFramework
             ExecuteEvent(excuteEventUseCase);
         }
 
-        void ExecuteEvent(ExcuteEventUseCase excuteEventUseCase)
+        void ExecuteEvent(IExcuteEventUseCase excuteEventUseCase)
         {
             excuteEventUseCase.ExcuteSceneLoadTimingEvent();
         }
 
         //UpdateEventを実行するタイムスパン
         const float UPDATE_EVENT_EXCUTE_SPAN = 1.0f;
-        IEnumerator ExcuteUpdateEvent(ExcuteEventUseCase excuteEventUseCase)
+        IEnumerator ExcuteUpdateEvent(IExcuteEventUseCase excuteEventUseCase)
         {
             while (true)
             {
