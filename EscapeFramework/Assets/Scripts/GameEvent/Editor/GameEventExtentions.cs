@@ -33,7 +33,7 @@ namespace Qitz.EscapeFramework
                 gameEvent.DropedItemName = (ItemName)EditorGUILayout.EnumPopup("対象アイテム:", gameEvent.DropedItemName);
 
             }
-
+            EditorGUILayout.LabelField("");
             //基本設定ここまで===========================================
 
 
@@ -123,8 +123,18 @@ namespace Qitz.EscapeFramework
             }
             //SpriteChangeEvent設定ここまで==========================================
 
+            //イベント遅延処理設定ここから==========================================
+            if(gameEvent.EventExecuteTiming != EventExecuteTiming.Update実行)
+            {
+                EditorGUILayout.LabelField("");
+                gameEvent.UseDelay = EditorGUILayout.Toggle("イベント遅延を設定する", gameEvent.UseDelay);
+                gameEvent.DelayTime = EditorGUILayout.FloatField("遅延時間", gameEvent.DelayTime);
+            }
+
+            //イベント遅延処理設定ここまで==========================================
 
             //=======イベント制限ここから==================
+            EditorGUILayout.LabelField("");
             gameEvent.UseItemRestrictedSetting = EditorGUILayout.Toggle("アイテム所持実行制限", gameEvent.UseItemRestrictedSetting);
             if (gameEvent.UseItemRestrictedSetting)
             {
@@ -150,7 +160,7 @@ namespace Qitz.EscapeFramework
                 }
                 EditorGUILayout.LabelField("========================================");
             }
-
+            EditorGUILayout.LabelField("");
             gameEvent.UseEventFlagRestrictedSetting = EditorGUILayout.Toggle("フラグ実行制限", gameEvent.UseEventFlagRestrictedSetting);
             if (gameEvent.UseEventFlagRestrictedSetting)
             {
@@ -174,7 +184,7 @@ namespace Qitz.EscapeFramework
                 }
                 EditorGUILayout.LabelField("========================================");
             }
-
+            EditorGUILayout.LabelField("");
             gameEvent.UseCountEventRestrictedSetting = EditorGUILayout.Toggle("カウント実行制限", gameEvent.UseCountEventRestrictedSetting);
             if (gameEvent.UseCountEventRestrictedSetting)
             {
