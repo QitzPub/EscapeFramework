@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\GameSystemInitializer\EscapeGameSystemInitializer.cs" />
     <Compile Include="Assets\Scripts\Repository\EscapeGameRepository.cs" />
     <Compile Include="Assets\Scripts\UseCase\ExcuteEventUseCase.cs" />
+    <Compile Include="Assets\Scripts\UseCase\SceneTransitionUseCase.cs" />
     <Compile Include="Assets\Scripts\Util\DelayTool.cs" />
     <Compile Include="Assets\Scripts\Util\PrefabFolder.cs" />
     <Compile Include="Assets\Scripts\View\ADVWindowView.cs" />
@@ -106,9 +107,11 @@
     <Compile Include="Assets\Scripts\View\EventComponents\ItemDropEventFlagEvent.cs" />
     <Compile Include="Assets\Scripts\View\EventComponents\ItemDropIncreaseAndDecreaseCountEvent.cs" />
     <Compile Include="Assets\Scripts\View\EventComponents\ItemDropIncreaseItemEvent.cs" />
+    <Compile Include="Assets\Scripts\View\EventComponents\ItemDropSceneTransitionEvent.cs" />
     <Compile Include="Assets\Scripts\View\EventComponents\ItemDropScreenEvent.cs" />
     <Compile Include="Assets\Scripts\View\EventComponents\ItemDropSEEvent.cs" />
     <Compile Include="Assets\Scripts\View\EventComponents\ItemDropSpriteChangeEvent.cs" />
+    <Compile Include="Assets\Scripts\View\EventComponents\SceneTransitionEvent.cs" />
     <Compile Include="Assets\Scripts\View\EventComponents\ScreenEffectEvent.cs" />
     <Compile Include="Assets\Scripts\View\EventComponents\SEEvent.cs" />
     <Compile Include="Assets\Scripts\View\EventComponents\SpriteChangeEvent.cs" />

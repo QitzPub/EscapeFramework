@@ -11,6 +11,7 @@ namespace Qitz.EscapeFramework
         void UnBlockRaycasts();
         void BlackOut();
         void UnBlackOut();
+        void TerminateScreenEffect();
     }
 
     public class ScreenEffectView : MonoBehaviour, IScreenEffectView
@@ -63,6 +64,13 @@ namespace Qitz.EscapeFramework
             canvasGroup.blocksRaycasts = false;
             fadeOutRq = false;
             currentEffectTime = 0;
+        }
+
+        public void TerminateScreenEffect()
+        {
+            fadeOutRq = false;
+            //currentEffectTime = 1.0f;
+            canvasGroup.alpha = 0;
         }
     }
 }

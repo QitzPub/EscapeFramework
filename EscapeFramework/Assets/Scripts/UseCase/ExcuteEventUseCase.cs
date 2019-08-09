@@ -27,6 +27,7 @@ namespace Qitz.EscapeFramework
         EscapeGameAudioPlayer escapeGameAudioPlayer;
         IADVWindowView aDVWindowView;
         IScreenEffectView screenEffectView;
+        ISceneTransitionUseCase sceneTransitionUseCase = new SceneTransitionUseCase();
 
         public ExcuteEventUseCase(IEscapeGameUserDataStore escapeGameUserDataStore, Action<AEvent[]> eventExcuteCallBack, EscapeGameAudioPlayer escapeGameAudioPlayer, IADVWindowView aDVWindowView, IScreenEffectView screenEffectView)
         {
@@ -162,6 +163,11 @@ namespace Qitz.EscapeFramework
                 var screenEvent = itemDropEvent as ItemDropScreenEvent;
                 ExcuteScreenEffectEvent(screenEvent);
             }
+            else if ((itemDropEvent as ItemDropSceneTransitionEvent) != null)
+            {
+                var sceneEvent = itemDropEvent as ItemDropSceneTransitionEvent;
+                ExcuteSceneTransitionEvent(sceneEvent);
+            }
         }
 
         void ExcuteNormalEvent(AEvent aEvent)
@@ -214,6 +220,23 @@ namespace Qitz.EscapeFramework
                 var screenEvent = aEvent as ScreenEffectEvent;
                 ExcuteScreenEffectEvent(screenEvent);
             }
+            else if ((aEvent as SceneTransitionEvent) != null)
+            {
+                var sceneEvent = aEvent as SceneTransitionEvent;
+                ExcuteSceneTransitionEvent(sceneEvent);
+            }
+        }
+
+        void ExcuteSceneTransitionEvent(ISceneTransitionEvent sceneTransitionEvent)
+        {
+            bool isOverTheLimit = JudgeEventIgnitionOverTheLimit((AEvent)sceneTransitionEvent);
+            if (!isOverTheLimit)
+            {
+                //イベント制限を突破していないのでイベントは実行されず
+                return;
+            }
+            sceneTransitionUseCase.GotoScene(sceneTransitionEvent.SceneName);
+            screenEffectView.TerminateScreenEffect();
         }
 
         //AdvWindowの表示を行う

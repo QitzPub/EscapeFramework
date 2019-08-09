@@ -15,7 +15,6 @@ namespace Qitz.EscapeFramework
         public void GotoScene()
         {
             SceneManager.LoadScene(SceneName);
-
         }
     }
 }

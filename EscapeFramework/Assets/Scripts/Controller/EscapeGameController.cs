@@ -30,6 +30,7 @@ namespace Qitz.EscapeFramework
         [SerializeField]
         ScreenEffectView screenEffectView;
 
+
         public void AddEventExecuteCallBack(Action<AEvent[]> addEventExecuteCallBack)
         {
             eventExecuteCallBack += addEventExecuteCallBack;

@@ -74,9 +74,11 @@
     <Compile Include="Assets\Scripts\View\Editor\ItemDropEventFlagEventExtentions.cs" />
     <Compile Include="Assets\Scripts\View\Editor\ItemDropIncreaseAndDecreaseCountEventExtentions.cs" />
     <Compile Include="Assets\Scripts\View\Editor\ItemDropIncreaseItemEventExtentions.cs" />
+    <Compile Include="Assets\Scripts\View\Editor\ItemDropSceneTransitionEventExtentions.cs" />
     <Compile Include="Assets\Scripts\View\Editor\ItemDropScreenEffectEventExtentions.cs" />
     <Compile Include="Assets\Scripts\View\Editor\ItemDropSEEventExtentions.cs" />
     <Compile Include="Assets\Scripts\View\Editor\ItemDropSpriteChangeEventExtentions.cs" />
+    <Compile Include="Assets\Scripts\View\Editor\SceneTransitionEventExtentions.cs" />
     <Compile Include="Assets\Scripts\View\Editor\ScreenEffectEventExtentions.cs" />
     <Compile Include="Assets\Scripts\View\Editor\SEEventExtentions.cs" />
     <Compile Include="Assets\Scripts\View\Editor\SpriteChangeEventExtentions.cs" />
