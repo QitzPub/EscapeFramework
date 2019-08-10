@@ -1,17 +1,26 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Qitz.EscapeFramework
 {
-    [RequireComponent(typeof(ItemDropable))]
+    [RequireComponent(typeof(ItemDropable)),Serializable]
     public class GameEvent : AEvent
     {
+        private void Awake()
+        {
+            EventToken = Guid.NewGuid().ToString();
+        }
         //基本設定ここから==========================================
         public EventType EventType;
         public EventExecuteTiming EventExecuteTiming;
         public ItemName DropedItemName;
         public ItemDropable DropableView => this.GetComponent<ItemDropable>();
+        [SerializeField]
+        GameEvent chainEvent;
+        public GameEvent ChainEvent => chainEvent;
+        public string EventToken { get; private set; }
         //基本設定ここまで==========================================
         //ADVWindow設定ここから==========================================
         [SerializeField]

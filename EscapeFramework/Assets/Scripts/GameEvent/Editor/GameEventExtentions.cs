@@ -33,6 +33,15 @@ namespace Qitz.EscapeFramework
                 gameEvent.DropedItemName = (ItemName)EditorGUILayout.EnumPopup("対象アイテム:", gameEvent.DropedItemName);
 
             }
+            if (gameEvent.EventExecuteTiming == EventExecuteTiming.指定のイベントが実行完了した時)
+            {
+                serializedObject.Update();
+                // 第二引数をtrueにする
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("chainEvent"), true);
+                serializedObject.ApplyModifiedProperties();
+
+            }
+
             EditorGUILayout.LabelField("");
             //基本設定ここまで===========================================
 

@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 namespace Qitz.EscapeFramework
 {
     public interface IADVWindowView
     {
         void Show();
-        void Hide();
-        void SetText(List<string> texts);
+        void Close();
+        void SetText(GameEvent gameEvent, Action<GameEvent> closeCallBack);
     }
 
     public class ADVWindowView : MonoBehaviour,IADVWindowView
@@ -17,17 +18,22 @@ namespace Qitz.EscapeFramework
         TextAnimation textAnimation;
         List<string> texts;
         int currentCount = 0;
+        GameEvent gameEvent;
+        Action<GameEvent> closeCallBack;
 
-        public void Hide()
+        public void Close()
         {
+            closeCallBack?.Invoke(gameEvent);
             this.gameObject.SetActive(false);
         }
 
-        public void SetText(List<string> texts)
+        public void SetText(GameEvent gameEvent, Action<GameEvent> closeCallBack)
         {
             Show();
-            this.texts = texts;
+            this.gameEvent = gameEvent;
+            this.texts = gameEvent.Texts;
             this.currentCount = 0;
+            this.closeCallBack = closeCallBack;
             NextText();
 
         }
@@ -37,7 +43,7 @@ namespace Qitz.EscapeFramework
 
             if(texts.Count <= currentCount)
             {
-                Hide();
+                Close();
                 return;
             }
 

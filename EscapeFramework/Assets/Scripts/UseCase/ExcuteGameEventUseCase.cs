@@ -22,6 +22,7 @@ namespace Qitz.EscapeFramework
         Action<GameEvent[]> eventExcuteCallBack;
         IEnumerable<GameEvent> normalEvents;
         IEnumerable<GameEvent> itemDropEvents;
+        IEnumerable<GameEvent> chainEvents;
         IGameEventExecutorUseCase gameEventExecutor;
 
         public ExcuteGameEventUseCase(Action<GameEvent[]> eventExcuteCallBack, IGameEventExecutorUseCase gameEventExecutor)
@@ -32,8 +33,9 @@ namespace Qitz.EscapeFramework
         void SetSceneEvents()
         {
             this.events = UnityEngine.Object.FindObjectsOfType<GameEvent>();
-            this.normalEvents = events.Where(e => e != null && e.EventExecuteTiming != EventExecuteTiming.アイテムがドロップされた時);
+            this.normalEvents = events.Where(e => e != null && e.EventExecuteTiming != EventExecuteTiming.アイテムがドロップされた時 && e.EventExecuteTiming != EventExecuteTiming.指定のイベントが実行完了した時);
             this.itemDropEvents = events.Where(e => e != null && e.EventExecuteTiming == EventExecuteTiming.アイテムがドロップされた時);
+            this.chainEvents = events.Where(e => e != null && e.EventExecuteTiming == EventExecuteTiming.指定のイベントが実行完了した時);
             SetClickEvents();
             SetItemDropEvent();
         }
@@ -47,7 +49,7 @@ namespace Qitz.EscapeFramework
             {
                 DelayTool.Tools.Delay(aEvent.DelayTime, () =>
                 {
-                    ExcuteNormalEvent(aEvent);
+                    ExcuteEvent(aEvent);
                 });
             }
             ExcuteUpdateEvent();
@@ -58,7 +60,7 @@ namespace Qitz.EscapeFramework
         {
             foreach (var aEvent in normalEvents.Where(e => e.EventExecuteTiming == EventExecuteTiming.Update実行))
             {
-                ExcuteNormalEvent(aEvent);
+                ExcuteEvent(aEvent);
             }
             eventExcuteCallBack.Invoke(events);
         }
@@ -91,7 +93,7 @@ namespace Qitz.EscapeFramework
                     Debug.Log($"ExcuteNormalEvent:{aEvent.name}");
                     //遅延処理する！
                     DelayTool.Tools.Delay(aEvent.DelayTime, () => {
-                        ExcuteNormalEvent(aEvent);
+                        ExcuteEvent(aEvent);
                         //UPDate時に実行されるイベントも発火する
                         ExcuteUpdateEvent();
                         eventExcuteCallBack.Invoke(events);
@@ -106,10 +108,10 @@ namespace Qitz.EscapeFramework
             {
                 return;
             }
-            ExcuteNormalEvent(gameEvent);
+            ExcuteEvent(gameEvent);
         }
 
-        void ExcuteNormalEvent(GameEvent gameEvent)
+        void ExcuteEvent(GameEvent gameEvent)
         {
             if (gameEvent.EventType == EventType.アイテムイベント)
             {
@@ -141,7 +143,11 @@ namespace Qitz.EscapeFramework
             }
             else if (gameEvent.EventType == EventType.メッセージWindowイベント)
             {
-                gameEventExecutor.ExcuteWindowEvent(gameEvent);
+                gameEventExecutor.ExcuteWindowEvent(gameEvent,(_gameEvent)=>{
+                    //メッセージイベントの場合はメッセージWindowが閉じられたら
+                    //チェーンイベントを実行する
+                    ExcuteChainEvent(_gameEvent.EventToken);
+                });
             }
             else if (gameEvent.EventType == EventType.スクリーンエフェクトイベント)
             {
@@ -151,6 +157,34 @@ namespace Qitz.EscapeFramework
             {
                 gameEventExecutor.ExcuteSceneTransitionEvent(gameEvent);
             }
+
+            //↓ここからチェイン指定があるイベントを実行する↓
+            if (gameEvent.EventType != EventType.メッセージWindowイベント)
+            {
+                ExcuteChainEvent(gameEvent.EventToken);
+            }
+
         }
+
+        void ExcuteChainEvent(string exctutedEventToken)
+        {
+            foreach (var ce in chainEvents)
+            {
+                ExcuteTargetTokenEvent(ce, exctutedEventToken);
+            }
+        }
+
+        void ExcuteTargetTokenEvent(GameEvent gameEvent, string exctutedEventToken)
+        {
+            if (gameEvent.ChainEvent.EventToken == exctutedEventToken)
+            {
+                //遅延処理を挟む
+                DelayTool.Tools.Delay(gameEvent.DelayTime, () =>
+                {
+                    ExcuteEvent(gameEvent);
+                });
+            }
+        }
+
     }
 }

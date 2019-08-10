@@ -9,7 +9,7 @@ namespace Qitz.EscapeFramework
     {
         void ExcuteSceneTransitionEvent(GameEvent gameEvent);
         void ExcuteScreenEffectEvent(GameEvent gameEvent);
-        void ExcuteWindowEvent(GameEvent gameEvent);
+        void ExcuteWindowEvent(GameEvent gameEvent, Action<GameEvent> closeCallBack);
         void ExcuteBGMEvent(GameEvent gameEvent);
         void ExcuteSEEvent(GameEvent gameEvent);
         void ExcuteEventFlagEvent(GameEvent gameEvent);
@@ -81,7 +81,7 @@ namespace Qitz.EscapeFramework
         }
 
         //AdvWindowの表示を行う
-        public void ExcuteWindowEvent(GameEvent gameEvent)
+        public void ExcuteWindowEvent(GameEvent gameEvent, Action<GameEvent> closeCallBack)
         {
             bool isOverTheLimit = judgeIgnitionOverTheLimitUseCase.JudgeEventIgnitionOverTheLimit((AEvent)gameEvent);
             if (!isOverTheLimit)
@@ -89,7 +89,7 @@ namespace Qitz.EscapeFramework
                 //イベント制限を突破していないのでイベントは実行されず
                 return;
             }
-            aDVWindowView.SetText(gameEvent.Texts);
+            aDVWindowView.SetText(gameEvent, closeCallBack);
         }
 
         //BGMを鳴らす

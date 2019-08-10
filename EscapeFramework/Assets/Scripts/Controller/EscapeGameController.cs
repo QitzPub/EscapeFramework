@@ -43,7 +43,7 @@ namespace Qitz.EscapeFramework
 
         void Awake()
         {
-            aDVWindowView.Hide();
+            aDVWindowView.Close();
             repository.Initialize();
             var gameEventExecutorUseCase = new GameEventExecutorUseCase(Repository.EscapeGameUserDataStore, escapeGameAudioPlayer, aDVWindowView, screenEffectView);
 

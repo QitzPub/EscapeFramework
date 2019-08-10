@@ -2602,6 +2602,8 @@ GameObject:
   - component: {fileID: 1891463690}
   - component: {fileID: 1891463689}
   - component: {fileID: 1891463688}
+  - component: {fileID: 1891463694}
+  - component: {fileID: 1891463693}
   m_Layer: 5
   m_Name: TestEvent
   m_TagString: Untagged
@@ -2658,6 +2660,7 @@ MonoBehaviour:
   EventType: 1
   EventExecuteTiming: 2
   DropedItemName: 0
+  chainEvent: {fileID: 0}
   texts:
   - "\u3042\u3042\u3042\u3042"
   - "\u3044\u3044\u3044\u3044\u3044\u3044\u3044\u3044"
@@ -2769,6 +2772,101 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1891463686}
   m_CullTransparentMesh: 0
+--- !u!114 &1891463693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891463686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6653858e3ba443e7915025486804d58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseItemRestrictedSetting: 0
+  ItemIGnitions:
+  - ItemName: 0
+    IGnitionPointItem: 0
+  UseEventFlagRestrictedSetting: 0
+  EventFlagIGnitions:
+  - EventType: 0
+    EventFlag: 0
+  UseCountEventRestrictedSetting: 0
+  CountEventIGnitions:
+  - CountEventName: 0
+    CountEventValue: 0
+    CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
+  EventType: 1
+  EventExecuteTiming: 4
+  DropedItemName: 0
+  chainEvent: {fileID: 1891463688}
+  texts:
+  - 1111
+  - 222
+  - 3333
+  BGMName: 0
+  BGMAudioCommandType: 0
+  DisplayEventProgress: 0
+  EventName: 0
+  EventFlag: 0
+  CountEventName: 0
+  CountEventProgress: 0
+  ItemName: 0
+  ItemEventProgress: 0
+  SceneName: 
+  ScreenEffect: 0
+  SEName: 0
+  SEAudioCommandType: 0
+  ChangeSprite: {fileID: 0}
+--- !u!114 &1891463694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891463686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6653858e3ba443e7915025486804d58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseItemRestrictedSetting: 0
+  ItemIGnitions:
+  - ItemName: 0
+    IGnitionPointItem: 0
+  UseEventFlagRestrictedSetting: 0
+  EventFlagIGnitions:
+  - EventType: 0
+    EventFlag: 0
+  UseCountEventRestrictedSetting: 0
+  CountEventIGnitions:
+  - CountEventName: 0
+    CountEventValue: 0
+    CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
+  EventType: 2
+  EventExecuteTiming: 4
+  DropedItemName: 0
+  chainEvent: {fileID: 1891463688}
+  texts: []
+  BGMName: 1
+  BGMAudioCommandType: 0
+  DisplayEventProgress: 0
+  EventName: 0
+  EventFlag: 0
+  CountEventName: 0
+  CountEventProgress: 0
+  ItemName: 0
+  ItemEventProgress: 0
+  SceneName: 
+  ScreenEffect: 0
+  SEName: 0
+  SEAudioCommandType: 0
+  ChangeSprite: {fileID: 0}
 --- !u!224 &1611828488755848270
 RectTransform:
   m_ObjectHideFlags: 0
