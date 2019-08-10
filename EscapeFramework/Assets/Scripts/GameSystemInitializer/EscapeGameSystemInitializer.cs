@@ -12,10 +12,10 @@ namespace Qitz.EscapeFramework
         {
             var ga = new GameObject();
             var controller = PrefabFolder.ResourcesLoadInstantiateTo("EscapeGameController", ga.transform.parent);
-            var itemWindow = PrefabFolder.ResourcesLoadInstantiateTo("ItemWindowView", ga.transform.parent);
+            //var itemWindow = PrefabFolder.ResourcesLoadInstantiateTo("ItemWindowView", ga.transform.parent);
             Object.Destroy(ga);
             Object.DontDestroyOnLoad(controller);
-            Object.DontDestroyOnLoad(itemWindow);
+            //Object.DontDestroyOnLoad(itemWindow);
         }
 
     }

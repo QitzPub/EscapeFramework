@@ -29,6 +29,8 @@ namespace Qitz.EscapeFramework
         ADVWindowView aDVWindowView;
         [SerializeField]
         ScreenEffectView screenEffectView;
+        [SerializeField]
+        ItemWindowView itemWindowView;
 
 
         public void AddEventExecuteCallBack(Action<AEvent[]> addEventExecuteCallBack)
@@ -45,7 +47,7 @@ namespace Qitz.EscapeFramework
         {
             aDVWindowView.Close();
             repository.Initialize();
-            var gameEventExecutorUseCase = new GameEventExecutorUseCase(Repository.EscapeGameUserDataStore, escapeGameAudioPlayer, aDVWindowView, screenEffectView);
+            var gameEventExecutorUseCase = new GameEventExecutorUseCase(Repository.EscapeGameUserDataStore, escapeGameAudioPlayer, aDVWindowView, screenEffectView, itemWindowView);
 
             excuteEventUseCase = new ExcuteGameEventUseCase(
                 (events) => {

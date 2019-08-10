@@ -5,7 +5,13 @@ using UnityEngine.UI;
 
 namespace Qitz.EscapeFramework
 {
-    public class ItemWindowView : MonoBehaviour,IView
+    public interface IItemWindowView
+    {
+        void Hide();
+        void Show();
+    }
+
+    public class ItemWindowView : MonoBehaviour,IView, IItemWindowView
     {
         [SerializeField]
         ItemColumnView itemColumnViewPrefab;
@@ -40,6 +46,16 @@ namespace Qitz.EscapeFramework
             this.GetController<EscapeGameController>().AddUserItemListChangeCallBack((items) => {
                 SetItems(items);
             });
+        }
+
+        public void Hide()
+        {
+            this.gameObject.SetActive(false);
+        }
+
+        public void Show()
+        {
+            this.gameObject.SetActive(true);
         }
     }
 }

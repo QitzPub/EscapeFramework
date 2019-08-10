@@ -1,12 +1,16 @@
 ﻿<Properties StartupConfiguration="{C9900E98-A63D-0522-C79D-6228823C21E5}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/View/ADVWindowView.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/View/ItemWindowView.cs">
     <Files>
-      <File FileName="Assets/Scripts/Controller/EscapeGameController.cs" Line="72" Column="46" />
-      <File FileName="Assets/Scripts/GameEvent/Editor/GameEventExtentions.cs" Line="40" Column="88" />
-      <File FileName="Assets/Scripts/Enum/EventEnums.cs" Line="98" Column="20" />
-      <File FileName="Assets/Scripts/UseCase/GameEventExecutorUseCase.cs" Line="92" Column="34" />
-      <File FileName="Assets/Scripts/View/ADVWindowView.cs" Line="21" Column="25" />
-      <File FileName="Assets/Scripts/UseCase/ExcuteGameEventUseCase.cs" Line="146" Column="44" NotebookId="1" />
+      <File FileName="Assets/Scripts/Controller/EscapeGameController.cs" Line="33" Column="16" />
+      <File FileName="Assets/Scripts/View/ADVWindowView.cs" Line="30" Column="81" />
+      <File FileName="Assets/Scripts/GameEvent/GameEvent.cs" Line="67" Column="47" />
+      <File FileName="Assets/Scripts/View/ItemWindowView.cs" Line="8" Column="18" />
+      <File FileName="Assets/Scripts/UseCase/ExcuteGameEventUseCase.cs" Line="151" Column="14" NotebookId="1" />
+      <File FileName="Assets/Scripts/GameEvent/Editor/GameEventExtentions.cs" Line="130" Column="32" NotebookId="1" />
+      <File FileName="Assets/Scripts/GameEvent/BaseObject/AEvent.cs" Line="14" Column="29" NotebookId="1" />
+      <File FileName="Assets/Scripts/Enum/EventEnums.cs" Line="27" Column="6" NotebookId="1" />
+      <File FileName="Assets/Scripts/UseCase/GameEventExecutorUseCase.cs" Line="235" Column="13" NotebookId="1" />
+      <File FileName="Assets/Scripts/GameSystemInitializer/EscapeGameSystemInitializer.cs" Line="15" Column="87" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

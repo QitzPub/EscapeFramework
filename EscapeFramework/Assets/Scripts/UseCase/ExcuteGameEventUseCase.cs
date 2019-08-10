@@ -157,6 +157,10 @@ namespace Qitz.EscapeFramework
             {
                 gameEventExecutor.ExcuteSceneTransitionEvent(gameEvent);
             }
+            else if (gameEvent.EventType == EventType.アイテム欄の表示ー非表示切り替え)
+            {
+                gameEventExecutor.ExcuteItemWindowEvent(gameEvent);
+            }
 
             //↓ここからチェイン指定があるイベントを実行する↓
             if (gameEvent.EventType != EventType.メッセージWindowイベント)

@@ -10,6 +10,7 @@ namespace Qitz.EscapeFramework
     {
         private void Awake()
         {
+            this.Button.transition = UnityEngine.UI.Selectable.Transition.None;
             EventToken = Guid.NewGuid().ToString();
         }
         //基本設定ここから==========================================
@@ -62,5 +63,8 @@ namespace Qitz.EscapeFramework
         //SpriteChangeEvent設定ここから==========================================
         public Sprite ChangeSprite;
         //SpriteChangeEvent設定ここまで==========================================
+        //アイテムウィンドウ設定ここから==========================================
+        public ItemWinodwEvent ItemWinodwEvent;
+        //アイテムウィンドウ設定ここまで==========================================
     }
 }

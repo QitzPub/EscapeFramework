@@ -110,7 +110,7 @@ namespace Qitz.EscapeFramework
             //ScreenEffectEvent設定ここから==========================================
             if (gameEvent.EventType == EventType.スクリーンエフェクトイベント)
             {
-                gameEvent.SceneName = EditorGUILayout.TextField("シーン名:", gameEvent.SceneName);
+                gameEvent.ScreenEffect = (ScreenEffectName)EditorGUILayout.EnumPopup("エフェクト:", gameEvent.ScreenEffect);
             }
             //ScreenEffectEvent設定ここまで==========================================
 
@@ -131,13 +131,23 @@ namespace Qitz.EscapeFramework
 
             }
             //SpriteChangeEvent設定ここまで==========================================
+            //アイテムウィンドウ設定ここから==========================================
+            if (gameEvent.EventType == EventType.アイテム欄の表示ー非表示切り替え)
+            {
+                gameEvent.ItemWinodwEvent = (ItemWinodwEvent)EditorGUILayout.EnumPopup("アイテム欄を", gameEvent.ItemWinodwEvent);
+
+            }
+            //アイテムウィンドウ設定ここまで==========================================
 
             //イベント遅延処理設定ここから==========================================
-            if(gameEvent.EventExecuteTiming != EventExecuteTiming.Update実行)
+            if (gameEvent.EventExecuteTiming != EventExecuteTiming.Update実行)
             {
                 EditorGUILayout.LabelField("");
                 gameEvent.UseDelay = EditorGUILayout.Toggle("イベント遅延を設定する", gameEvent.UseDelay);
-                gameEvent.DelayTime = EditorGUILayout.FloatField("遅延時間", gameEvent.DelayTime);
+                if (gameEvent.UseDelay)
+                {
+                    gameEvent.DelayTime = EditorGUILayout.FloatField("遅延時間", gameEvent.DelayTime);
+                }
             }
 
             //イベント遅延処理設定ここまで==========================================

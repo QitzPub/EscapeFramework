@@ -17,6 +17,7 @@ namespace Qitz.EscapeFramework
         void ExcuteItemIncreaseEvent(GameEvent gameEvent);
         void ExcuteCountIncreaseAndDecreaseEvent(GameEvent gameEvent);
         void ExcuteSpriteChangeEvent(GameEvent gameEvent);
+        void ExcuteItemWindowEvent(GameEvent gameEvent);
     }
 
     public class GameEventExecutorUseCase: IGameEventExecutorUseCase
@@ -28,14 +29,16 @@ namespace Qitz.EscapeFramework
         IScreenEffectView screenEffectView;
         ISceneTransitionUseCase sceneTransitionUseCase = new SceneTransitionUseCase();
         IJudgeIgnitionOverTheLimitUseCase judgeIgnitionOverTheLimitUseCase;
+        IItemWindowView itemWindowView;
 
-        public GameEventExecutorUseCase(IEscapeGameUserDataStore escapeGameUserDataStore, EscapeGameAudioPlayer escapeGameAudioPlayer, IADVWindowView aDVWindowView, IScreenEffectView screenEffectView)
+        public GameEventExecutorUseCase(IEscapeGameUserDataStore escapeGameUserDataStore, EscapeGameAudioPlayer escapeGameAudioPlayer, IADVWindowView aDVWindowView, IScreenEffectView screenEffectView, IItemWindowView itemWindowView)
         {
             this.escapeGameUserDataStore = escapeGameUserDataStore;
             this.escapeGameAudioPlayer = escapeGameAudioPlayer;
             this.aDVWindowView = aDVWindowView;
             this.screenEffectView = screenEffectView;
             this.judgeIgnitionOverTheLimitUseCase = new JudgeIgnitionOverTheLimitUseCase(escapeGameUserDataStore);
+            this.itemWindowView = itemWindowView;
         }
 
 
@@ -221,6 +224,25 @@ namespace Qitz.EscapeFramework
             }
 
             gameEvent.Image.sprite = gameEvent.ChangeSprite;
+        }
+        public void ExcuteItemWindowEvent(GameEvent gameEvent)
+        {
+            //イベント制限事項を突破しているかどうか判定
+            bool isOverTheLimit = judgeIgnitionOverTheLimitUseCase.JudgeEventIgnitionOverTheLimit((AEvent)gameEvent);
+            if (!isOverTheLimit)
+            {
+                //イベント制限を突破していないのでイベントは実行されず
+                return;
+            }
+            //アイテムWindowを表示したり消したりするイベントを追加
+            if(gameEvent.ItemWinodwEvent == ItemWinodwEvent.アイテム欄を表示する)
+            {
+                itemWindowView.Show();
+            }else if (gameEvent.ItemWinodwEvent == ItemWinodwEvent.アイテム欄を非表示にする)
+            {
+                itemWindowView.Hide();
+            }
+
         }
     }
 }

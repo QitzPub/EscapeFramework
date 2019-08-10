@@ -17,8 +17,14 @@ namespace Qitz.EscapeFramework
         シーン遷移イベント,
         イメージ切り替えイベント,
         スクリーンエフェクトイベント,
+        アイテム欄の表示ー非表示切り替え,
     }
 
+    public enum ItemWinodwEvent
+    {
+        アイテム欄を表示する,
+        アイテム欄を非表示にする,
+    }
 
     public enum EventName
     {
