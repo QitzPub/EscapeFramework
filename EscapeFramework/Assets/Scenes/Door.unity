@@ -120,80 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &142870731
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 142870732}
-  - component: {fileID: 142870734}
-  - component: {fileID: 142870733}
-  m_Layer: 5
-  m_Name: DialRockBack
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &142870732
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 142870731}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1553928787}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 410, y: -91}
-  m_SizeDelta: {x: 730.3, y: 730.3}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &142870733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 142870731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 4ce5551d3e3b44614a7c8c4e3b97e9f8, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
---- !u!222 &142870734
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 142870731}
-  m_CullTransparentMesh: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,7 +156,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -277,2058 +203,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &716583051
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 716583052}
-  - component: {fileID: 716583067}
-  - component: {fileID: 716583066}
-  - component: {fileID: 716583065}
-  - component: {fileID: 716583064}
-  - component: {fileID: 716583063}
-  - component: {fileID: 716583062}
-  - component: {fileID: 716583061}
-  - component: {fileID: 716583060}
-  - component: {fileID: 716583059}
-  - component: {fileID: 716583058}
-  - component: {fileID: 716583057}
-  - component: {fileID: 716583056}
-  - component: {fileID: 716583055}
-  - component: {fileID: 716583054}
-  - component: {fileID: 716583053}
-  - component: {fileID: 716583068}
-  m_Layer: 5
-  m_Name: DialRockUp (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &716583052
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716583051}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1553928787}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 165, y: -154}
-  m_SizeDelta: {x: 26, y: 37}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &716583053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716583051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18155c572ede48329ca09ba9f9c8d46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 2
-    CountEventValue: 10
-    CountEventJudge: 1
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  countEventName: 2
-  countEventProgress: 2
---- !u!114 &716583054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716583051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 2
-    CountEventValue: 9
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: 66eb4a489a5184a74b1b9f646a0b2424, type: 3}
---- !u!114 &716583055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716583051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 2
-    CountEventValue: 8
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: eabb23b2214f540b986105ef19fd630e, type: 3}
---- !u!114 &716583056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716583051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 2
-    CountEventValue: 7
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: 350f7a7f1698a446b980bc6648dca6ca, type: 3}
---- !u!114 &716583057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716583051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 2
-    CountEventValue: 6
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: 99dde426e37074689a77e8a42e508c4b, type: 3}
---- !u!114 &716583058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716583051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 2
-    CountEventValue: 5
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: ae4e2c858eac74453983b0299945c0f8, type: 3}
---- !u!114 &716583059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716583051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 2
-    CountEventValue: 4
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: 56f11e52a328642f4906c52c82d5b2c6, type: 3}
---- !u!114 &716583060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716583051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 2
-    CountEventValue: 3
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: f902d1b2e89de435b8db054b5a3b8a9f, type: 3}
---- !u!114 &716583061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716583051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 2
-    CountEventValue: 2
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: e6ee00ca2febe4dae98aa7696cbea68e, type: 3}
---- !u!114 &716583062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716583051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 2
-    CountEventValue: 1
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: dfa872434080c4c7998e3af360e5f3c2, type: 3}
---- !u!114 &716583063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716583051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 2
-    CountEventValue: 0
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: 22aba7f3e0d2e4bfe8552fedf989f43d, type: 3}
---- !u!114 &716583064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716583051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18155c572ede48329ca09ba9f9c8d46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 0
-  CountEventIGnitions:
-  - CountEventName: 0
-    CountEventValue: 0
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 2
-  countEventName: 2
-  countEventProgress: 0
---- !u!114 &716583065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716583051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 716583066}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &716583066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716583051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 22aba7f3e0d2e4bfe8552fedf989f43d, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
---- !u!222 &716583067
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716583051}
-  m_CullTransparentMesh: 0
---- !u!114 &716583068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716583051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aed50a7a140f43c8a76319d1526b3d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 0
-  CountEventIGnitions:
-  - CountEventName: 0
-    CountEventValue: 0
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 2
-  sEName: 1
-  audioCommandType: 0
---- !u!1 &775081862
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 775081863}
-  - component: {fileID: 775081867}
-  - component: {fileID: 775081866}
-  - component: {fileID: 775081865}
-  - component: {fileID: 775081864}
-  - component: {fileID: 775081877}
-  - component: {fileID: 775081876}
-  - component: {fileID: 775081875}
-  - component: {fileID: 775081874}
-  - component: {fileID: 775081873}
-  - component: {fileID: 775081872}
-  - component: {fileID: 775081871}
-  - component: {fileID: 775081870}
-  - component: {fileID: 775081869}
-  - component: {fileID: 775081868}
-  - component: {fileID: 775081878}
-  - component: {fileID: 775081879}
-  m_Layer: 5
-  m_Name: DialRockUp
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &775081863
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775081862}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1553928787}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 165, y: 192}
-  m_SizeDelta: {x: 26, y: 37}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &775081864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775081862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18155c572ede48329ca09ba9f9c8d46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 0
-  CountEventIGnitions:
-  - CountEventName: 0
-    CountEventValue: 0
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 2
-  countEventName: 0
-  countEventProgress: 0
---- !u!114 &775081865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775081862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 775081866}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &775081866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775081862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 22aba7f3e0d2e4bfe8552fedf989f43d, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
---- !u!222 &775081867
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775081862}
-  m_CullTransparentMesh: 0
---- !u!114 &775081868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775081862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 0
-    CountEventValue: 9
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: 66eb4a489a5184a74b1b9f646a0b2424, type: 3}
---- !u!114 &775081869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775081862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 0
-    CountEventValue: 8
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: eabb23b2214f540b986105ef19fd630e, type: 3}
---- !u!114 &775081870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775081862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 0
-    CountEventValue: 7
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: 350f7a7f1698a446b980bc6648dca6ca, type: 3}
---- !u!114 &775081871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775081862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 0
-    CountEventValue: 6
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: 99dde426e37074689a77e8a42e508c4b, type: 3}
---- !u!114 &775081872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775081862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 0
-    CountEventValue: 5
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: ae4e2c858eac74453983b0299945c0f8, type: 3}
---- !u!114 &775081873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775081862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 0
-    CountEventValue: 4
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: 56f11e52a328642f4906c52c82d5b2c6, type: 3}
---- !u!114 &775081874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775081862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 0
-    CountEventValue: 3
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: f902d1b2e89de435b8db054b5a3b8a9f, type: 3}
---- !u!114 &775081875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775081862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 0
-    CountEventValue: 2
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: e6ee00ca2febe4dae98aa7696cbea68e, type: 3}
---- !u!114 &775081876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775081862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 0
-    CountEventValue: 1
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: dfa872434080c4c7998e3af360e5f3c2, type: 3}
---- !u!114 &775081877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775081862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 0
-    CountEventValue: 0
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: 22aba7f3e0d2e4bfe8552fedf989f43d, type: 3}
---- !u!114 &775081878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775081862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18155c572ede48329ca09ba9f9c8d46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 0
-    CountEventValue: 10
-    CountEventJudge: 1
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  countEventName: 0
-  countEventProgress: 2
---- !u!114 &775081879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775081862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aed50a7a140f43c8a76319d1526b3d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 0
-  CountEventIGnitions:
-  - CountEventName: 0
-    CountEventValue: 0
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 2
-  sEName: 1
-  audioCommandType: 0
---- !u!1 &806697721
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 806697722}
-  - component: {fileID: 806697737}
-  - component: {fileID: 806697736}
-  - component: {fileID: 806697735}
-  - component: {fileID: 806697734}
-  - component: {fileID: 806697733}
-  - component: {fileID: 806697732}
-  - component: {fileID: 806697731}
-  - component: {fileID: 806697730}
-  - component: {fileID: 806697729}
-  - component: {fileID: 806697728}
-  - component: {fileID: 806697727}
-  - component: {fileID: 806697726}
-  - component: {fileID: 806697725}
-  - component: {fileID: 806697724}
-  - component: {fileID: 806697723}
-  - component: {fileID: 806697738}
-  m_Layer: 5
-  m_Name: DialRockUp (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &806697722
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 806697721}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1553928787}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 165, y: -319}
-  m_SizeDelta: {x: 26, y: 37}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &806697723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 806697721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18155c572ede48329ca09ba9f9c8d46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 3
-    CountEventValue: 10
-    CountEventJudge: 1
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  countEventName: 3
-  countEventProgress: 2
---- !u!114 &806697724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 806697721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 3
-    CountEventValue: 9
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: 66eb4a489a5184a74b1b9f646a0b2424, type: 3}
---- !u!114 &806697725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 806697721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 3
-    CountEventValue: 8
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: eabb23b2214f540b986105ef19fd630e, type: 3}
---- !u!114 &806697726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 806697721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 3
-    CountEventValue: 7
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: 350f7a7f1698a446b980bc6648dca6ca, type: 3}
---- !u!114 &806697727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 806697721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 3
-    CountEventValue: 6
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: 99dde426e37074689a77e8a42e508c4b, type: 3}
---- !u!114 &806697728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 806697721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 3
-    CountEventValue: 5
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: ae4e2c858eac74453983b0299945c0f8, type: 3}
---- !u!114 &806697729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 806697721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 3
-    CountEventValue: 4
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: 56f11e52a328642f4906c52c82d5b2c6, type: 3}
---- !u!114 &806697730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 806697721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 3
-    CountEventValue: 3
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: f902d1b2e89de435b8db054b5a3b8a9f, type: 3}
---- !u!114 &806697731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 806697721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 3
-    CountEventValue: 2
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: e6ee00ca2febe4dae98aa7696cbea68e, type: 3}
---- !u!114 &806697732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 806697721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 3
-    CountEventValue: 1
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: dfa872434080c4c7998e3af360e5f3c2, type: 3}
---- !u!114 &806697733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 806697721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 3
-    CountEventValue: 0
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: 22aba7f3e0d2e4bfe8552fedf989f43d, type: 3}
---- !u!114 &806697734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 806697721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18155c572ede48329ca09ba9f9c8d46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 0
-  CountEventIGnitions:
-  - CountEventName: 0
-    CountEventValue: 0
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 2
-  countEventName: 3
-  countEventProgress: 0
---- !u!114 &806697735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 806697721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 806697736}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &806697736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 806697721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 22aba7f3e0d2e4bfe8552fedf989f43d, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
---- !u!222 &806697737
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 806697721}
-  m_CullTransparentMesh: 0
---- !u!114 &806697738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 806697721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aed50a7a140f43c8a76319d1526b3d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 0
-  CountEventIGnitions:
-  - CountEventName: 0
-    CountEventValue: 0
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 2
-  sEName: 1
-  audioCommandType: 0
---- !u!1 &810010160
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 810010161}
-  - component: {fileID: 810010176}
-  - component: {fileID: 810010175}
-  - component: {fileID: 810010174}
-  - component: {fileID: 810010173}
-  - component: {fileID: 810010172}
-  - component: {fileID: 810010171}
-  - component: {fileID: 810010170}
-  - component: {fileID: 810010169}
-  - component: {fileID: 810010168}
-  - component: {fileID: 810010167}
-  - component: {fileID: 810010166}
-  - component: {fileID: 810010165}
-  - component: {fileID: 810010164}
-  - component: {fileID: 810010163}
-  - component: {fileID: 810010162}
-  - component: {fileID: 810010177}
-  m_Layer: 5
-  m_Name: DialRockUp (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &810010161
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810010160}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1553928787}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 165, y: 31}
-  m_SizeDelta: {x: 26, y: 37}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &810010162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810010160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18155c572ede48329ca09ba9f9c8d46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 1
-    CountEventValue: 10
-    CountEventJudge: 1
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  countEventName: 1
-  countEventProgress: 2
---- !u!114 &810010163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810010160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 1
-    CountEventValue: 9
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: 66eb4a489a5184a74b1b9f646a0b2424, type: 3}
---- !u!114 &810010164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810010160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 1
-    CountEventValue: 8
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: eabb23b2214f540b986105ef19fd630e, type: 3}
---- !u!114 &810010165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810010160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 1
-    CountEventValue: 7
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: 350f7a7f1698a446b980bc6648dca6ca, type: 3}
---- !u!114 &810010166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810010160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 1
-    CountEventValue: 6
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: 99dde426e37074689a77e8a42e508c4b, type: 3}
---- !u!114 &810010167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810010160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 1
-    CountEventValue: 5
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: ae4e2c858eac74453983b0299945c0f8, type: 3}
---- !u!114 &810010168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810010160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 1
-    CountEventValue: 4
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: 56f11e52a328642f4906c52c82d5b2c6, type: 3}
---- !u!114 &810010169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810010160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 1
-    CountEventValue: 3
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: f902d1b2e89de435b8db054b5a3b8a9f, type: 3}
---- !u!114 &810010170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810010160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 1
-    CountEventValue: 2
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: e6ee00ca2febe4dae98aa7696cbea68e, type: 3}
---- !u!114 &810010171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810010160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 1
-    CountEventValue: 1
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: dfa872434080c4c7998e3af360e5f3c2, type: 3}
---- !u!114 &810010172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810010160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbaa1c5de59944b3a6253ecedacdd89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 1
-  CountEventIGnitions:
-  - CountEventName: 1
-    CountEventValue: 0
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 0
-  changeSprite: {fileID: 21300000, guid: 22aba7f3e0d2e4bfe8552fedf989f43d, type: 3}
---- !u!114 &810010173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810010160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18155c572ede48329ca09ba9f9c8d46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 0
-  CountEventIGnitions:
-  - CountEventName: 0
-    CountEventValue: 0
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 2
-  countEventName: 1
-  countEventProgress: 0
---- !u!114 &810010174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810010160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 810010175}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &810010175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810010160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 22aba7f3e0d2e4bfe8552fedf989f43d, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
---- !u!222 &810010176
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810010160}
-  m_CullTransparentMesh: 0
---- !u!114 &810010177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810010160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aed50a7a140f43c8a76319d1526b3d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 0
-  CountEventIGnitions:
-  - CountEventName: 0
-    CountEventValue: 0
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  eventExecuteTiming: 2
-  sEName: 1
-  audioCommandType: 0
 --- !u!1 &838191509
 GameObject:
   m_ObjectHideFlags: 0
@@ -2395,19 +269,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1321701862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1611828488755848271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71b9e7fd2469647c391d99ad58e6f1e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SceneName: Home
 --- !u!1 &1553928783
 GameObject:
   m_ObjectHideFlags: 0
@@ -2499,13 +360,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1781746799}
-  - {fileID: 1611828488755848270}
-  - {fileID: 142870732}
-  - {fileID: 775081863}
-  - {fileID: 810010161}
-  - {fileID: 716583052}
-  - {fileID: 806697722}
-  - {fileID: 1891463687}
+  - {fileID: 2047632231}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2548,8 +403,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1080, y: -25}
-  m_SizeDelta: {x: 3461.6, y: 2712}
+  m_AnchoredPosition: {x: 0, y: -117}
+  m_SizeDelta: {x: 886, y: 1181}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1781746800
 MonoBehaviour:
@@ -2571,7 +426,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 784eadf669567452ba23890b1be7200d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc55437e42ab94655bd5d2f4a7609b72, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2588,7 +443,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1781746798}
   m_CullTransparentMesh: 0
---- !u!1 &1891463686
+--- !u!1 &2047632230
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2596,47 +451,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1891463687}
-  - component: {fileID: 1891463692}
-  - component: {fileID: 1891463691}
-  - component: {fileID: 1891463690}
-  - component: {fileID: 1891463689}
-  - component: {fileID: 1891463688}
-  - component: {fileID: 1891463694}
-  - component: {fileID: 1891463693}
+  - component: {fileID: 2047632231}
+  - component: {fileID: 2047632239}
+  - component: {fileID: 2047632238}
+  - component: {fileID: 2047632237}
+  - component: {fileID: 2047632236}
+  - component: {fileID: 2047632235}
+  - component: {fileID: 2047632234}
+  - component: {fileID: 2047632233}
+  - component: {fileID: 2047632232}
+  - component: {fileID: 2047632240}
   m_Layer: 5
-  m_Name: TestEvent
+  m_Name: StartEvent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1891463687
+--- !u!224 &2047632231
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1891463686}
+  m_GameObject: {fileID: 2047632230}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1553928787}
-  m_RootOrder: 7
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -940, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1891463688
+--- !u!114 &2047632232
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1891463686}
+  m_GameObject: {fileID: 2047632230}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6653858e3ba443e7915025486804d58, type: 3}
@@ -2657,13 +514,11 @@ MonoBehaviour:
     CountEventJudge: 0
   UseDelay: 0
   DelayTime: 0
-  EventType: 1
-  EventExecuteTiming: 2
+  EventType: 5
+  EventExecuteTiming: 4
   DropedItemName: 0
-  chainEvent: {fileID: 0}
-  texts:
-  - "\u3042\u3042\u3042\u3042"
-  - "\u3044\u3044\u3044\u3044\u3044\u3044\u3044\u3044"
+  chainEvent: {fileID: 2047632234}
+  texts: []
   BGMName: 0
   BGMAudioCommandType: 0
   DisplayEventProgress: 0
@@ -2678,13 +533,161 @@ MonoBehaviour:
   SEName: 0
   SEAudioCommandType: 0
   ChangeSprite: {fileID: 0}
---- !u!114 &1891463689
+  ItemWinodwEvent: 0
+--- !u!114 &2047632233
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1891463686}
+  m_GameObject: {fileID: 2047632230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6653858e3ba443e7915025486804d58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseItemRestrictedSetting: 0
+  ItemIGnitions:
+  - ItemName: 0
+    IGnitionPointItem: 0
+  UseEventFlagRestrictedSetting: 0
+  EventFlagIGnitions:
+  - EventType: 0
+    EventFlag: 0
+  UseCountEventRestrictedSetting: 0
+  CountEventIGnitions:
+  - CountEventName: 0
+    CountEventValue: 0
+    CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
+  EventType: 8
+  EventExecuteTiming: 4
+  DropedItemName: 0
+  chainEvent: {fileID: 2047632232}
+  texts: []
+  BGMName: 0
+  BGMAudioCommandType: 0
+  DisplayEventProgress: 0
+  EventName: 0
+  EventFlag: 0
+  CountEventName: 0
+  CountEventProgress: 0
+  ItemName: 0
+  ItemEventProgress: 0
+  SceneName: Home
+  ScreenEffect: 0
+  SEName: 0
+  SEAudioCommandType: 0
+  ChangeSprite: {fileID: 0}
+  ItemWinodwEvent: 0
+--- !u!114 &2047632234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047632230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6653858e3ba443e7915025486804d58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseItemRestrictedSetting: 0
+  ItemIGnitions:
+  - ItemName: 0
+    IGnitionPointItem: 0
+  UseEventFlagRestrictedSetting: 0
+  EventFlagIGnitions:
+  - EventType: 0
+    EventFlag: 0
+  UseCountEventRestrictedSetting: 0
+  CountEventIGnitions:
+  - CountEventName: 0
+    CountEventValue: 0
+    CountEventJudge: 0
+  UseDelay: 1
+  DelayTime: 2
+  EventType: 1
+  EventExecuteTiming: 4
+  DropedItemName: 0
+  chainEvent: {fileID: 2047632235}
+  texts:
+  - "\u300C\u304F\u30FB\u30FB\u30FB\u958B\u304B\u306A\u3044\uFF01\u3000\u306A\u3093\u3067\u3060\uFF1F\uFF1F\uFF1F\u300D"
+  - "\u306A\u305C\u304B\u3001\u6249\u304C\u65AD\u56FA\u3068\u3057\u3066\u958B\u304B\u306A\u3044\u3088\u3046\u3060\u3063\u305F\u3002
+    \u5185\u5074\u304B\u3089\u306A\u306E\u3067\u666E\u901A\u306F\u3042\u304F\u306F\u305A\u306A\u306E\u3060\u304C\u30FB\u30FB\u30FB"
+  - "\u300C\u304F\u305D\u30FB\u30FB\u30FB\uFF01\u3068\u306B\u304B\u304F\u3053\u3053\u304B\u3089\u3067\u306A\u3051\u308C\u3070\u30FB\u30FB\u30FB\uFF01\u300D"
+  - "\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB"
+  - "\u53D7\u4ED8\u306B\u4F55\u304B\u8131\u51FA\u306B\u4F7F\u3048\u308B\u3082\u306E\u304C\u3042\u308B\u304B\u3082\u3057\u308C\u306A\u3044\u30FB\u30FB\u30FB\u30FB"
+  BGMName: 0
+  BGMAudioCommandType: 0
+  DisplayEventProgress: 0
+  EventName: 0
+  EventFlag: 0
+  CountEventName: 0
+  CountEventProgress: 0
+  ItemName: 0
+  ItemEventProgress: 0
+  SceneName: 
+  ScreenEffect: 0
+  SEName: 0
+  SEAudioCommandType: 0
+  ChangeSprite: {fileID: 0}
+  ItemWinodwEvent: 0
+--- !u!114 &2047632235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047632230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6653858e3ba443e7915025486804d58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseItemRestrictedSetting: 0
+  ItemIGnitions:
+  - ItemName: 0
+    IGnitionPointItem: 0
+  UseEventFlagRestrictedSetting: 1
+  EventFlagIGnitions:
+  - EventType: 0
+    EventFlag: 1
+  UseCountEventRestrictedSetting: 0
+  CountEventIGnitions:
+  - CountEventName: 0
+    CountEventValue: 0
+    CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
+  EventType: 10
+  EventExecuteTiming: 1
+  DropedItemName: 0
+  chainEvent: {fileID: 0}
+  texts: []
+  BGMName: 0
+  BGMAudioCommandType: 0
+  DisplayEventProgress: 0
+  EventName: 0
+  EventFlag: 0
+  CountEventName: 0
+  CountEventProgress: 0
+  ItemName: 0
+  ItemEventProgress: 0
+  SceneName: 
+  ScreenEffect: 1
+  SEName: 0
+  SEAudioCommandType: 0
+  ChangeSprite: {fileID: 0}
+  ItemWinodwEvent: 0
+--- !u!114 &2047632236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047632230}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -2717,31 +720,31 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1891463691}
+  m_TargetGraphic: {fileID: 2047632238}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &1891463690
+--- !u!114 &2047632237
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1891463686}
+  m_GameObject: {fileID: 2047632230}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddacfc461bc794894b9489266d5c5f98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1891463691
+--- !u!114 &2047632238
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1891463686}
+  m_GameObject: {fileID: 2047632230}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -2764,21 +767,21 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!222 &1891463692
+--- !u!222 &2047632239
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1891463686}
+  m_GameObject: {fileID: 2047632230}
   m_CullTransparentMesh: 0
---- !u!114 &1891463693
+--- !u!114 &2047632240
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1891463686}
+  m_GameObject: {fileID: 2047632230}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6653858e3ba443e7915025486804d58, type: 3}
@@ -2799,14 +802,11 @@ MonoBehaviour:
     CountEventJudge: 0
   UseDelay: 0
   DelayTime: 0
-  EventType: 1
+  EventType: 11
   EventExecuteTiming: 4
   DropedItemName: 0
-  chainEvent: {fileID: 1891463688}
-  texts:
-  - 1111
-  - 222
-  - 3333
+  chainEvent: {fileID: 2047632234}
+  texts: []
   BGMName: 0
   BGMAudioCommandType: 0
   DisplayEventProgress: 0
@@ -2821,181 +821,4 @@ MonoBehaviour:
   SEName: 0
   SEAudioCommandType: 0
   ChangeSprite: {fileID: 0}
---- !u!114 &1891463694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1891463686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6653858e3ba443e7915025486804d58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 0
-  UseCountEventRestrictedSetting: 0
-  CountEventIGnitions:
-  - CountEventName: 0
-    CountEventValue: 0
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  EventType: 2
-  EventExecuteTiming: 4
-  DropedItemName: 0
-  chainEvent: {fileID: 1891463688}
-  texts: []
-  BGMName: 1
-  BGMAudioCommandType: 0
-  DisplayEventProgress: 0
-  EventName: 0
-  EventFlag: 0
-  CountEventName: 0
-  CountEventProgress: 0
-  ItemName: 0
-  ItemEventProgress: 0
-  SceneName: 
-  ScreenEffect: 0
-  SEName: 0
-  SEAudioCommandType: 0
-  ChangeSprite: {fileID: 0}
---- !u!224 &1611828488755848270
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1611828488755848271}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7080318, w: 0.7061806}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1553928787}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.15}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.6, y: -261}
-  m_SizeDelta: {x: 190.6, y: 108.2}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1611828488755848271
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1611828488755848270}
-  - component: {fileID: 1611828488755848371}
-  - component: {fileID: 1611828488755848368}
-  - component: {fileID: 1611828488755848369}
-  - component: {fileID: 1321701862}
-  m_Layer: 5
-  m_Name: ArrowButton
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1611828488755848368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1611828488755848271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 6cecd09d855bf4caea693b986123281e, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
---- !u!114 &1611828488755848369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1611828488755848271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1611828488755848368}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1321701862}
-        m_MethodName: GotoScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!222 &1611828488755848371
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1611828488755848271}
-  m_CullTransparentMesh: 0
+  ItemWinodwEvent: 0

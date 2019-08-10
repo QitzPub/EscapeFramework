@@ -28,6 +28,7 @@ namespace Qitz.EscapeFramework
 
     public enum EventName
     {
+        開始イベント終了,
         トンカチを入手,
         ぶたの貯金箱を破壊,
         金庫を開ける,
