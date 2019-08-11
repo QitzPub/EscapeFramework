@@ -68,6 +68,7 @@ namespace Qitz.EscapeFramework
 
         void SceneLoaded(Scene nextScene, LoadSceneMode mode)
         {
+            screenEffectView.TerminateScreenEffect();
             ExecuteEvent(excuteEventUseCase);
         }
 
@@ -98,6 +99,21 @@ namespace Qitz.EscapeFramework
         {
             PlayerPrefs.DeleteAll();
         }
-
+        public void DumpUserdata()
+        {
+            var data = Repository.EscapeGameUserDataStore;
+            foreach (var item in data.Items)
+            {
+                Debug.Log(item.ItemName);
+            }
+            foreach (var c in data.CountEvents)
+            {
+                Debug.Log(c.CountEventType+":"+c.Count);
+            }
+            foreach (var ev in data.EventFlags)
+            {
+                Debug.Log(ev.EventType+":"+ ev.IsOn);
+            }
+        }
     }
 }

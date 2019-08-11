@@ -599,14 +599,14 @@ MonoBehaviour:
   UseEventFlagRestrictedSetting: 0
   EventFlagIGnitions:
   - EventType: 0
-    EventFlag: 0
+    EventFlag: 1
   UseCountEventRestrictedSetting: 0
   CountEventIGnitions:
   - CountEventName: 0
     CountEventValue: 0
     CountEventJudge: 0
   UseDelay: 1
-  DelayTime: 3
+  DelayTime: 1
   EventType: 1
   EventExecuteTiming: 4
   DropedItemName: 0
@@ -650,10 +650,10 @@ MonoBehaviour:
   ItemIGnitions:
   - ItemName: 0
     IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
+  UseEventFlagRestrictedSetting: 1
   EventFlagIGnitions:
   - EventType: 0
-    EventFlag: 0
+    EventFlag: 1
   UseCountEventRestrictedSetting: 0
   CountEventIGnitions:
   - CountEventName: 0

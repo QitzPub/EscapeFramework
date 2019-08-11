@@ -672,6 +672,10 @@
       <Project>{C9900E98-A63D-0522-C79D-6228823C21E5}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
+    <ProjectReference Include="EscapeGameArchitrctureCore.csproj">
+      <Project>{EE40E20B-5142-5824-8D08-469691DDE612}</Project>
+      <Name>EscapeGameArchitrctureCore</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

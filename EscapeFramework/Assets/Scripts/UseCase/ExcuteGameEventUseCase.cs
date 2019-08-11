@@ -113,37 +113,38 @@ namespace Qitz.EscapeFramework
 
         void ExcuteEvent(GameEvent gameEvent)
         {
+            bool eventExcuted = false;
             if (gameEvent.EventType == EventType.アイテムイベント)
             {
-                gameEventExecutor.ExcuteItemIncreaseEvent(gameEvent);
+                eventExcuted = gameEventExecutor.ExcuteItemIncreaseEvent(gameEvent);
             }
             else if (gameEvent.EventType == EventType.表示ー非表示イベント)
             {
-                gameEventExecutor.ExcuteDisplayEvent(gameEvent);
+                eventExcuted = gameEventExecutor.ExcuteDisplayEvent(gameEvent);
             }
             else if (gameEvent.EventType == EventType.フラグイベント)
             {
-                gameEventExecutor.ExcuteEventFlagEvent(gameEvent);
+                eventExcuted = gameEventExecutor.ExcuteEventFlagEvent(gameEvent);
             }
             else if (gameEvent.EventType == EventType.カウントイベント)
             {
-                gameEventExecutor.ExcuteCountIncreaseAndDecreaseEvent(gameEvent);
+                eventExcuted = gameEventExecutor.ExcuteCountIncreaseAndDecreaseEvent(gameEvent);
             }
             else if (gameEvent.EventType == EventType.イメージ切り替えイベント)
             {
-                gameEventExecutor.ExcuteSpriteChangeEvent(gameEvent);
+                eventExcuted = gameEventExecutor.ExcuteSpriteChangeEvent(gameEvent);
             }
             else if (gameEvent.EventType == EventType.BGMイベント)
             {
-                gameEventExecutor.ExcuteBGMEvent(gameEvent);
+                eventExcuted = gameEventExecutor.ExcuteBGMEvent(gameEvent);
             }
             else if (gameEvent.EventType == EventType.SEイベント)
             {
-                gameEventExecutor.ExcuteSEEvent(gameEvent);
+                eventExcuted = gameEventExecutor.ExcuteSEEvent(gameEvent);
             }
             else if (gameEvent.EventType == EventType.メッセージWindowイベント)
             {
-                gameEventExecutor.ExcuteWindowEvent(gameEvent,(_gameEvent)=>{
+                eventExcuted = gameEventExecutor.ExcuteWindowEvent(gameEvent,(_gameEvent)=>{
                     //メッセージイベントの場合はメッセージWindowが閉じられたら
                     //チェーンイベントを実行する
                     ExcuteChainEvent(_gameEvent.EventToken);
@@ -151,19 +152,19 @@ namespace Qitz.EscapeFramework
             }
             else if (gameEvent.EventType == EventType.スクリーンエフェクトイベント)
             {
-                gameEventExecutor.ExcuteScreenEffectEvent(gameEvent);
+                eventExcuted = gameEventExecutor.ExcuteScreenEffectEvent(gameEvent);
             }
             else if (gameEvent.EventType == EventType.シーン遷移イベント)
             {
-                gameEventExecutor.ExcuteSceneTransitionEvent(gameEvent);
+                eventExcuted = gameEventExecutor.ExcuteSceneTransitionEvent(gameEvent);
             }
             else if (gameEvent.EventType == EventType.アイテム欄の表示ー非表示切り替え)
             {
-                gameEventExecutor.ExcuteItemWindowEvent(gameEvent);
+                eventExcuted = gameEventExecutor.ExcuteItemWindowEvent(gameEvent);
             }
 
             //↓ここからチェイン指定があるイベントを実行する↓
-            if (gameEvent.EventType != EventType.メッセージWindowイベント)
+            if (gameEvent.EventType != EventType.メッセージWindowイベント && eventExcuted)
             {
                 ExcuteChainEvent(gameEvent.EventToken);
             }

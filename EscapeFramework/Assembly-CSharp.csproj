@@ -62,17 +62,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ArchitectureCore\Controller\AController.cs" />
-    <Compile Include="Assets\ArchitectureCore\Controller\IController.cs" />
-    <Compile Include="Assets\ArchitectureCore\DataStore\ADataStore.cs" />
-    <Compile Include="Assets\ArchitectureCore\Repository\ARepository.cs" />
-    <Compile Include="Assets\ArchitectureCore\Transmitter\BaseFactory.cs" />
-    <Compile Include="Assets\ArchitectureCore\Transmitter\BaseTransmitter.cs" />
-    <Compile Include="Assets\ArchitectureCore\Transmitter\ITransmitter.cs" />
-    <Compile Include="Assets\ArchitectureCore\ValueObject\BaseVO.cs" />
-    <Compile Include="Assets\ArchitectureCore\ValueObject\IVO.cs" />
-    <Compile Include="Assets\ArchitectureCore\View\AView.cs" />
-    <Compile Include="Assets\ArchitectureCore\View\IView.cs" />
     <Compile Include="Assets\Scripts\Audio\EscapeGameAudioPlayer.cs" />
     <Compile Include="Assets\Scripts\Controller\EscapeGameController.cs" />
     <Compile Include="Assets\Scripts\DataStore\EscapeGameAudioDataStore.cs" />
@@ -662,6 +651,12 @@
     <Reference Include="mscorlib">
       <HintPath>/Applications/Unity/Hub/Editor/2019.1.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="EscapeGameArchitrctureCore.csproj">
+      <Project>{EE40E20B-5142-5824-8D08-469691DDE612}</Project>
+      <Name>EscapeGameArchitrctureCore</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

@@ -7,17 +7,17 @@ namespace Qitz.EscapeFramework
     //TODO 本当は機能ごとにインターフェイスを分けるのだが・・・・・・
     public interface IGameEventExecutorUseCase
     {
-        void ExcuteSceneTransitionEvent(GameEvent gameEvent);
-        void ExcuteScreenEffectEvent(GameEvent gameEvent);
-        void ExcuteWindowEvent(GameEvent gameEvent, Action<GameEvent> closeCallBack);
-        void ExcuteBGMEvent(GameEvent gameEvent);
-        void ExcuteSEEvent(GameEvent gameEvent);
-        void ExcuteEventFlagEvent(GameEvent gameEvent);
-        void ExcuteDisplayEvent(GameEvent gameEvent);
-        void ExcuteItemIncreaseEvent(GameEvent gameEvent);
-        void ExcuteCountIncreaseAndDecreaseEvent(GameEvent gameEvent);
-        void ExcuteSpriteChangeEvent(GameEvent gameEvent);
-        void ExcuteItemWindowEvent(GameEvent gameEvent);
+        bool ExcuteSceneTransitionEvent(GameEvent gameEvent);
+        bool ExcuteScreenEffectEvent(GameEvent gameEvent);
+        bool ExcuteWindowEvent(GameEvent gameEvent, Action<GameEvent> closeCallBack);
+        bool ExcuteBGMEvent(GameEvent gameEvent);
+        bool ExcuteSEEvent(GameEvent gameEvent);
+        bool ExcuteEventFlagEvent(GameEvent gameEvent);
+        bool ExcuteDisplayEvent(GameEvent gameEvent);
+        bool ExcuteItemIncreaseEvent(GameEvent gameEvent);
+        bool ExcuteCountIncreaseAndDecreaseEvent(GameEvent gameEvent);
+        bool ExcuteSpriteChangeEvent(GameEvent gameEvent);
+        bool ExcuteItemWindowEvent(GameEvent gameEvent);
     }
 
     public class GameEventExecutorUseCase: IGameEventExecutorUseCase
@@ -42,26 +42,26 @@ namespace Qitz.EscapeFramework
         }
 
 
-        public void ExcuteSceneTransitionEvent(GameEvent gameEvent)
+        public bool ExcuteSceneTransitionEvent(GameEvent gameEvent)
         {
             bool isOverTheLimit = judgeIgnitionOverTheLimitUseCase.JudgeEventIgnitionOverTheLimit((AEvent)gameEvent);
             if (!isOverTheLimit)
             {
                 //イベント制限を突破していないのでイベントは実行されず
-                return;
+                return false;
             }
             sceneTransitionUseCase.GotoScene(gameEvent.SceneName);
-            screenEffectView.TerminateScreenEffect();
+            return true;
         }
 
         //AdvWindowの表示を行う
-        public void ExcuteScreenEffectEvent(GameEvent gameEvent)
+        public bool ExcuteScreenEffectEvent(GameEvent gameEvent)
         {
             bool isOverTheLimit = judgeIgnitionOverTheLimitUseCase.JudgeEventIgnitionOverTheLimit((AEvent)gameEvent);
             if (!isOverTheLimit)
             {
                 //イベント制限を突破していないのでイベントは実行されず
-                return;
+                return false;
             }
             switch (gameEvent.ScreenEffect)
             {
@@ -81,67 +81,72 @@ namespace Qitz.EscapeFramework
                     throw new Exception("想定されない型です。");
                     break;
             }
+            return true;
         }
 
         //AdvWindowの表示を行う
-        public void ExcuteWindowEvent(GameEvent gameEvent, Action<GameEvent> closeCallBack)
+        public bool ExcuteWindowEvent(GameEvent gameEvent, Action<GameEvent> closeCallBack)
         {
             bool isOverTheLimit = judgeIgnitionOverTheLimitUseCase.JudgeEventIgnitionOverTheLimit((AEvent)gameEvent);
             if (!isOverTheLimit)
             {
                 //イベント制限を突破していないのでイベントは実行されず
-                return;
+                return false;
             }
             aDVWindowView.SetText(gameEvent, closeCallBack);
+            return true;
         }
 
         //BGMを鳴らす
-        public void ExcuteBGMEvent(GameEvent gameEvent)
+        public bool ExcuteBGMEvent(GameEvent gameEvent)
         {
             bool isOverTheLimit = judgeIgnitionOverTheLimitUseCase.JudgeEventIgnitionOverTheLimit((AEvent)gameEvent);
             if (!isOverTheLimit)
             {
                 //イベント制限を突破していないのでイベントは実行されず
-                return;
+                return false;
             }
             escapeGameAudioPlayer.PlayAudio(gameEvent.BGMName);
+            return true;
         }
 
         //SE再生イベント
-        public void ExcuteSEEvent(GameEvent gameEvent)
+        public bool ExcuteSEEvent(GameEvent gameEvent)
         {
             //イベント制限事項を突破しているかどうか判定
             bool isOverTheLimit = judgeIgnitionOverTheLimitUseCase.JudgeEventIgnitionOverTheLimit((AEvent)gameEvent);
             if (!isOverTheLimit)
             {
                 //イベント制限を突破していないのでイベントは実行されず
-                return;
+                return false;
             }
             escapeGameAudioPlayer.PlaySE(gameEvent.SEName);
+            return true;
         }
 
         //フラグ変更イベント
-        public void ExcuteEventFlagEvent(GameEvent gameEvent)
+        public bool ExcuteEventFlagEvent(GameEvent gameEvent)
         {
             //イベント制限事項を突破しているかどうか判定
             bool isOverTheLimit = judgeIgnitionOverTheLimitUseCase.JudgeEventIgnitionOverTheLimit((AEvent)gameEvent);
             if (!isOverTheLimit)
             {
                 //イベント制限を突破していないのでイベントは実行されず
-                return;
+                return false;
             }
             escapeGameUserDataStore.SetEventFlag(gameEvent.EventFlagVO);
+            return true;
         }
 
         //表示-非表示イベントの実行
-        public void ExcuteDisplayEvent(GameEvent gameEvent)
+        public bool ExcuteDisplayEvent(GameEvent gameEvent)
         {
             //イベント制限事項を突破しているかどうか判定
             bool isOverTheLimit = judgeIgnitionOverTheLimitUseCase.JudgeEventIgnitionOverTheLimit((AEvent)gameEvent);
             if (!isOverTheLimit)
             {
                 //イベント制限を突破していないのでイベントは実行されず
-                return;
+                return false;
             }
             if (gameEvent.DisplayEventProgress == DisplayEventProgress.表示する)
             {
@@ -155,10 +160,11 @@ namespace Qitz.EscapeFramework
             {
                 throw new System.Exception($"想定されない形式です:{gameEvent.DisplayEventProgress}");
             }
+            return true;
         }
 
         //アイテム増加イベントの実行
-        public void ExcuteItemIncreaseEvent(GameEvent gameEvent)
+        public bool ExcuteItemIncreaseEvent(GameEvent gameEvent)
         {
 
             //イベント制限事項を突破しているかどうか判定
@@ -166,7 +172,7 @@ namespace Qitz.EscapeFramework
             if (!isOverTheLimit)
             {
                 //イベント制限を突破していないのでイベントは実行されず
-                return;
+                return false;
             }
 
             if (gameEvent.ItemEventProgress == EventProgress.増やす)
@@ -181,9 +187,10 @@ namespace Qitz.EscapeFramework
             {
                 throw new System.Exception($"想定されない形式です:{gameEvent.ItemEventProgress}");
             }
+            return true;
         }
         //カウント増減イベントの実行
-        public void ExcuteCountIncreaseAndDecreaseEvent(GameEvent gameEvent)
+        public bool ExcuteCountIncreaseAndDecreaseEvent(GameEvent gameEvent)
         {
 
             //イベント制限事項を突破しているかどうか判定
@@ -191,7 +198,7 @@ namespace Qitz.EscapeFramework
             if (!isOverTheLimit)
             {
                 //イベント制限を突破していないのでイベントは実行されず
-                return;
+                return false;
             }
 
 
@@ -211,28 +218,30 @@ namespace Qitz.EscapeFramework
             {
                 throw new System.Exception($"想定されない形式です:{gameEvent.CountEventName}");
             }
+            return true;
         }
 
-        public void ExcuteSpriteChangeEvent(GameEvent gameEvent)
+        public bool ExcuteSpriteChangeEvent(GameEvent gameEvent)
         {
             //イベント制限事項を突破しているかどうか判定
             bool isOverTheLimit = judgeIgnitionOverTheLimitUseCase.JudgeEventIgnitionOverTheLimit((AEvent)gameEvent);
             if (!isOverTheLimit)
             {
                 //イベント制限を突破していないのでイベントは実行されず
-                return;
+                return false;
             }
 
             gameEvent.Image.sprite = gameEvent.ChangeSprite;
+            return true;
         }
-        public void ExcuteItemWindowEvent(GameEvent gameEvent)
+        public bool ExcuteItemWindowEvent(GameEvent gameEvent)
         {
             //イベント制限事項を突破しているかどうか判定
             bool isOverTheLimit = judgeIgnitionOverTheLimitUseCase.JudgeEventIgnitionOverTheLimit((AEvent)gameEvent);
             if (!isOverTheLimit)
             {
                 //イベント制限を突破していないのでイベントは実行されず
-                return;
+                return false;
             }
             //アイテムWindowを表示したり消したりするイベントを追加
             if(gameEvent.ItemWinodwEvent == ItemWinodwEvent.アイテム欄を表示する)
@@ -242,6 +251,7 @@ namespace Qitz.EscapeFramework
             {
                 itemWindowView.Hide();
             }
+            return true;
 
         }
     }

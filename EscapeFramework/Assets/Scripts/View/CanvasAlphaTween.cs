@@ -8,7 +8,7 @@ public class CanvasAlphaTween : MonoBehaviour
     CanvasGroup canvasGroup;
     float currentEffectTime = 0;
     float durationTime = 0;
-    float effectValue => currentEffectTime / durationTime;
+    float effectValue => targetAlpha*(currentEffectTime / durationTime);
     bool isCompleatedeffect => currentEffectTime >= durationTime;
 
     float targetAlpha = 0;

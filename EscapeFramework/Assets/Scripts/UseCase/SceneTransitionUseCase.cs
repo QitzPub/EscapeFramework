@@ -13,7 +13,7 @@ namespace Qitz.EscapeFramework
     {
         public void GotoScene(string sceneName)
         {
-            SceneManager.LoadScene(sceneName);
+            SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
         }
     }
 }

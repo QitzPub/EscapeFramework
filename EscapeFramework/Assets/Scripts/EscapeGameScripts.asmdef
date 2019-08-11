@@ -1,0 +1,15 @@
+{
+    "name": "EscapeGameScripts",
+    "references": [
+        "GUID:5d09581a3497741e08d3c1eaabce0e4c"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": []
+}

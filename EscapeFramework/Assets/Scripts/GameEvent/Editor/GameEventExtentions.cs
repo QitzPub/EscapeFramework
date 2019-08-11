@@ -23,6 +23,7 @@ namespace Qitz.EscapeFramework
         //======================================
         public override void OnInspectorGUI()
         {
+
             //基本設定ここから===========================================
             gameEvent.EventType = (EventType)EditorGUILayout.EnumPopup("イベント種類:", gameEvent.EventType);
             if (gameEvent.EventType == EventType.イベントの種類を設定してくださいまし) return;
@@ -235,8 +236,14 @@ namespace Qitz.EscapeFramework
                 gameEvent.gameObject.AddComponent<GameEvent>();
             }
             //=====イベント追加ここまで====================================
+            //if (DrawDefaultInspector())
+            //{
+            //    // ここで更新処理を入れる
+            //}
 
-
+            //!!!!!!!!!!!!エディターバグのハックfix!!!!!!!!!!!!
+            Undo.RecordObject(target, "Update");
+            EditorUtility.SetDirty(gameEvent);
         }
         //======================================
     }

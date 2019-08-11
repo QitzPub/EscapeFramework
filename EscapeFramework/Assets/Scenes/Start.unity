@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 1354884142}
   - component: {fileID: 1354884141}
   - component: {fileID: 1354884140}
+  - component: {fileID: 1354884143}
   m_Layer: 5
   m_Name: StartEvent
   m_TagString: Untagged
@@ -440,7 +441,7 @@ MonoBehaviour:
   - CountEventName: 0
     CountEventValue: 0
     CountEventJudge: 0
-  UseDelay: 0
+  UseDelay: 1
   DelayTime: 2
   EventType: 8
   EventExecuteTiming: 4
@@ -565,6 +566,53 @@ MonoBehaviour:
   SEAudioCommandType: 0
   ChangeSprite: {fileID: 0}
   ItemWinodwEvent: 0
+--- !u!114 &1354884143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354884133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6653858e3ba443e7915025486804d58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseItemRestrictedSetting: 0
+  ItemIGnitions:
+  - ItemName: 0
+    IGnitionPointItem: 0
+  UseEventFlagRestrictedSetting: 0
+  EventFlagIGnitions:
+  - EventType: 0
+    EventFlag: 0
+  UseCountEventRestrictedSetting: 0
+  CountEventIGnitions:
+  - CountEventName: 0
+    CountEventValue: 0
+    CountEventJudge: 0
+  UseDelay: 0
+  DelayTime: 0
+  EventType: 11
+  EventExecuteTiming: 1
+  DropedItemName: 0
+  chainEvent: {fileID: 0}
+  texts: []
+  BGMName: 0
+  BGMAudioCommandType: 0
+  DisplayEventProgress: 0
+  EventName: 0
+  EventFlag: 0
+  CountEventName: 0
+  CountEventProgress: 0
+  ItemName: 0
+  ItemEventProgress: 0
+  SceneName: 
+  ScreenEffect: 0
+  SEName: 0
+  SEAudioCommandType: 0
+  ChangeSprite: {fileID: 0}
+  ItemWinodwEvent: 1
 --- !u!1 &1777683944
 GameObject:
   m_ObjectHideFlags: 0
