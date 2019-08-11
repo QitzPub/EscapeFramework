@@ -29,6 +29,10 @@ namespace Qitz.EscapeFramework
             }
         }
 
+        public void SetText(string text)
+        {
+            uiText.text = text;
+        }
 
         void Update()
         {
@@ -47,6 +51,12 @@ namespace Qitz.EscapeFramework
 
         public void SetNextLine(string Text)
         {
+            if (!IsCompleteDisplayText)
+            {
+                ShowAllText();
+                return;
+            }
+
             currentText = Text;
             timeUntilDisplay = currentText.Length * intervalForCharacterDisplay;
             timeElapsed = Time.time;

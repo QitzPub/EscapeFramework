@@ -23,6 +23,7 @@ namespace Qitz.EscapeFramework
 
         public void Close()
         {
+            textAnimation.SetText("");
             closeCallBack?.Invoke(gameEvent);
             this.gameObject.SetActive(false);
         }

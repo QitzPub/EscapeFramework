@@ -93,6 +93,7 @@
     <Compile Include="Assets\Scripts\Util\PrefabFolder.cs" />
     <Compile Include="Assets\Scripts\View\ADVWindowView.cs" />
     <Compile Include="Assets\Scripts\View\Animation\TextAnimation.cs" />
+    <Compile Include="Assets\Scripts\View\CanvasAlphaTween.cs" />
     <Compile Include="Assets\Scripts\View\ItemColumnView.cs" />
     <Compile Include="Assets\Scripts\View\ItemDragableView.cs" />
     <Compile Include="Assets\Scripts\View\ItemDropable.cs" />

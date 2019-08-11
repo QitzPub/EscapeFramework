@@ -17,34 +17,12 @@ namespace Qitz.EscapeFramework
     public class ScreenEffectView : MonoBehaviour, IScreenEffectView
     {
         [SerializeField]
+        CanvasAlphaTween canvasAlphaTween;
+        [SerializeField]
         CanvasGroup canvasGroup;
         [SerializeField]
         Image image;
 
-        bool fadeOutRq = false;
-        [SerializeField]
-        float effectDuration = 1.0f;
-        float currentEffectTime = 1.0f;
-        float effectValue => currentEffectTime / effectDuration;
-
-        // Start is called before the first frame update
-        void Start()
-        {
-            canvasGroup.alpha = 0;
-            canvasGroup.blocksRaycasts = false;
-        }
-        void Update()
-        {
-            currentEffectTime += Time.deltaTime;
-            if (fadeOutRq && canvasGroup.alpha <= 1)
-            {
-                canvasGroup.alpha = effectValue;
-            }
-            else if(canvasGroup.alpha >= 0)
-            {
-                canvasGroup.alpha = 1 - effectValue;
-            }
-        }
         public void BlockRaycasts()
         {
             canvasGroup.blocksRaycasts = true;
@@ -55,21 +33,16 @@ namespace Qitz.EscapeFramework
         }
         public void BlackOut()
         {
-            canvasGroup.blocksRaycasts = true;
-            fadeOutRq = true;
-            currentEffectTime = 0;
+            canvasAlphaTween.SetAlphaTween(0,1,1);
         }
         public void UnBlackOut()
         {
-            canvasGroup.blocksRaycasts = false;
-            fadeOutRq = false;
-            currentEffectTime = 0;
+            canvasAlphaTween.SetAlphaTween(1, 0, 1);
         }
 
         public void TerminateScreenEffect()
         {
-            fadeOutRq = false;
-            //currentEffectTime = 1.0f;
+            UnBlockRaycasts();
             canvasGroup.alpha = 0;
         }
     }
