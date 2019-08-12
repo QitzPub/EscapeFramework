@@ -1063,7 +1063,6 @@ GameObject:
   - component: {fileID: 2047632238}
   - component: {fileID: 2047632237}
   - component: {fileID: 2047632236}
-  - component: {fileID: 2047632235}
   - component: {fileID: 2047632234}
   - component: {fileID: 2047632233}
   - component: {fileID: 2047632232}
@@ -1204,21 +1203,21 @@ MonoBehaviour:
   ItemIGnitions:
   - ItemName: 0
     IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 0
+  UseEventFlagRestrictedSetting: 1
   EventFlagIGnitions:
   - EventType: 0
-    EventFlag: 0
+    EventFlag: 1
   UseCountEventRestrictedSetting: 0
   CountEventIGnitions:
   - CountEventName: 0
     CountEventValue: 0
     CountEventJudge: 0
-  UseDelay: 1
-  DelayTime: 2
+  UseDelay: 0
+  DelayTime: 0
   EventType: 1
-  EventExecuteTiming: 4
+  EventExecuteTiming: 1
   DropedItemName: 0
-  chainEvent: {fileID: 2047632235}
+  chainEvent: {fileID: 0}
   texts:
   - "\u300C\u304F\u30FB\u30FB\u30FB\u958B\u304B\u306A\u3044\uFF01\u3000\u306A\u3093\u3067\u3060\uFF1F\uFF1F\uFF1F\u300D"
   - "\u306A\u305C\u304B\u3001\u6249\u304C\u65AD\u56FA\u3068\u3057\u3066\u958B\u304B\u306A\u3044\u3088\u3046\u3060\u3063\u305F\u3002
@@ -1237,53 +1236,6 @@ MonoBehaviour:
   ItemEventProgress: 0
   SceneName: 
   ScreenEffect: 0
-  SEName: 0
-  SEAudioCommandType: 0
-  ChangeSprite: {fileID: 0}
-  ItemWinodwEvent: 0
---- !u!114 &2047632235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2047632230}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6653858e3ba443e7915025486804d58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseItemRestrictedSetting: 0
-  ItemIGnitions:
-  - ItemName: 0
-    IGnitionPointItem: 0
-  UseEventFlagRestrictedSetting: 1
-  EventFlagIGnitions:
-  - EventType: 0
-    EventFlag: 1
-  UseCountEventRestrictedSetting: 0
-  CountEventIGnitions:
-  - CountEventName: 0
-    CountEventValue: 0
-    CountEventJudge: 0
-  UseDelay: 0
-  DelayTime: 0
-  EventType: 10
-  EventExecuteTiming: 1
-  DropedItemName: 0
-  chainEvent: {fileID: 0}
-  texts: []
-  BGMName: 0
-  BGMAudioCommandType: 0
-  DisplayEventProgress: 0
-  EventName: 0
-  EventFlag: 0
-  CountEventName: 0
-  CountEventProgress: 0
-  ItemName: 0
-  ItemEventProgress: 0
-  SceneName: 
-  ScreenEffect: 1
   SEName: 0
   SEAudioCommandType: 0
   ChangeSprite: {fileID: 0}
