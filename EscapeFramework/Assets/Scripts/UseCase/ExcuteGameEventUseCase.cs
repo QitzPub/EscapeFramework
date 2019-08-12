@@ -47,10 +47,18 @@ namespace Qitz.EscapeFramework
             //シーン読み込み時開始になっているものはこのタイミングでイベントが実行される
             foreach (var aEvent in normalEvents.Where(e => e.EventExecuteTiming == EventExecuteTiming.シーン読み込み時))
             {
-                DelayTool.Tools.Delay(aEvent.DelayTime, () =>
+                if(aEvent.DelayTime == 0)
                 {
                     ExcuteEvent(aEvent);
-                });
+                }
+                else
+                {
+                    DelayTool.Tools.Delay(aEvent.DelayTime, () =>
+                    {
+                        ExcuteEvent(aEvent);
+                    });
+                }
+
             }
             ExcuteUpdateEvent();
             eventExcuteCallBack.Invoke(events);

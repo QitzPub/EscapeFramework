@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 namespace Qitz.EscapeFramework
 {
@@ -21,6 +22,7 @@ namespace Qitz.EscapeFramework
         List<ItemColumnView> itemColumnViews = new List<ItemColumnView>();
         [SerializeField]
         GridLayoutGroup grid;
+        List<IItemSpriteVO> currentItems = new List<IItemSpriteVO>();
 
         void SetItems(List<IItemSpriteVO> itemSpriteVOs)
         {
@@ -44,7 +46,13 @@ namespace Qitz.EscapeFramework
         {
             //ゲームコントローラーのユーザーアイテムリストチェンジ時のコールバックに応じてアイテムを生成する処理
             this.GetController<EscapeGameController>().AddUserItemListChangeCallBack((items) => {
+                if (currentItems.SequenceEqual(items))
+                {
+                    return;
+                }
+                Debug.Log("AddUserItemListChangeCallBack");
                 SetItems(items);
+                currentItems = items;
             });
         }
 

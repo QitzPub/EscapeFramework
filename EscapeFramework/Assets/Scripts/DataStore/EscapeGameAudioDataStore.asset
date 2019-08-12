@@ -16,5 +16,7 @@ MonoBehaviour:
   - audio: {fileID: 8300000, guid: 0643908ea2a90c341a1f488fb302af76, type: 3}
   - audio: {fileID: 8300000, guid: a93ce8dd966882c4389385f52048895d, type: 3}
   qitzSEs:
-  - audio: {fileID: 8300000, guid: 17de11aa90eda4249b024dfa26164b3e, type: 3}
-  - audio: {fileID: 8300000, guid: 361275894dd6e448bbf731a12ce0afce, type: 3}
+  - audio: {fileID: 8300000, guid: 0c0d60977a03a41268f0f6818f250bf2, type: 3}
+  - audio: {fileID: 8300000, guid: c5f7a78a9e30d458bbb9642be6429bc9, type: 3}
+  - audio: {fileID: 8300000, guid: dfd0cef0332b64d9892830aaf643b908, type: 3}
+  - audio: {fileID: 8300000, guid: 22eab76e2c9a24dcab122d315558a0d6, type: 3}

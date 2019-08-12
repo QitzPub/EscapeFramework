@@ -30,7 +30,9 @@ namespace Qitz.EscapeFramework
     {
         開始イベント終了,
         トンカチを入手,
-        ぶたの貯金箱を破壊,
+        ガラスビン破壊,
+        タンスを開ける,
+        壁破壊,
         金庫を開ける,
     }
 
@@ -41,8 +43,10 @@ namespace Qitz.EscapeFramework
     }
     public enum SEName
     {
-        se_test1,
-        se_test2,
+        door_dondon1,
+        door_open1,
+        glass_break2,
+        stone_break1,
     }
     public enum AudioCommandType
     {
