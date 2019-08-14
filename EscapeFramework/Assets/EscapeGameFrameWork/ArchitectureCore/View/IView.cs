@@ -20,6 +20,10 @@ namespace Qitz.EscapeFramework
             }
             return controller as T;
         }
+        public static void CashClear()
+        {
+            controller = null;
+        }
     }
 }
 

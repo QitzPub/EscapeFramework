@@ -12,6 +12,7 @@ namespace Qitz.EscapeFramework
         bool GetEventFlagValue(EventName eventType);
         bool InPossessionItem(ItemVO itemVO);
         bool InPossessionItem(ItemName itemName);
+        void ClearUserData();
     }
 
     public class EscapeGameUserDataStore: IEscapeGameUserDataStore
@@ -137,11 +138,19 @@ namespace Qitz.EscapeFramework
             SaveUserData();
         }
 
-
+        public void ClearUserData()
+        {
+            PlayerPrefs.DeleteKey(SAVE_KEY);
+            SetUserData();
+        }
 
         public EscapeGameUserDataStore()
         {
             //this.countEventSettings = countEventSettings;
+            SetUserData();
+        }
+        void SetUserData()
+        {
             userVO = LoadUserData();
             if (userVO == null)
             {
@@ -149,6 +158,7 @@ namespace Qitz.EscapeFramework
                 SaveUserData();
             }
         }
+
 
     }
 

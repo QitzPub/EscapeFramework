@@ -8,8 +8,15 @@ namespace Qitz.EscapeFramework
     {
 
         [RuntimeInitializeOnLoadMethod]
-        static void GameSystemInitialize()
+        public static void GameSystemInitialize()
         {
+            var _controller = Object.FindObjectOfType<EscapeGameController>();
+            if(_controller != null)
+            {
+                Object.Destroy(_controller.gameObject);
+                ViewExtensions.CashClear();
+            }
+
             var ga = new GameObject();
             var controller = PrefabFolder.ResourcesLoadInstantiateTo("EscapeGameController", ga.transform.parent);
             //var itemWindow = PrefabFolder.ResourcesLoadInstantiateTo("ItemWindowView", ga.transform.parent);

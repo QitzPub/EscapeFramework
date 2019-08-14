@@ -99,6 +99,13 @@ namespace Qitz.EscapeFramework
         {
             PlayerPrefs.DeleteAll();
         }
+
+
+        public void ClearUserData()
+        {
+            repository.EscapeGameUserDataStore.ClearUserData();
+        }
+
         public void DumpUserdata()
         {
             var data = Repository.EscapeGameUserDataStore;
