@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5661bf7a5328640b0b6cc46b7ec1b1a5, type: 3}
   m_Name: EscapeGameDefinsDataStore
   m_EditorClassIdentifier: 
-  maxItemListCount: 10
+  maxItemListCount: 7

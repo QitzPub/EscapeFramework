@@ -405,8 +405,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5.9000244, y: -206.5}
-  m_SizeDelta: {x: -157.4, y: -492.1}
+  m_AnchoredPosition: {x: 1.300003, y: -181.9}
+  m_SizeDelta: {x: -22.7, y: -382.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3914226290949960011
 CanvasRenderer:
@@ -480,8 +480,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 10.099976, y: 2.5}
-  m_SizeDelta: {x: -131.7, y: -55.7}
+  m_AnchoredPosition: {x: 6.7, y: -3.9}
+  m_SizeDelta: {x: -13.4, y: -7.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3914226291256421747
 CanvasRenderer:
@@ -513,7 +513,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 807d31fb2199f4120982675025e21597, type: 3}
-    m_FontSize: 36
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -524,7 +524,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: "\u3042\u3042\u3042\u3042\u3042\u3042\u3042\u3042\u3042\n\u3042\u3042\u3042\u3042\u3042\u3042\u3042\u3042\u3042\u3042\u3042\u3042\u3042\u3042\u3042\u3042\u3042\u3042\u3042\u3042\u3042\u3042"
 --- !u!114 &3914226291256421745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -737,10 +737,10 @@ RectTransform:
   m_Father: {fileID: 5052342072158508253}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 300.82}
-  m_SizeDelta: {x: 0, y: -601.65}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -51}
+  m_SizeDelta: {x: 320, y: 103}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5052342072125152972
 CanvasRenderer:
@@ -770,7 +770,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 108, y: 108}
+  m_CellSize: {x: 45, y: 45}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2

@@ -13,7 +13,7 @@ namespace Qitz.EscapeFramework
     public class EscapeGameDefinsDataStore : ScriptableObject, IEscapeGameDefinsDataStore
     {
         [SerializeField]
-        int maxItemListCount = 10;
+        int maxItemListCount = 7;
         public int MAX_ITEM_LIST_COUNT => maxItemListCount;
     }
 }

@@ -46,7 +46,7 @@ namespace Qitz.EscapeFramework
         {
             //ゲームコントローラーのユーザーアイテムリストチェンジ時のコールバックに応じてアイテムを生成する処理
             this.GetController<EscapeGameController>().AddUserItemListChangeCallBack((items) => {
-                if (currentItems.SequenceEqual(items))
+                if (items.Count != 0 && currentItems.SequenceEqual(items))
                 {
                     return;
                 }

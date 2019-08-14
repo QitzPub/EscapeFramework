@@ -1,14 +1,8 @@
 ﻿<Properties StartupConfiguration="{EE40E20B-5142-5824-8D08-469691DDE612}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enum/ItemName.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/EscapeGameFrameWork/Scripts/DataStore/EscapeGameDefinsDataStore.cs">
     <Files>
-      <File FileName="Assets/Tests/Tests/EscapeGameTests.cs" Line="19" Column="39" />
-      <File FileName="Assets/Scripts/UseCase/ExcuteGameEventUseCase.cs" Line="159" Column="53" />
-      <File FileName="Assets/Scripts/View/ScreenEffectView.cs" Line="36" Column="34" />
-      <File FileName="Assets/Scripts/Enum/EventEnums.cs" Line="35" Column="13" />
-      <File FileName="Assets/Scripts/Controller/EscapeGameController.cs" Line="71" Column="54" NotebookId="1" />
-      <File FileName="Assets/Scripts/View/CanvasAlphaTween.cs" Line="29" Column="33" NotebookId="1" />
-      <File FileName="Assets/Scripts/VO/ItemSpriteVO.cs" Line="17" Column="13" NotebookId="1" />
-      <File FileName="Assets/Scripts/Enum/ItemName.cs" Line="9" Column="13" NotebookId="1" />
+      <File FileName="Assets/EscapeGameFrameWork/Scripts/View/ItemWindowView.cs" Line="29" Column="118" />
+      <File FileName="Assets/EscapeGameFrameWork/Scripts/DataStore/EscapeGameDefinsDataStore.cs" Line="16" Column="33" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
