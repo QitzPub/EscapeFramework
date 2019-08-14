@@ -6,30 +6,30 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Title.unity
+    path: Assets/EscapeGameFrameWork/Scenes/Title.unity
     guid: 3e4b156b155fe4fe68a2f3a407de1c24
   - enabled: 1
-    path: Assets/Scenes/Home.unity
+    path: Assets/EscapeGameFrameWork/Scenes/Home.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Tansu.unity
+    path: Assets/EscapeGameFrameWork/Scenes/Tansu.unity
     guid: b1c1bbd1a61084e849bc62fa710dc4f5
   - enabled: 1
-    path: Assets/Scenes/End.unity
+    path: Assets/EscapeGameFrameWork/Scenes/End.unity
     guid: 511c09796f0314116a3c38ad38ce79b9
   - enabled: 1
-    path: Assets/Scenes/Door.unity
+    path: Assets/EscapeGameFrameWork/Scenes/Door.unity
     guid: 108e6c012cdf14b2c91189cdf6c3a2c4
   - enabled: 1
-    path: Assets/Scenes/Kabe.unity
+    path: Assets/EscapeGameFrameWork/Scenes/Kabe.unity
     guid: 797a968f91268491a9478884fe86d0b5
   - enabled: 1
-    path: Assets/Scenes/TV.unity
+    path: Assets/EscapeGameFrameWork/Scenes/TV.unity
     guid: 86307da0f8a144ef09e5f9fd2bb5403a
   - enabled: 1
-    path: Assets/Scenes/Hint.unity
+    path: Assets/EscapeGameFrameWork/Scenes/Hint.unity
     guid: fa7fa602ac5d6480abee35cd15bbf139
   - enabled: 1
-    path: Assets/Scenes/Start.unity
+    path: Assets/EscapeGameFrameWork/Scenes/Start.unity
     guid: 0eb733c398c814762937bc5f7dd9fd08
   m_configObjects: {}
