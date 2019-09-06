@@ -1,0 +1,193 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95be340f1f40548e58751b102d5f5aa6, type: 3}
+  m_Name: ADVSpriteDataStore
+  m_EditorClassIdentifier: 
+  bodySpriteList:
+  - bodySprite: {fileID: 21300000, guid: 68d0afc174dd8419ba15c4bb56b09298, type: 3}
+    character: 8
+    costume: 1
+  - bodySprite: {fileID: 21300000, guid: cca9f78f421c64dcc9edaaf6309b0315, type: 3}
+    character: 9
+    costume: 1
+  - bodySprite: {fileID: 21300000, guid: 111a8dd6dda764538a633102b1c6e96a, type: 3}
+    character: 10
+    costume: 1
+  - bodySprite: {fileID: 21300000, guid: c7d2ee057edc44766bb444617eee9b31, type: 3}
+    character: 11
+    costume: 1
+  - bodySprite: {fileID: 21300000, guid: d752bd5163d684cd99511eeaf0df8edf, type: 3}
+    character: 12
+    costume: 1
+  - bodySprite: {fileID: 21300000, guid: cd680d973c2f44764ac96af951dad128, type: 3}
+    character: 13
+    costume: 1
+  - bodySprite: {fileID: 21300000, guid: 75b27453924e248e184a464c0453ae3f, type: 3}
+    character: 14
+    costume: 1
+  - bodySprite: {fileID: 21300000, guid: 3297e4c7419b24923b8521744fe7a5ae, type: 3}
+    character: 15
+    costume: 1
+  - bodySprite: {fileID: 21300000, guid: 11a4630c31ec143b688035551dfc3ccb, type: 3}
+    character: 16
+    costume: 1
+  faceSpriteList:
+  - faceSprite: {fileID: 21300000, guid: 248c7fdf4ce4e45acb0cfbcd970fe8b8, type: 3}
+    character: 8
+    expression: 1
+  - faceSprite: {fileID: 21300000, guid: c79c57453421b4646929e357e08a5f8f, type: 3}
+    character: 8
+    expression: 7
+  - faceSprite: {fileID: 21300000, guid: a4a3e21fae2f54e51b9d674746c9f045, type: 3}
+    character: 8
+    expression: 2
+  - faceSprite: {fileID: 21300000, guid: 1f3972f786c564335a1d9c3c68ba1dd3, type: 3}
+    character: 8
+    expression: 18
+  - faceSprite: {fileID: 21300000, guid: e4f5caf1c143741b8aad9ca94ee7dbe2, type: 3}
+    character: 9
+    expression: 1
+  - faceSprite: {fileID: 21300000, guid: 94458d48c538f43f1b971e91b44a1c06, type: 3}
+    character: 9
+    expression: 7
+  - faceSprite: {fileID: 21300000, guid: efbf3a8ec2e1a48cf9797ddf7e89c540, type: 3}
+    character: 9
+    expression: 2
+  - faceSprite: {fileID: 21300000, guid: 5eb5901a56c354f6a86050a50e070256, type: 3}
+    character: 9
+    expression: 18
+  - faceSprite: {fileID: 21300000, guid: 3f03750b0ef6b4850ac1add387bc39c7, type: 3}
+    character: 10
+    expression: 1
+  - faceSprite: {fileID: 21300000, guid: 1039122e5e7e64847afc769ee2629702, type: 3}
+    character: 10
+    expression: 7
+  - faceSprite: {fileID: 21300000, guid: b10164b9e2ef64883ac9ac258896e178, type: 3}
+    character: 10
+    expression: 2
+  - faceSprite: {fileID: 21300000, guid: 95117dffa1518483ca91414a1f5f54c6, type: 3}
+    character: 10
+    expression: 18
+  - faceSprite: {fileID: 21300000, guid: 304cac2065b8e4ec5b246ee12032f42d, type: 3}
+    character: 11
+    expression: 1
+  - faceSprite: {fileID: 21300000, guid: bef0736891d5146838d7d3d725ccfe32, type: 3}
+    character: 11
+    expression: 7
+  - faceSprite: {fileID: 21300000, guid: a0775a902eb2543e3bad50664eb88551, type: 3}
+    character: 11
+    expression: 2
+  - faceSprite: {fileID: 21300000, guid: d45068bf631d14ef3ad8c75202a9fdb9, type: 3}
+    character: 11
+    expression: 18
+  - faceSprite: {fileID: 21300000, guid: 315e5bee392d240bc837ff63b978ca86, type: 3}
+    character: 12
+    expression: 1
+  - faceSprite: {fileID: 21300000, guid: 514c0005688b8499880b124a9654c7d8, type: 3}
+    character: 12
+    expression: 7
+  - faceSprite: {fileID: 21300000, guid: 042ba4724ce96444ea2985bd15eb9862, type: 3}
+    character: 12
+    expression: 2
+  - faceSprite: {fileID: 21300000, guid: 4dc0fa067dbcc463a88f688093e754e3, type: 3}
+    character: 12
+    expression: 18
+  - faceSprite: {fileID: 21300000, guid: c6f6004d8d1c44ac39b00e4782879653, type: 3}
+    character: 13
+    expression: 1
+  - faceSprite: {fileID: 21300000, guid: 2715b45bd98094b0d80793ed810565c8, type: 3}
+    character: 13
+    expression: 7
+  - faceSprite: {fileID: 21300000, guid: 9104bbc94d3f84cbe8b6115e7e61f747, type: 3}
+    character: 13
+    expression: 2
+  - faceSprite: {fileID: 21300000, guid: 436d46deb8bb74382a84cc2b4e8517d8, type: 3}
+    character: 13
+    expression: 18
+  - faceSprite: {fileID: 21300000, guid: 013eebd75dac94120b7bd427980952ef, type: 3}
+    character: 14
+    expression: 1
+  - faceSprite: {fileID: 21300000, guid: 7d3e28ecb7b2f46cca4888dc2fd44d4d, type: 3}
+    character: 14
+    expression: 7
+  - faceSprite: {fileID: 21300000, guid: 43095e6c9ceea4b7baf0488d421d3533, type: 3}
+    character: 14
+    expression: 2
+  - faceSprite: {fileID: 21300000, guid: acc4a176c62a74557aa3e0adfcf25bb5, type: 3}
+    character: 14
+    expression: 18
+  - faceSprite: {fileID: 21300000, guid: 4489590fd075a4622887c0883f9751d5, type: 3}
+    character: 15
+    expression: 1
+  - faceSprite: {fileID: 21300000, guid: be722cd74fd264a16b912d5735ad8aa9, type: 3}
+    character: 15
+    expression: 7
+  - faceSprite: {fileID: 21300000, guid: 661abc2ec91d74d01b1b4e98c5c2ca39, type: 3}
+    character: 15
+    expression: 2
+  - faceSprite: {fileID: 21300000, guid: 13a024bf9610a46b18eda337850c1835, type: 3}
+    character: 15
+    expression: 18
+  - faceSprite: {fileID: 21300000, guid: 90e6efd6b5d9c4e2c9c9ac37639a6913, type: 3}
+    character: 16
+    expression: 1
+  - faceSprite: {fileID: 21300000, guid: f7255e404ca0b4884b32b51e22325661, type: 3}
+    character: 16
+    expression: 7
+  - faceSprite: {fileID: 21300000, guid: ac6e0f2c4936a432ca0520be86911a80, type: 3}
+    character: 16
+    expression: 2
+  - faceSprite: {fileID: 21300000, guid: ecfb149d5116f4afd882bddd9d12ef86, type: 3}
+    character: 16
+    expression: 18
+  backgroundSpriteList:
+  - sprite: {fileID: 21300000, guid: 2c21a2386c6bf486dadb1ff07bf4e3d8, type: 3}
+  - sprite: {fileID: 21300000, guid: 4b1561be2c138482fa3732cbc417b93e, type: 3}
+  - sprite: {fileID: 21300000, guid: 57d97cf1bc7224e3594fcd16af4d2627, type: 3}
+  characterBodyPostionList:
+  - postion: {x: 0, y: -1061}
+    character: 8
+  - postion: {x: 0, y: -1081}
+    character: 9
+  - postion: {x: 0, y: 0}
+    character: 10
+  - postion: {x: 0, y: 0}
+    character: 11
+  - postion: {x: 0, y: 0}
+    character: 12
+  - postion: {x: 0, y: 0}
+    character: 13
+  - postion: {x: 0, y: 0}
+    character: 14
+  - postion: {x: 0, y: 0}
+    character: 15
+  - postion: {x: 0, y: 0}
+    character: 16
+  characterFacePostionList:
+  - postion: {x: 14, y: 1232}
+    character: 8
+  - postion: {x: 5, y: 1214}
+    character: 9
+  - postion: {x: 0, y: 0}
+    character: 10
+  - postion: {x: 0, y: 0}
+    character: 11
+  - postion: {x: 0, y: 0}
+    character: 12
+  - postion: {x: 0, y: 0}
+    character: 13
+  - postion: {x: 0, y: 0}
+    character: 14
+  - postion: {x: 0, y: 0}
+    character: 15
+  - postion: {x: 0, y: 0}
+    character: 16

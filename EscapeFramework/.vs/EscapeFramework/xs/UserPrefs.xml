@@ -1,14 +1,10 @@
-﻿<Properties StartupConfiguration="{EE40E20B-5142-5824-8D08-469691DDE612}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/EscapeGameFrameWork/Scripts/View/StartButtonView.cs">
+﻿<Properties StartupConfiguration="{C9900E98-A63D-0522-C79D-6228823C21E5}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/EscapeGameFrameWork/ADVEngine/ArchitectureCore/View/IView.cs">
     <Files>
-      <File FileName="Assets/EscapeGameFrameWork/Scripts/View/ItemWindowView.cs" Line="33" Column="40" />
-      <File FileName="Assets/EscapeGameFrameWork/Scripts/DataStore/EscapeGameDefinsDataStore.cs" Line="15" Column="25" />
-      <File FileName="Assets/EscapeGameFrameWork/Scripts/GameSystemInitializer/EscapeGameSystemInitializer.cs" Line="17" Column="44" />
-      <File FileName="Assets/EscapeGameFrameWork/ArchitectureCore/View/IView.cs" Line="10" Column="39" />
-      <File FileName="Assets/EscapeGameFrameWork/Scripts/Controller/EscapeGameController.cs" Line="106" Column="64" />
-      <File FileName="Assets/EscapeGameFrameWork/Scripts/Repository/EscapeGameRepository.cs" Line="24" Column="64" />
-      <File FileName="Assets/EscapeGameFrameWork/Scripts/DataStore/EscapeGameUserDataStore.cs" Line="141" Column="34" />
-      <File FileName="Assets/EscapeGameFrameWork/Scripts/View/StartButtonView.cs" Line="8" Column="5" />
+      <File FileName="Assets/EscapeGameFrameWork/ADVEngine/Scripts/Controller/ADVGameController.cs" Line="66" Column="37" />
+      <File FileName="Assets/EscapeGameFrameWork/ADVEngine/Scripts/View/EffectView.cs" Line="3" Column="36" />
+      <File FileName="Assets/EscapeGameFrameWork/ADVEngine/Scripts/View/AdvView.cs" Line="10" Column="36" />
+      <File FileName="Assets/EscapeGameFrameWork/ADVEngine/ArchitectureCore/View/IView.cs" Line="4" Column="40" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

@@ -1,0 +1,21 @@
+﻿
+
+public static class ParseCommandList
+{
+    public static readonly string[] characterList = new[]
+    {
+#NameList#
+    };
+    
+    // TODO 自動生成
+    public static readonly string[] costumeList = new[]
+    {
+#CostumeList#
+    };
+    
+    //TODO 自動生成
+    public static readonly string[] faceList = new[]
+    {
+#FaceList#
+    };
+}

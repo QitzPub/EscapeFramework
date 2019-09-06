@@ -1,0 +1,69 @@
+﻿;先頭にセミコロンを入れるとコメント行になります。
+;メモを入れたりするのに便利！
+
+[messageoff]
+[ev file="936030.jpg"]
+[wait keyinput]
+
+[暗転共通]
+
+[bg file="039002.jpg"]
+[messageon]
+[bgm file="test1.wav"]
+[se file="se_test1.wav"]
+これは、マクロの使い方のサンプル説明ようの@\nシナリオになります。
+;@\nを入れると改行できます。
+
+選択肢を表示することができます！
+
+[seltag target=*select_test]
+[seladd text=""モブキャラとの会話へ"" target=*kyo_sel_01a]
+[seladd text=""複数キャラクター表示へ"" target=*kyo_sel_01b]
+[select]
+
+[seltag target=*kyo_sel_01a]
+【モブキャラ１】
+やあこんにちは〜〜〜
+
+モブキャラですよろしく！
+
+[se file="se_test2.wav"]
+[リリファ 出 顔 通常服 tb 笑顔 time=100]
+【リリファ】
+よろしくね！
+
+選択肢その２へ
+
+[seladd text=""ゲーム終了へ"" target=*end]
+[seladd text=""最初の選択肢に戻る"" target=*select_test]
+[select]
+[リリファ 消 time=1000]
+
+;jumptoで[seltag target=*end]で指定した部位へjump
+[jumpto target=*end]
+
+【モブその２】
+アイン王子こんにちは！
+
+[seltag target=*kyo_sel_01b]
+[bgm file="test2.wav"]
+[アイン 出 通常服 up 真顔 time=0]
+【アイン】
+やあ！アインだ！よろしく！
+
+[リリファ 出 顔 通常服 真顔 time=1000]
+【リリファ】
+(こんな感じで複数キャラクターも出せますよ)
+
+[リリファ 消 time=1000]
+[アイン 消 time=0]
+[bgm file="bgm002_a.wav"]
+♪～ BGM変更とかもできます
+
+[bg file="034003.jpg"]
+[暗転共通]
+
+[seltag target=*end]
+[wait keyinput]
+
+

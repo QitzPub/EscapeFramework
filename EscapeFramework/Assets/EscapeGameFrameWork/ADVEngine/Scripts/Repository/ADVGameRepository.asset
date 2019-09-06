@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7cdf8420097b4942b52064bfdeae079, type: 3}
+  m_Name: ADVGameRepository
+  m_EditorClassIdentifier: 
+  aDVGameDataStore: {fileID: 11400000, guid: 2f84fb1cd013e4bdea65deb83d635de9, type: 2}
+  aDVSpriteDataStore: {fileID: 11400000, guid: 169b686b8eadc4b519c9632abbd61b59, type: 2}
+  aDVAudioDataStore: {fileID: 11400000, guid: 866852128e94743aabad66a0aac57526, type: 2}

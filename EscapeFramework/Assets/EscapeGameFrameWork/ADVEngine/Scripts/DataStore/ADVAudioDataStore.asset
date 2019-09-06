@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36d5643e0338246b39c4158883fcf871, type: 3}
+  m_Name: ADVAudioDataStore
+  m_EditorClassIdentifier: 
+  qitzAudios:
+  - audio: {fileID: 8300000, guid: 0643908ea2a90c341a1f488fb302af76, type: 3}
+  - audio: {fileID: 8300000, guid: a93ce8dd966882c4389385f52048895d, type: 3}
+  qitzSEs:
+  - audio: {fileID: 8300000, guid: 17de11aa90eda4249b024dfa26164b3e, type: 3}
+  - audio: {fileID: 8300000, guid: 361275894dd6e448bbf731a12ce0afce, type: 3}
