@@ -6,15 +6,15 @@ namespace Qitz.EscapeFramework
 {
     public interface IItemDataStore
     {
-        List<IItemSpriteVO> Items { get; }
-        IItemSpriteVO GetItemFromItemName(ItemName itemName);
+        List<IItemDataVO> Items { get; }
+        IItemDataVO GetItemFromItemName(ItemName itemName);
     }
     public class ItemDataStore : ADataStore, IItemDataStore
     {
         [SerializeField]
-        List<ItemSpriteVO> items;
-        public List<IItemSpriteVO> Items => items.Select(it => (IItemSpriteVO)it).ToList();
-        public IItemSpriteVO GetItemFromItemName(ItemName itemName)
+        List<ItemDataVO> items;
+        public List<IItemDataVO> Items => items.Select(it => (IItemDataVO)it).ToList();
+        public IItemDataVO GetItemFromItemName(ItemName itemName)
         {
             return Items.FirstOrDefault(isv=>isv.ItemName==itemName);
         }

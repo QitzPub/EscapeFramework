@@ -14,10 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - itemName: 0
-    sprite: {fileID: 21300000, guid: 0fd5645e0b7ce442983097e7248537e6, type: 3}
-  - itemName: 2
-    sprite: {fileID: 21300000, guid: a2fea95093b4343429a34b21cb31b4ea, type: 3}
+    sprite: {fileID: 0}
+    itemDescription: 
   - itemName: 1
+    sprite: {fileID: 21300000, guid: 0fd5645e0b7ce442983097e7248537e6, type: 3}
+    itemDescription: "\u666E\u901A\u306E\u30C8\u30F3\u30AB\u30C1\u3060"
+  - itemName: 2
     sprite: {fileID: 21300000, guid: 55a2f90efd4464f2cb977dd839659e21, type: 3}
+    itemDescription: "\u9375\u306E\u3088\u3046\u306A\u4F55\u304B\u3060"
   - itemName: 3
+    sprite: {fileID: 21300000, guid: a2fea95093b4343429a34b21cb31b4ea, type: 3}
+    itemDescription: "\u30C9\u30E9\u30A4\u30D0\u30FC\u3060"
+  - itemName: 4
     sprite: {fileID: 21300000, guid: f009877c149474490aa2a301689a988f, type: 3}
+    itemDescription: "\u3053\u308C\u306F\uFF1F\uFF1F"

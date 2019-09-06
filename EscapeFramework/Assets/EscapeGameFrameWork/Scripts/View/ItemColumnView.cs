@@ -13,14 +13,14 @@ namespace Qitz.EscapeFramework
         Image itemImage;
         //[SerializeField]
         //ItemDragableView itemDragableView;
-        IItemSpriteVO itemSpriteVO;
-        public IItemSpriteVO ItemSpriteVO => itemSpriteVO;
+        IItemDataVO itemSpriteVO;
+        public IItemDataVO ItemSpriteVO => itemSpriteVO;
         public Button Button => this.GetComponent<Button>();
         [SerializeField]
         Image selectImage;
         Action itemSelectAction;
 
-        public void Initialize(IItemSpriteVO itemSpriteVO, Action itemSelectAction)
+        public void Initialize(IItemDataVO itemSpriteVO, Action itemSelectAction)
         {
             this.itemSelectAction = itemSelectAction;
             Button.onClick.RemoveAllListeners();

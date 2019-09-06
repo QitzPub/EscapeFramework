@@ -40,6 +40,7 @@ namespace Qitz.EscapeFramework
 
         void UseItem(ItemName item)
         {
+            ItemWindowView.UseItem(item);
             Debug.Log("UseItem");
         }
     }

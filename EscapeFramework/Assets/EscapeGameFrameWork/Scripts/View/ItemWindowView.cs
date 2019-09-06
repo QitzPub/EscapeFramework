@@ -10,6 +10,7 @@ namespace Qitz.EscapeFramework
     {
         void Hide();
         void Show();
+        void UseItem(ItemName itemName);
     }
 
     public class ItemWindowView : MonoBehaviour,IView, IItemWindowView
@@ -18,13 +19,15 @@ namespace Qitz.EscapeFramework
         ItemColumnView itemColumnViewPrefab;
         [SerializeField]
         ItemColumnView emptyItemColumnViewPrefab;
+        [SerializeField]
+        ItemDetailView itemDetailView;
 
         List<ItemColumnView> itemColumnViews = new List<ItemColumnView>();
         [SerializeField]
         GridLayoutGroup grid;
-        List<IItemSpriteVO> currentItems = new List<IItemSpriteVO>();
+        List<IItemDataVO> currentItems = new List<IItemDataVO>();
 
-        void SetItems(List<IItemSpriteVO> itemSpriteVOs)
+        void SetItems(List<IItemDataVO> itemSpriteVOs)
         {
             int emptyItemCount = this.GetController<EscapeGameController>().GetEscapeGameDefins().MAX_ITEM_LIST_COUNT - itemSpriteVOs.Count;
 
@@ -44,6 +47,7 @@ namespace Qitz.EscapeFramework
         }
         void Awake()
         {
+            itemDetailView.Close();
             //ゲームコントローラーのユーザーアイテムリストチェンジ時のコールバックに応じてアイテムを生成する処理
             this.GetController<EscapeGameController>().AddUserItemListChangeCallBack((items) => {
                 if (items.Count != 0 && currentItems.SequenceEqual(items))
@@ -54,6 +58,11 @@ namespace Qitz.EscapeFramework
                 SetItems(items);
                 currentItems = items;
             });
+        }
+        public void UseItem(ItemName itemName)
+        {
+            var itemData = currentItems.FirstOrDefault(ci => ci.ItemName == itemName);
+            itemDetailView.Open(itemData);
         }
 
         public void DisSelectDisplay()

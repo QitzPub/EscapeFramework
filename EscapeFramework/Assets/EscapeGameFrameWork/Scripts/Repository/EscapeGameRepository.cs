@@ -35,9 +35,9 @@ namespace Qitz.EscapeFramework
         //CountEventDataStore countEventDataStore;
 
         //ユーザーが持っている持ち物のアイテムSpriteList
-        public List<IItemSpriteVO> UserPossessionItemSpriteList => escapeGameUserDataStore.Items.Select(iv => itemDataStore.GetItemFromItemName(iv.ItemName)).ToList();
+        public List<IItemDataVO> UserPossessionItemSpriteList => escapeGameUserDataStore.Items.Select(iv => itemDataStore.GetItemFromItemName(iv.ItemName)).ToList();
         //ゲーム中の全アイテムSpriteList
-        public List<IItemSpriteVO> AllItemSpriteList => itemDataStore.Items;
+        public List<IItemDataVO> AllItemSpriteList => itemDataStore.Items;
         ////カウントダウンイベント用
         //public List<CountEventSetting> CountEventSettings => countEventDataStore.CountEventSettings;
 
