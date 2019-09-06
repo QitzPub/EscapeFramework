@@ -11,8 +11,8 @@ namespace Qitz.EscapeFramework
     {
         [SerializeField]
         Image itemImage;
-        [SerializeField]
-        ItemDragableView itemDragableView;
+        //[SerializeField]
+        //ItemDragableView itemDragableView;
         IItemSpriteVO itemSpriteVO;
         public IItemSpriteVO ItemSpriteVO => itemSpriteVO;
         public Button Button => this.GetComponent<Button>();
@@ -26,7 +26,7 @@ namespace Qitz.EscapeFramework
             Button.onClick.RemoveAllListeners();
             this.itemSpriteVO = itemSpriteVO;
             itemImage.sprite = itemSpriteVO.Sprite;
-            itemDragableView.SetItemName(itemSpriteVO.ItemName);
+            //itemDragableView.SetItemName(itemSpriteVO.ItemName);
             selectImage.gameObject.SetActive(false);
             Button.onClick.AddListener(SetSelect);
         }
