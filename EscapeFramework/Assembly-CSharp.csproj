@@ -85,6 +85,7 @@
     <Compile Include="Assets\EscapeGameFrameWork\ADVEngine\Scripts\DataStore\QitzMacroParseUtil\QitzADVMacroParseUtil.cs" />
     <Compile Include="Assets\EscapeGameFrameWork\ADVEngine\Scripts\Debug\StubADVStarter.cs" />
     <Compile Include="Assets\EscapeGameFrameWork\ADVEngine\Scripts\Enums\ADVGameEnums.cs" />
+    <Compile Include="Assets\EscapeGameFrameWork\ADVEngine\Scripts\GameSystemInitializer\ADVSystemInitializer.cs" />
     <Compile Include="Assets\EscapeGameFrameWork\ADVEngine\Scripts\Model\BackgroundVO.cs" />
     <Compile Include="Assets\EscapeGameFrameWork\ADVEngine\Scripts\Model\CharacterVO.cs" />
     <Compile Include="Assets\EscapeGameFrameWork\ADVEngine\Scripts\Model\ChoiceVO.cs" />
