@@ -61,7 +61,22 @@ namespace Qitz.EscapeFramework
         }
         public void UseItem(ItemName itemName)
         {
-            var itemData = currentItems.FirstOrDefault(ci => ci.ItemName == itemName);
+            var controller = this.GetController<EscapeGameController>();
+            IItemDataVO itemData;
+            //TODO ネスト深いのでなおす
+            if (itemDetailView.IsOpened)
+            {
+                //ここでアイテム合成判定を行う
+                var synthesizedItemName = controller.SynthesizeItems(itemDetailView.CurrentItem.ItemName, itemName);
+                if(synthesizedItemName != ItemName.NONE)
+                {
+                    itemData = currentItems.FirstOrDefault(ci => ci.ItemName == synthesizedItemName);
+                    itemDetailView.Open(itemData);
+                    return;
+                }
+            }
+
+            itemData = currentItems.FirstOrDefault(ci => ci.ItemName == itemName);
             itemDetailView.Open(itemData);
         }
 

@@ -159,14 +159,26 @@ namespace Qitz.EscapeFramework
             }
         }
 
+        public void AddItem(ItemName item)
+        {
+            UserVO.AddItem(item);
+            SaveUserData();
+        }
 
+        public void DecreaseItem(ItemName item)
+        {
+            UserVO.DecreaseItem(item);
+            SaveUserData();
+        }
     }
 
     public interface ICanHoldItems
     {
         List<ItemVO> Items { get; }
         void AddItem(ItemVO item);
+        void AddItem(ItemName item);
         void DecreaseItem(ItemVO item);
+        void DecreaseItem(ItemName item);
     }
     public interface ICanHoldEvents
     {
@@ -289,6 +301,15 @@ namespace Qitz.EscapeFramework
             return vo.Count;
         }
 
+        public void AddItem(ItemName item)
+        {
+            items.Add(new ItemVO(item));
+        }
 
+        public void DecreaseItem(ItemName item)
+        {
+            var target = items.FirstOrDefault(it => it.ItemName == item);
+            items.Remove(target);
+        }
     }
 }

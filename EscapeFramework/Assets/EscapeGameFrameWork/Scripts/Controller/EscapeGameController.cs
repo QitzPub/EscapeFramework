@@ -8,6 +8,13 @@ using System.Collections;
 
 namespace Qitz.EscapeFramework
 {
+    //public enum SynthesizeResult
+    //{
+    //    NONE,
+    //    SUCCESS,
+    //    FAILED,
+    //}
+
     public interface IEscapeGameController
     {
         void AddEventExecuteCallBack(Action<AEvent[]> addEventExecuteCallBack);
@@ -128,11 +135,40 @@ namespace Qitz.EscapeFramework
             }
         }
 
-        //TODO ↓ItemProgressUseCase
         public void SelectItem(ItemName item)
         {
             itemSelectUseCase.SelectItem(item);
         }
 
-     }
+        //TODO SynthesizeUseCase!!
+
+        public ItemName SynthesizeItems(ItemName itemA,ItemName itemB)
+        {
+            //まずは、合成リストにパターンマッチするものがあるかどうか調べる
+            ItemName synthesizedItemName = JugSynthesizeable(itemA,itemB);
+            if (synthesizedItemName != ItemName.NONE)
+            {
+                //itemAとitemBを減らす
+                repository.EscapeGameUserDataStore.DecreaseItem(itemA);
+                repository.EscapeGameUserDataStore.DecreaseItem(itemB);
+                //合成後のアイテムを増やす
+                repository.EscapeGameUserDataStore.AddItem(synthesizedItemName);
+                //アイテム欄の更新
+                userItemListChangeCallBack?.Invoke(repository.UserPossessionItemSpriteList);
+                return synthesizedItemName;
+            }
+            return ItemName.NONE;
+        }
+
+        ItemName JugSynthesizeable(ItemName itemA, ItemName itemB)
+        {
+            foreach (var item in repository.ItemDataStore.Items)
+            {
+                var synthesizedItemName = item.JugSynthesizeable(itemA, itemB);
+                if (synthesizedItemName != ItemName.NONE) return synthesizedItemName;
+            }
+            return ItemName.NONE;
+        }
+
+    }
 }

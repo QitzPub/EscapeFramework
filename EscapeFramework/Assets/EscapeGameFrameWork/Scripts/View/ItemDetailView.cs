@@ -16,17 +16,25 @@ namespace Qitz.EscapeFramework
         Image itemImage;
         [SerializeField]
         Text itemDescription;
+        bool isOpened = false;
+        [SerializeField]
+        public bool IsOpened => isOpened;
+        IItemDataVO currentItem;
+        public IItemDataVO CurrentItem => currentItem;
 
         public void Open(IItemDataVO item)
         {
             this.gameObject.SetActive(true);
             itemImage.sprite = item.Sprite;
             itemDescription.text = item.ItemDescription;
+            this.currentItem = item;
+            isOpened = true;
         }
 
         public void Close()
         {
             this.gameObject.SetActive(false);
+            isOpened = false;
         }
     }
 }

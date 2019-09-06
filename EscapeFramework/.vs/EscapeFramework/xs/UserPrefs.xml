@@ -1,17 +1,13 @@
 ﻿<Properties StartupConfiguration="{E2686CDF-B964-E00D-1F59-97B3C95ADBBB}|">
   <MonoDevelop.Ide.ItemProperties.AdvEngine PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/EscapeGameFrameWork/Scripts/Controller/EscapeGameController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/EscapeGameFrameWork/Scripts/DataStore/EscapeGameUserDataStore.cs">
     <Files>
       <File FileName="Assets/EscapeGameFrameWork/Scripts/GameEvent/Editor/GameEventExtentions.cs" Line="32" Column="1" />
-      <File FileName="Assets/EscapeGameFrameWork/Scripts/View/ItemColumnView.cs" Line="16" Column="29" />
-      <File FileName="Assets/EscapeGameFrameWork/Scripts/View/ItemWindowView.cs" Line="62" Column="28" />
-      <File FileName="Assets/EscapeGameFrameWork/Scripts/VO/ItemDataVO.cs" Line="23" Column="25" />
-      <File FileName="Assets/EscapeGameFrameWork/Scripts/Controller/EscapeGameController.cs" Line="33" Column="38" />
+      <File FileName="Assets/EscapeGameFrameWork/Scripts/View/ItemWindowView.cs" Line="70" Column="63" />
+      <File FileName="Assets/EscapeGameFrameWork/Scripts/Repository/EscapeGameRepository.cs" Line="24" Column="33" />
+      <File FileName="Assets/EscapeGameFrameWork/Scripts/DataStore/EscapeGameUserDataStore.cs" Line="47" Column="24" />
       <File FileName="Assets/EscapeGameFrameWork/Scripts/Enum/EventEnums.cs" Line="122" Column="18" NotebookId="1" />
-      <File FileName="Assets/EscapeGameFrameWork/Scripts/UseCase/JudgeIgnitionOverTheLimitUseCase.cs" Line="36" Column="14" NotebookId="1" />
-      <File FileName="Assets/EscapeGameFrameWork/Scripts/UseCase/ItemSelectUseCase.cs" Line="19" Column="46" NotebookId="1" />
-      <File FileName="Assets/EscapeGameFrameWork/Scripts/View/ItemDetailView.cs" Line="21" Column="10" NotebookId="1" />
-      <File FileName="Assets/EscapeGameFrameWork/Scripts/VO/ItemVO.cs" Line="11" Column="14" NotebookId="1" />
+      <File FileName="Assets/EscapeGameFrameWork/Scripts/Controller/EscapeGameController.cs" Line="152" Column="47" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
