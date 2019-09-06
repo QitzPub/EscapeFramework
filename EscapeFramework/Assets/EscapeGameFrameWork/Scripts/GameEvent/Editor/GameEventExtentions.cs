@@ -29,11 +29,11 @@ namespace Qitz.EscapeFramework
             if (gameEvent.EventType == EventType.イベントの種類を設定してくださいまし) return;
 
             gameEvent.EventExecuteTiming = (EventExecuteTiming)EditorGUILayout.EnumPopup("イベント実行タイミング:", gameEvent.EventExecuteTiming);
-            if(gameEvent.EventExecuteTiming == EventExecuteTiming.アイテムがドロップされた時 || gameEvent.EventExecuteTiming == EventExecuteTiming.アイテムが選択時にクリックされた時)
-            {
-                gameEvent.TargetItemName = (ItemName)EditorGUILayout.EnumPopup("対象アイテム:", gameEvent.TargetItemName);
+            //if(gameEvent.EventExecuteTiming == EventExecuteTiming.アイテムがドロップされた時 || gameEvent.EventExecuteTiming == EventExecuteTiming.アイテムが選択時にクリックされた時)
+            //{
+            //    gameEvent.TargetItemName = (ItemName)EditorGUILayout.EnumPopup("対象アイテム:", gameEvent.TargetItemName);
 
-            }
+            //}
             if (gameEvent.EventExecuteTiming == EventExecuteTiming.指定のイベントが実行完了した時)
             {
                 serializedObject.Update();

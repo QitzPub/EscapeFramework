@@ -120,10 +120,6 @@ namespace Qitz.EscapeFramework
         Update実行,
         シーン読み込み時,
         クリックされた時,
-        //ここは消す
-        アイテムが選択時にクリックされた時,
-        アイテムがドロップされた時,
-        //=========
         指定のイベントが実行完了した時,
     }
     public enum CountEventJudge

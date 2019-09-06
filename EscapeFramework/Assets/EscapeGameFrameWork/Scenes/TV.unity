@@ -656,7 +656,7 @@ MonoBehaviour:
   UseDelay: 0
   DelayTime: 0
   EventType: 2
-  EventExecuteTiming: 3
+  EventExecuteTiming: 2
   TargetItemName: 0
   chainEvent: {fileID: 0}
   texts:

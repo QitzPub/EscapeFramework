@@ -2,14 +2,13 @@
   <MonoDevelop.Ide.ItemProperties.AdvEngine PreferredExecutionTarget="Unity.Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/EscapeGameFrameWork/Scripts/UseCase/ExcuteGameEventUseCase.cs">
     <Files>
-      <File FileName="Assets/EscapeGameFrameWork/Scripts/GameEvent/Editor/GameEventExtentions.cs" Line="241" Column="91" />
+      <File FileName="Assets/EscapeGameFrameWork/Scripts/GameEvent/Editor/GameEventExtentions.cs" Line="32" Column="1" />
       <File FileName="Assets/EscapeGameFrameWork/Scripts/Controller/EscapeGameController.cs" Line="54" Column="46" />
-      <File FileName="Assets/EscapeGameFrameWork/Scripts/UseCase/GameEventExecutorUseCase.cs" Line="37" Column="16" />
-      <File FileName="Assets/EscapeGameFrameWork/Scripts/GameEvent/BaseObject/AEvent.cs" Line="80" Column="18" />
-      <File FileName="Assets/EscapeGameFrameWork/Scripts/Enum/EventEnums.cs" Line="106" Column="32" NotebookId="1" />
-      <File FileName="Assets/EscapeGameFrameWork/Scripts/UseCase/JudgeIgnitionOverTheLimitUseCase.cs" Line="18" Column="98" NotebookId="1" />
+      <File FileName="Assets/EscapeGameFrameWork/Scripts/UseCase/GameEventExecutorUseCase.cs" Line="94" Column="1" />
+      <File FileName="Assets/EscapeGameFrameWork/Scripts/UseCase/ExcuteGameEventUseCase.cs" Line="39" Column="1" />
+      <File FileName="Assets/EscapeGameFrameWork/Scripts/Enum/EventEnums.cs" Line="122" Column="18" NotebookId="1" />
+      <File FileName="Assets/EscapeGameFrameWork/Scripts/UseCase/JudgeIgnitionOverTheLimitUseCase.cs" Line="36" Column="14" NotebookId="1" />
       <File FileName="Assets/EscapeGameFrameWork/Scripts/UseCase/ItemSelectUseCase.cs" Line="19" Column="46" NotebookId="1" />
-      <File FileName="Assets/EscapeGameFrameWork/Scripts/UseCase/ExcuteGameEventUseCase.cs" Line="30" Column="16" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
@@ -17,7 +16,9 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
   <MonoDevelop.Ide.ItemProperties.EscapeGameArchitrctureCore PreferredExecutionTarget="Unity.Editor" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/user/Desktop/EscapeFramework/EscapeFramework/Assets/EscapeGameFrameWork/Scripts/UseCase/JudgeIgnitionOverTheLimitUseCase.cs" relfile="Assets/EscapeGameFrameWork/Scripts/UseCase/JudgeIgnitionOverTheLimitUseCase.cs" line="106" column="17" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
