@@ -1,7 +1,8 @@
 {
     "name": "EscapeGameScripts",
     "references": [
-        "GUID:5d09581a3497741e08d3c1eaabce0e4c"
+        "GUID:5d09581a3497741e08d3c1eaabce0e4c",
+        "GUID:a642cb5bbe3b6487cac94a707d3c9d11"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],

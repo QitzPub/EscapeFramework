@@ -158,6 +158,15 @@ namespace Qitz.EscapeFramework
                     ExcuteChainEvent(_gameEvent.EventToken);
                 });
             }
+            else if (gameEvent.EventType == EventType.ADVイベント)
+            {
+                eventExcuted = gameEventExecutor.ExcuteADVEvent(gameEvent, (_gameEvent) => {
+                    //メッセージイベントの場合はメッセージWindowが閉じられたら
+                    //チェーンイベントを実行する
+                    ExcuteChainEvent(_gameEvent.EventToken);
+                });
+            }
+
             else if (gameEvent.EventType == EventType.スクリーンエフェクトイベント)
             {
                 eventExcuted = gameEventExecutor.ExcuteScreenEffectEvent(gameEvent);
@@ -172,7 +181,7 @@ namespace Qitz.EscapeFramework
             }
 
             //↓ここからチェイン指定があるイベントを実行する↓
-            if (gameEvent.EventType != EventType.メッセージWindowイベント && eventExcuted)
+            if (gameEvent.EventType != EventType.メッセージWindowイベント && gameEvent.EventType != EventType.ADVイベント && eventExcuted)
             {
                 ExcuteChainEvent(gameEvent.EventToken);
             }

@@ -23,10 +23,15 @@ namespace Qitz.EscapeFramework
         public GameEvent ChainEvent => chainEvent;
         public string EventToken { get; private set; }
         //基本設定ここまで==========================================
-        //ADVWindow設定ここから==========================================
+        //TextWindow設定ここから==========================================
         [SerializeField]
         List<string> texts;
         public List<string> Texts => texts;
+        //TextWindow設定ここまで==========================================
+        //ADVWindow設定ここから==========================================
+        [SerializeField]
+        TextAsset advMacro;
+        public string AdvMacro => advMacro.text;
         //ADVWindow設定ここまで==========================================
         //BGMEvent設定ここから==========================================
         public BGMName BGMName;

@@ -8,6 +8,7 @@ namespace Qitz.EscapeFramework
     {
         イベントの種類を設定してくださいまし,
         メッセージWindowイベント,
+        ADVイベント,
         BGMイベント,
         SEイベント,
         表示ー非表示イベント,

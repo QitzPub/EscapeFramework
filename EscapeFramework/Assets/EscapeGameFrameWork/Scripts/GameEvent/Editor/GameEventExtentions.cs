@@ -49,12 +49,22 @@ namespace Qitz.EscapeFramework
 
 
 
-            //ADVWindow設定ここから==========================================
+            //TextWindow設定ここから==========================================
             if (gameEvent.EventType == EventType.メッセージWindowイベント)
             {
                 serializedObject.Update();
                 // 第二引数をtrueにする
                 EditorGUILayout.PropertyField(serializedObject.FindProperty("texts"), true);
+                serializedObject.ApplyModifiedProperties();
+            }
+            //TextWindow設定ここまで==========================================
+
+            //ADVWindow設定ここから==========================================
+            if (gameEvent.EventType == EventType.ADVイベント)
+            {
+                serializedObject.Update();
+                // 第二引数をtrueにする
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("advMacro"), true);
                 serializedObject.ApplyModifiedProperties();
             }
             //ADVWindow設定ここまで==========================================

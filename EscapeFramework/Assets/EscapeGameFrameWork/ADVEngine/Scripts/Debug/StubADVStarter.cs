@@ -11,7 +11,7 @@ namespace Qitz.ADVGame
         // Start is called before the first frame update
         void Start()
         {
-            this.aDVGameController.StartADV(sampleMacro.text);
+            this.aDVGameController.StartADV(sampleMacro.text,()=> { });
         }
 
     }

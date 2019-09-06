@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Qitz.ADVGame;
+
 namespace Qitz.EscapeFramework
 {
     //TODO 本当は機能ごとにインターフェイスを分けるのだが・・・・・・
@@ -10,6 +12,7 @@ namespace Qitz.EscapeFramework
         bool ExcuteSceneTransitionEvent(GameEvent gameEvent);
         bool ExcuteScreenEffectEvent(GameEvent gameEvent);
         bool ExcuteWindowEvent(GameEvent gameEvent, Action<GameEvent> closeCallBack);
+        bool ExcuteADVEvent(GameEvent gameEvent, Action<GameEvent> closeCallBack);
         bool ExcuteBGMEvent(GameEvent gameEvent);
         bool ExcuteSEEvent(GameEvent gameEvent);
         bool ExcuteEventFlagEvent(GameEvent gameEvent);
@@ -20,7 +23,7 @@ namespace Qitz.EscapeFramework
         bool ExcuteItemWindowEvent(GameEvent gameEvent);
     }
 
-    public class GameEventExecutorUseCase: IGameEventExecutorUseCase
+    public class GameEventExecutorUseCase: IGameEventExecutorUseCase,IReceivableADVContoroller
     {
 
         IEscapeGameUserDataStore escapeGameUserDataStore;
@@ -84,7 +87,7 @@ namespace Qitz.EscapeFramework
             return true;
         }
 
-        //AdvWindowの表示を行う
+        //TextWindowの表示を行う
         public bool ExcuteWindowEvent(GameEvent gameEvent, Action<GameEvent> closeCallBack)
         {
             bool isOverTheLimit = judgeIgnitionOverTheLimitUseCase.JudgeEventIgnitionOverTheLimit((AEvent)gameEvent);
@@ -96,7 +99,21 @@ namespace Qitz.EscapeFramework
             aDVWindowView.SetText(gameEvent, closeCallBack);
             return true;
         }
-
+        //ADVシーンの再生を行う
+        public bool ExcuteADVEvent(GameEvent gameEvent, Action<GameEvent> closeCallBack)
+        {
+            bool isOverTheLimit = judgeIgnitionOverTheLimitUseCase.JudgeEventIgnitionOverTheLimit((AEvent)gameEvent);
+            if (!isOverTheLimit)
+            {
+                //イベント制限を突破していないのでイベントは実行されず
+                return false;
+            }
+            var advController = this.GetController<ADVGameController>();
+            advController.StartADV(gameEvent.AdvMacro,()=> {
+                closeCallBack.Invoke(gameEvent);
+            });
+            return true;
+        }
         //BGMを鳴らす
         public bool ExcuteBGMEvent(GameEvent gameEvent)
         {
@@ -254,5 +271,7 @@ namespace Qitz.EscapeFramework
             return true;
 
         }
+
+
     }
 }

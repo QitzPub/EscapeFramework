@@ -12,7 +12,7 @@ namespace Qitz.ADVGame
     {
         IObservable<List<int>> ASVScenarioEndObservable { get; }
         IObservable<ICutVO> ADVCutObservable { get; }
-        void StartADV(string macro);
+        void StartADV(string macro, Action endScenario);
         void Next(string jumpTo);
         void AddSelect(int selectNumber);
     }
@@ -55,14 +55,16 @@ namespace Qitz.ADVGame
                 Debug.Log($"isScenarioEnd{selectedChoice[0]}");
                 advScenarioEndSubject.OnNext(selectedChoice);
                 HideAdv();
+                endScenario();
                 return;
             }
             advCutSunject.OnNext(cutVOs[currentScenarioCutCount]);
             currentScenarioCutCount++;
         }
-
-        public void StartADV(string macro)
+        Action endScenario;
+        public void StartADV(string macro,Action endScenario)
         {
+            this.endScenario = endScenario;
             this.cacheMacro = macro;
             ShowAdv();
             this.repository.Initialize(macro);
