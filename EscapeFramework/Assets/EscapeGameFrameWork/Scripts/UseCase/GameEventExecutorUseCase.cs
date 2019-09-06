@@ -34,14 +34,14 @@ namespace Qitz.EscapeFramework
         IJudgeIgnitionOverTheLimitUseCase judgeIgnitionOverTheLimitUseCase;
         IItemWindowView itemWindowView;
 
-        public GameEventExecutorUseCase(IEscapeGameUserDataStore escapeGameUserDataStore, EscapeGameAudioPlayer escapeGameAudioPlayer, IADVWindowView aDVWindowView, IScreenEffectView screenEffectView, IItemWindowView itemWindowView)
+        public GameEventExecutorUseCase(IEscapeGameUserDataStore escapeGameUserDataStore, EscapeGameAudioPlayer escapeGameAudioPlayer, IADVWindowView aDVWindowView, IScreenEffectView screenEffectView, IItemSelectUseCase itemSelectUseCase)
         {
             this.escapeGameUserDataStore = escapeGameUserDataStore;
             this.escapeGameAudioPlayer = escapeGameAudioPlayer;
             this.aDVWindowView = aDVWindowView;
             this.screenEffectView = screenEffectView;
-            this.judgeIgnitionOverTheLimitUseCase = new JudgeIgnitionOverTheLimitUseCase(escapeGameUserDataStore);
-            this.itemWindowView = itemWindowView;
+            this.judgeIgnitionOverTheLimitUseCase = new JudgeIgnitionOverTheLimitUseCase(escapeGameUserDataStore, itemSelectUseCase);
+            this.itemWindowView = itemSelectUseCase.ItemWindowView;
         }
 
 

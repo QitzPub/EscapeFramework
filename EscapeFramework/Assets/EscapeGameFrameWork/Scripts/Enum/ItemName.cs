@@ -4,8 +4,9 @@ using UnityEngine;
 
 public enum ItemName
 {
-    トンカチ=0,
-    鍵 =1,
-    ドライバー=2,
-    カードキー = 3,
+    NONE=0,
+    トンカチ,
+    鍵,
+    ドライバー,
+    カードキー,
 }

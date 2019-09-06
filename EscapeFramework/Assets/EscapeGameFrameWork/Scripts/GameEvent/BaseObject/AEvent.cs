@@ -33,6 +33,15 @@ namespace Qitz.EscapeFramework
         //====================================
 
         //====================================
+        [HideInInspector, HeaderAttribute("アイテム選択状態によるイベント発火制限をかける")]
+        public bool UseSelectedItemRestrictedSetting = false;
+
+        [HideInInspector]
+        public List<ItemSelectIGnitionPoint> SelectItemIGnitions = new List<ItemSelectIGnitionPoint>() { new ItemSelectIGnitionPoint() };
+
+        //====================================
+
+        //====================================
         [HideInInspector, HeaderAttribute("カウントイベントによる発火制限をかける")]
         public bool UseCountEventRestrictedSetting = false;
 
@@ -66,6 +75,14 @@ namespace Qitz.EscapeFramework
         public EventName EventType;
         [HideInInspector]
         public EventFlag EventFlag;
+    }
+    [Serializable]
+    public class ItemSelectIGnitionPoint
+    {
+        [HideInInspector]
+        public ItemName ItemName;
+        [HideInInspector]
+        public SelectItemState SelectItemState;
     }
 
     [Serializable]

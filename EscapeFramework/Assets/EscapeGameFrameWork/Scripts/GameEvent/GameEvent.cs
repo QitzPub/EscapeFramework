@@ -16,7 +16,7 @@ namespace Qitz.EscapeFramework
         //基本設定ここから==========================================
         public EventType EventType;
         public EventExecuteTiming EventExecuteTiming;
-        public ItemName DropedItemName;
+        public ItemName TargetItemName;
         public ItemDropable DropableView => this.GetComponent<ItemDropable>();
         [SerializeField]
         GameEvent chainEvent;

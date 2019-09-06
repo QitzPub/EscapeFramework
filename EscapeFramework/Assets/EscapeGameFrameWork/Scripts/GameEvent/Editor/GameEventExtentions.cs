@@ -29,9 +29,9 @@ namespace Qitz.EscapeFramework
             if (gameEvent.EventType == EventType.イベントの種類を設定してくださいまし) return;
 
             gameEvent.EventExecuteTiming = (EventExecuteTiming)EditorGUILayout.EnumPopup("イベント実行タイミング:", gameEvent.EventExecuteTiming);
-            if(gameEvent.EventExecuteTiming == EventExecuteTiming.アイテムがドロップされた時)
+            if(gameEvent.EventExecuteTiming == EventExecuteTiming.アイテムがドロップされた時 || gameEvent.EventExecuteTiming == EventExecuteTiming.アイテムが選択時にクリックされた時)
             {
-                gameEvent.DropedItemName = (ItemName)EditorGUILayout.EnumPopup("対象アイテム:", gameEvent.DropedItemName);
+                gameEvent.TargetItemName = (ItemName)EditorGUILayout.EnumPopup("対象アイテム:", gameEvent.TargetItemName);
 
             }
             if (gameEvent.EventExecuteTiming == EventExecuteTiming.指定のイベントが実行完了した時)
@@ -191,6 +191,8 @@ namespace Qitz.EscapeFramework
                 EditorGUILayout.LabelField("========================================");
             }
             EditorGUILayout.LabelField("");
+            //===========================================================
+            //===========================================================
             gameEvent.UseEventFlagRestrictedSetting = EditorGUILayout.Toggle("フラグ実行制限", gameEvent.UseEventFlagRestrictedSetting);
             if (gameEvent.UseEventFlagRestrictedSetting)
             {
@@ -215,6 +217,34 @@ namespace Qitz.EscapeFramework
                 EditorGUILayout.LabelField("========================================");
             }
             EditorGUILayout.LabelField("");
+            //===========================================================
+            //===========================================================
+            gameEvent.UseSelectedItemRestrictedSetting = EditorGUILayout.Toggle("アイテム選択状態実行制限", gameEvent.UseSelectedItemRestrictedSetting);
+            if (gameEvent.UseSelectedItemRestrictedSetting)
+            {
+                EditorGUILayout.LabelField("=======アイテム選択状態実行制限==========");
+                foreach (var ignitionPoint in gameEvent.SelectItemIGnitions)
+                {
+                    ignitionPoint.ItemName = (ItemName)EditorGUILayout.EnumPopup("対象のアイテム:", ignitionPoint.ItemName);
+                    ignitionPoint.SelectItemState = (SelectItemState)EditorGUILayout.EnumPopup("アイテム選択状態", ignitionPoint.SelectItemState);
+                    EditorGUILayout.LabelField("時にイベントが実行可能");
+                    EditorGUILayout.LabelField("");
+                }
+
+                if (GUILayout.Button("制限条件を増やす"))
+                {
+                    gameEvent.SelectItemIGnitions.Add(new ItemSelectIGnitionPoint());
+                }
+                if (GUILayout.Button("制限条件を減らす"))
+                {
+                    if (gameEvent.SelectItemIGnitions.LastOrDefault() != null)
+                        gameEvent.SelectItemIGnitions.Remove(gameEvent.SelectItemIGnitions.LastOrDefault());
+                }
+                EditorGUILayout.LabelField("========================================");
+            }
+            EditorGUILayout.LabelField("");
+            //===========================================================
+            //===========================================================
             gameEvent.UseCountEventRestrictedSetting = EditorGUILayout.Toggle("カウント実行制限", gameEvent.UseCountEventRestrictedSetting);
             if (gameEvent.UseCountEventRestrictedSetting)
             {

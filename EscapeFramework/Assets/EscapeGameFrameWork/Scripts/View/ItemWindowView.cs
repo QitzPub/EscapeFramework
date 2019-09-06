@@ -33,7 +33,7 @@ namespace Qitz.EscapeFramework
             itemSpriteVOs.ForEach(it =>
             {
                 var icv = PrefabFolder.InstantiateTo<ItemColumnView>(itemColumnViewPrefab, grid.transform);
-                icv.Initialize(it);
+                icv.Initialize(it, DisSelectDisplay);
                 itemColumnViews.Add(icv);
             });
             for (int i = 0; i < emptyItemCount; i++)
@@ -54,6 +54,11 @@ namespace Qitz.EscapeFramework
                 SetItems(items);
                 currentItems = items;
             });
+        }
+
+        public void DisSelectDisplay()
+        {
+            itemColumnViews.ForEach(iv=>iv.DisSelectDisplay());
         }
 
         public void Hide()

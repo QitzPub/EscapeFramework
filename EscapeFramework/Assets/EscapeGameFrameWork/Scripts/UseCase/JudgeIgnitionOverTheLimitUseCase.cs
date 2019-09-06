@@ -14,9 +14,11 @@ namespace Qitz.EscapeFramework
     public class JudgeIgnitionOverTheLimitUseCase: IJudgeIgnitionOverTheLimitUseCase
     {
         IEscapeGameUserDataStore escapeGameUserDataStore;
-        public JudgeIgnitionOverTheLimitUseCase(IEscapeGameUserDataStore escapeGameUserDataStor)
+        IItemSelectUseCase itemSelectUseCase;
+        public JudgeIgnitionOverTheLimitUseCase(IEscapeGameUserDataStore escapeGameUserDataStor, IItemSelectUseCase itemSelectUseCase)
         {
             this.escapeGameUserDataStore = escapeGameUserDataStor;
+            this.itemSelectUseCase = itemSelectUseCase;
         }
 
         public bool JudgeEventIgnitionOverTheLimit(AEvent aEvent)
@@ -33,12 +35,18 @@ namespace Qitz.EscapeFramework
                 eventFlagRestrictedOver = JudgeEventsFlagIgnitionOverTheLimit(aEvent);
             }
 
+            bool itemSelectRestrictedOver = true;
+            if (aEvent.UseSelectedItemRestrictedSetting)
+            {
+                itemSelectRestrictedOver = JudgeSelectItemIgnitionOverTheLimit(aEvent);
+            }
+
             bool countEventRestrictedOver = true;
             if (aEvent.UseCountEventRestrictedSetting)
             {
                 countEventRestrictedOver = JudgeCountEventsIgnitionOverTheLimit(aEvent);
             }
-            return itemRestrictedOver && eventFlagRestrictedOver && countEventRestrictedOver;
+            return itemRestrictedOver && eventFlagRestrictedOver && itemSelectRestrictedOver && countEventRestrictedOver;
         }
 
         bool JudgeItemEventsIgnitionOverTheLimit(AEvent aEvent)
@@ -85,7 +93,27 @@ namespace Qitz.EscapeFramework
                 throw new System.Exception($"想定されない形式です");
             }
         }
+        bool JudgeSelectItemIgnitionOverTheLimit(AEvent aEvent)
+        {
+            if (!aEvent.UseSelectedItemRestrictedSetting) return true;
+            return aEvent.SelectItemIGnitions.All(ei => JudgeSelectItemIgnitionOverTheLimit(ei));
+        }
 
+        bool JudgeSelectItemIgnitionOverTheLimit(ItemSelectIGnitionPoint ei)
+        {
+            if (ei.SelectItemState == SelectItemState.アイテムが選択されている)
+            {
+                return itemSelectUseCase.SelectedItem == ei.ItemName;
+            }
+            else if (ei.SelectItemState == SelectItemState.アイテムが選択されていない)
+            {
+                return itemSelectUseCase.SelectedItem != ei.ItemName;
+            }
+            else
+            {
+                throw new System.Exception($"想定されない形式です");
+            }
+        }
 
         bool JudgeCountEventsIgnitionOverTheLimit(AEvent aEvent)
         {

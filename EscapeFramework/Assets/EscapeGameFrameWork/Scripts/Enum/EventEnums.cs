@@ -103,6 +103,11 @@ namespace Qitz.EscapeFramework
         アイテムを持っている,
         アイテムを持っていない,
     }
+    public enum SelectItemState
+    {
+        アイテムが選択されている,
+        アイテムが選択されていない,
+    }
 
     public enum IGnitionPointEvent
     {
@@ -115,7 +120,10 @@ namespace Qitz.EscapeFramework
         Update実行,
         シーン読み込み時,
         クリックされた時,
+        //ここは消す
+        アイテムが選択時にクリックされた時,
         アイテムがドロップされた時,
+        //=========
         指定のイベントが実行完了した時,
     }
     public enum CountEventJudge

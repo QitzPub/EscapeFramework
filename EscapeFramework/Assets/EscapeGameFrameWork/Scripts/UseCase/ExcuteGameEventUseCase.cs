@@ -22,22 +22,27 @@ namespace Qitz.EscapeFramework
         Action<GameEvent[]> eventExcuteCallBack;
         IEnumerable<GameEvent> normalEvents;
         IEnumerable<GameEvent> itemDropEvents;
+        IEnumerable<GameEvent> itemSelectClickEvents;
         IEnumerable<GameEvent> chainEvents;
         IGameEventExecutorUseCase gameEventExecutor;
+        IItemSelectUseCase itemSelectUseCase;
 
-        public ExcuteGameEventUseCase(Action<GameEvent[]> eventExcuteCallBack, IGameEventExecutorUseCase gameEventExecutor)
+        public ExcuteGameEventUseCase(Action<GameEvent[]> eventExcuteCallBack, IGameEventExecutorUseCase gameEventExecutor, IItemSelectUseCase itemSelectUseCase)
         {
             this.gameEventExecutor = gameEventExecutor;
             this.eventExcuteCallBack = eventExcuteCallBack;
+            this.itemSelectUseCase = itemSelectUseCase;
         }
         void SetSceneEvents()
         {
             this.events = UnityEngine.Object.FindObjectsOfType<GameEvent>();
             this.normalEvents = events.Where(e => e != null && e.EventExecuteTiming != EventExecuteTiming.アイテムがドロップされた時 && e.EventExecuteTiming != EventExecuteTiming.指定のイベントが実行完了した時);
             this.itemDropEvents = events.Where(e => e != null && e.EventExecuteTiming == EventExecuteTiming.アイテムがドロップされた時);
+            itemSelectClickEvents = events.Where(e => e != null && e.EventExecuteTiming == EventExecuteTiming.アイテムが選択時にクリックされた時);
             this.chainEvents = events.Where(e => e != null && e.EventExecuteTiming == EventExecuteTiming.指定のイベントが実行完了した時);
             SetClickEvents();
             SetItemDropEvent();
+            SetItemSelectClickEvents();
         }
 
         public void ExcuteSceneLoadTimingEvent()
@@ -93,11 +98,43 @@ namespace Qitz.EscapeFramework
                 });
             }
         }
+        void SetItemSelectClickEvents()
+        {
+            foreach (var aEvent in itemSelectClickEvents)
+            {
+                SetItemSelectClickEvent(aEvent);
+            }
+        }
+        void SetItemSelectClickEvent(GameEvent aEvent)
+        {
+            aEvent.Button.onClick.AddListener(
+                () => {
+
+                    Debug.Log($"ExcuteNormalEvent:{aEvent.name}");
+                    //遅延処理する！
+                    DelayTool.Tools.Delay(aEvent.DelayTime, () => {
+                        //GameControllerの選択中アイテムとイベントのターゲットアイテムが合致する時のみ実行可能
+                        if(itemSelectUseCase.SelectedItem == aEvent.TargetItemName)
+                        {
+                            ExcuteEvent(aEvent);
+                        }
+
+                        //UPDate時に実行されるイベントも発火する
+                        ExcuteUpdateEvent();
+                        eventExcuteCallBack.Invoke(events);
+                    });
+                    DelayTool.Tools.Delay(aEvent.DelayTime + 0.5f, () => {
+                        itemSelectUseCase.DisSelectItem();
+                    });
+                }
+            );
+        }
 
         void SetClickEvent(GameEvent aEvent)
         {
             aEvent.Button.onClick.AddListener(
                 () => {
+
                     Debug.Log($"ExcuteNormalEvent:{aEvent.name}");
                     //遅延処理する！
                     DelayTool.Tools.Delay(aEvent.DelayTime, () => {
@@ -106,13 +143,16 @@ namespace Qitz.EscapeFramework
                         ExcuteUpdateEvent();
                         eventExcuteCallBack.Invoke(events);
                     });
+                    DelayTool.Tools.Delay(aEvent.DelayTime + 0.5f, () => {
+                        itemSelectUseCase.DisSelectItem();
+                    });
                 }
             );
         }
 
         void ExcuteItemDropEvent(GameEvent gameEvent, ItemName dropedItem)
         {
-            if (gameEvent.DropedItemName != dropedItem)
+            if (gameEvent.TargetItemName != dropedItem)
             {
                 return;
             }

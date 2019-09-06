@@ -31,7 +31,8 @@ namespace Qitz.EscapeFramework
         ScreenEffectView screenEffectView;
         [SerializeField]
         ItemWindowView itemWindowView;
-
+        ItemName selectedItem;
+        ItemSelectUseCase itemSelectUseCase;
 
         public void AddEventExecuteCallBack(Action<AEvent[]> addEventExecuteCallBack)
         {
@@ -47,15 +48,19 @@ namespace Qitz.EscapeFramework
         {
             aDVWindowView.Close();
             repository.Initialize();
-            var gameEventExecutorUseCase = new GameEventExecutorUseCase(Repository.EscapeGameUserDataStore, escapeGameAudioPlayer, aDVWindowView, screenEffectView, itemWindowView);
+            itemSelectUseCase = new ItemSelectUseCase(itemWindowView);
+            var gameEventExecutorUseCase = new GameEventExecutorUseCase(Repository.EscapeGameUserDataStore, escapeGameAudioPlayer, aDVWindowView, screenEffectView, itemSelectUseCase);
 
             excuteEventUseCase = new ExcuteGameEventUseCase(
                 (events) => {
-                                //イベント実行後のコールバック
-                                //ユーザーデータのアイテム数をItemViewに反映させる処理など
-                                eventExecuteCallBack?.Invoke(events);
-                                userItemListChangeCallBack?.Invoke(repository.UserPossessionItemSpriteList);
-                    }, gameEventExecutorUseCase);
+                    //イベント実行後のコールバック
+                    //ユーザーデータのアイテム数をItemViewに反映させる処理など
+                    eventExecuteCallBack?.Invoke(events);
+                    userItemListChangeCallBack?.Invoke(repository.UserPossessionItemSpriteList);
+                }
+                    , gameEventExecutorUseCase
+                    , itemSelectUseCase
+                    );
         }
 
         void Start()
@@ -122,5 +127,12 @@ namespace Qitz.EscapeFramework
                 Debug.Log(ev.EventType+":"+ ev.IsOn);
             }
         }
-    }
+
+        //TODO ↓ItemProgressUseCase
+        public void SelectItem(ItemName item)
+        {
+            itemSelectUseCase.SelectItem(item);
+        }
+
+     }
 }
